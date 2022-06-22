@@ -32,7 +32,7 @@ public class MenuManager : MonoBehaviour
     public void menuButtonSettings()
     {
         HideAll();
-        panelChoosePlan.Show();
+        panelSettings.Show();
     }
     
     public void menuButtonExit()
