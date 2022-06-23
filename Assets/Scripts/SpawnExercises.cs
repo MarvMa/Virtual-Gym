@@ -33,16 +33,18 @@ public class SpawnExercises : MonoBehaviour
 
     void Start()
     {
+        // exercises = JsonHandler.getExercises();
+        // trainingPlans = JsonHandler.getTrainingPlans();
+        // trainingPlan = trainingPlans.First();
+        // spawnPodests();
+    }
+
+    public GameObject[] spawnPodests()
+    {
         exercises = JsonHandler.getExercises();
         trainingPlans = JsonHandler.getTrainingPlans();
         trainingPlan = trainingPlans.First();
-        Debug.Log(trainingPlan);
-        GameObject[] podests = spawnPodests();
-
-    }
-
-    GameObject[] spawnPodests()
-    {
+        
         GameObject[] podests = new GameObject[podestPositions.Length];
         int index = 0;
         String[] tpExercises = trainingPlan.exercises;

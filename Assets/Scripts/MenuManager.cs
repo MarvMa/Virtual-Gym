@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
+using System.Threading.Tasks;
 
 public class MenuManager : MonoBehaviour
 {
@@ -20,6 +22,11 @@ public class MenuManager : MonoBehaviour
 
     private CurrentPanelEnum _currentPanel;
 
+    private bool is_visible = true;
+    private bool is_spawned = false;
+
+    public SpawnExercises spawnExercises;
+
     private enum CurrentPanelEnum
     {
         PanelStart,
@@ -37,6 +44,7 @@ public class MenuManager : MonoBehaviour
 
     private void Start()
     {
+        spawnExercises = GameObject.FindWithTag("GameManager").GetComponent<SpawnExercises>();
         HideAll();
         _currentPanel = CurrentPanelEnum.PanelStart;
         panelStart.Show();
@@ -218,21 +226,33 @@ public class MenuManager : MonoBehaviour
     {
         if (sethideMenu)
         {
-            if (transform.position.y > -1.0f)
+            if (transform.position.y > -1.1f)
             {
-                uibBackground.transform.Translate(0, -0.5f * Time.deltaTime, 0);
-                transform.Translate(0, -0.5f * Time.deltaTime, 0);
+                uibBackground.transform.Translate(0, -1.2f * Time.deltaTime, 0);
+                transform.Translate(0, -1.2f * Time.deltaTime, 0);
+                is_visible = false;
             }
         }
-
         if (setShowMenu)
         {
             if (transform.position.y < 1.684)
             {
-                uibBackground.transform.Translate(0, 0.5f * Time.deltaTime, 0);
+                uibBackground.transform.Translate(0, 0.8f * Time.deltaTime, 0);
                 transform.Translate(0, 0.5f * Time.deltaTime, 0);
             }
         }
+
+        if (!is_visible && !is_spawned)
+        {
+            spawnScene();
+            is_spawned = true;
+        }
+
+    }
+    async Task spawnScene()
+    {
+        await Task.Delay(2500);
+        spawnExercises.spawnPodests();
 
     }
 }
