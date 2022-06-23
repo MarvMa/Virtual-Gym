@@ -22,7 +22,7 @@
   },
   {
     "name": "Bizeps Curl",
-    "identifier": "bizep_curl",
+    "identifier": "bizeps_curl",
     "muscleGroups": [
       "bizeps",
       "forearm"
@@ -127,7 +127,7 @@
   },
   {
     "name": "Push Up",
-    "identifier": "bizep_curl",
+    "identifier": "push_up",
     "muscleGroups": [
       "chest",
       "triceps"

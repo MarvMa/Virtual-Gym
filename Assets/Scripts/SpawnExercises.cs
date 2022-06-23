@@ -50,6 +50,9 @@ public class SpawnExercises : MonoBehaviour
         {
             podests[index] = Instantiate(podestGameObject, position, Quaternion.identity);
             GameObject light = Instantiate(spotLight, new Vector3(position.x, 5, position.z), Quaternion.identity);
+            GameObject animationPrefab = Resources.Load<GameObject>("Prefabs/situps");
+            Debug.Log(animationPrefab);
+            GameObject animation = Instantiate(animationPrefab, new Vector3(position.x, 0.18f, position.z), Quaternion.identity);
             light.transform.Rotate(90, 0, 0);
             index++;
         }
