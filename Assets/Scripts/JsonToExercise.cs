@@ -1,9 +1,7 @@
 // using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-using System.Text.Json;
+using DefaultNamespace;
 
 public class JsonToExercise : DeserializeJson
 {
@@ -14,6 +12,12 @@ public class JsonToExercise : DeserializeJson
         JsonUtility.FromJsonOverwrite(readJson, exercise);
         return exercise;
     }
+    
+    public Exercise[] _exercises(string path)
+    { 
+        string readJson = File.ReadAllText(path);
+        return JsonHelper.FromJson<Exercise>(readJson);
+    }
 
     public TrainingPlan _trainingPlan(string path)
     {
@@ -21,5 +25,12 @@ public class JsonToExercise : DeserializeJson
         TrainingPlan trainingPlan = new TrainingPlan();
         JsonUtility.FromJsonOverwrite(readJson, trainingPlan);
         return trainingPlan;
+    }
+    
+    public TrainingPlan[] _trainingPlans(string path)
+    {
+        string readJson = File.ReadAllText(path);
+        return JsonHelper.FromJson<TrainingPlan>(readJson);
+
     }
 }
