@@ -6,24 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="a1ad0527-a5f1-488e-b1e3-8e8193cb975a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Virtuelles_Gym/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Virtuelles_Gym/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Exercise_Animations/Air Squat.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Exercise_Animations/Air Squat.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Exercise_Animations/Back Squat.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Exercise_Animations/Back Squat.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Exercise_Animations/Bicep Curl.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Exercise_Animations/Bicep Curl.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Exercise_Animations/Burpee.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Exercise_Animations/Burpee.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Exercise_Animations/Clean And Jerk.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Exercise_Animations/Clean And Jerk.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Exercise_Animations/Front Raises.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Exercise_Animations/Front Raises.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Exercise_Animations/Jump Push Up.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Exercise_Animations/Jump Push Up.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Exercise_Animations/Jumping Jacks.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Exercise_Animations/Jumping Jacks.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Exercise_Animations/Overhead Squat.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Exercise_Animations/Overhead Squat.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Exercise_Animations/Pike Walk.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Exercise_Animations/Pike Walk.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Exercise_Animations/Pistol Squat.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Exercise_Animations/Pistol Squat.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Exercise_Animations/Push Up.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Exercise_Animations/Push Up.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Exercise_Animations/Situps.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Exercise_Animations/Situps.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Exercise_Animations/Snatch.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Exercise_Animations/Snatch.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/front_raise.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/front_raise.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/overhead_squat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/overhead_squat.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/DataHandler/data/exercises.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DataHandler/data/exercises.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DataHandler/data/trainingsplan.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DataHandler/data/trainingsplan.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnExercises.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnExercises.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XR/Settings/Open XR Package Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR/Settings/Open XR Package Settings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +20,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DataHandler/ExercisesContainer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DataHandler/JsonHandler.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -97,6 +87,7 @@
       <workItem from="1655373175206" duration="15000" />
       <workItem from="1655980307283" duration="2478000" />
       <workItem from="1655984804726" duration="1392000" />
+      <workItem from="1656015059272" duration="1850000" />
     </task>
     <servers />
   </component>

@@ -1118,7 +1118,7 @@ GameObject:
   - component: {fileID: 5463225739927056258}
   - component: {fileID: 2103579091895760376}
   m_Layer: 0
-  m_Name: front_raise
+  m_Name: front_raises
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

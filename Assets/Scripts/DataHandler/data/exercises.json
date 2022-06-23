@@ -23,7 +23,7 @@
     },
     {
       "name": "Bizeps Curl",
-      "identifier": "bizeps_curl",
+      "identifier": "biceps_curl",
       "muscleGroups": [
         "bizeps",
         "forearm"
