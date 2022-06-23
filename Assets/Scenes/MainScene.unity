@@ -8491,6 +8491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e304506e213bf47832994dbc6851a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uibBackground: {fileID: 504788195}
   panelStart: {fileID: 7128417007124672526}
   panelChoosePlan: {fileID: 7128417008868733303}
   panelChooseModifyExp: {fileID: 7128417007510754637}
