@@ -11,7 +11,6 @@ public class MenuManager : MonoBehaviour
     public Panel panelChooseStart = null;
     public Panel panelSettings = null;
     public Panel panelPauseMenu = null;
-
     private int trainingsPlan;
     private int trainingsExperience;
     private int trainingsDuration;
@@ -45,7 +44,7 @@ public class MenuManager : MonoBehaviour
     public void pressStartButton()
     {
         HideAll();
-        panelSettings.Show();
+        panelChoosePlan.Show();
     }
     
     //panel panelChoosePlan
@@ -95,24 +94,53 @@ public class MenuManager : MonoBehaviour
     //panelChooseModifyDuration
     public void panelChooseModifyDurOne()
     {
-        trainingsDuration = 1;
+        trainingsDuration = 3;
         HideAll();
         panelChooseStart.Show();
     }
     
     public void panelChooseModifyDurTwo()
     {
-        trainingsDuration = 2;
+        trainingsDuration = 6;
         HideAll();
         panelChooseStart.Show();
     }
     
     public void panelChooseModifyDurThree()
     {
-        trainingsDuration = 3;
+        trainingsDuration = 9;
         HideAll();
         panelChooseStart.Show();
     }
+
+    public void panelChooseModifyDurBackButton()
+    {
+        HideAll();
+        panelChooseModifyExp.Show();
+    }
+    
+    //panelChooseStart
+    
+    public void panelChooseStartBackButton()
+    {
+        HideAll();
+        panelChooseModifyDuration.Show();
+    }
+    
+    public void panelChooseStartStartButton()
+    {
+        HideAll();
+        //implent hideMenu
+    }
+    
+    //panelPauseMenu
+    
+    public void panelPauseÜbersichtButton()
+    {
+        HideAll();
+        panelChooseStart.Show();
+    }
+
     
     //genTrainingsplan
     
