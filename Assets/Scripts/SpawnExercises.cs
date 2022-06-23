@@ -1,3 +1,5 @@
+using DataHandler;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SpawnExercises : MonoBehaviour
@@ -21,7 +23,18 @@ public class SpawnExercises : MonoBehaviour
     void Start()
     {
         GameObject[] podests = spawnPodests();
-        Debug.Log(podests);
+        Exercise[] exercises = JsonHandler.getExercises();
+        if (exercises != null)
+        {
+            foreach (var exercise in exercises)
+            {
+                Debug.Log("Exercise" + exercise);
+            }
+        }
+        else
+        {
+            Debug.Log("exercises are empty");
+        }
     }
 
     // Update is called once per frame
