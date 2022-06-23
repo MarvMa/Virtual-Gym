@@ -3,8 +3,15 @@
     {
       "name": "my_plan",
       "exercises": [
-        "bizep_curl",
-        "bench_press"
+        "air_squat",
+        "back_squat",
+        "biceps_curl",
+        "burpee",
+        "clean_and_jerk",
+        "front_raises",
+        "jump_push_up",
+        "jumping_jacks",
+        "overhead_squat",
       ],
       "difficulty": 2,
       "duration": 10

@@ -6,55 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="a1ad0527-a5f1-488e-b1e3-8e8193cb975a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Virtuelles_Gym/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Virtuelles_Gym/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Overhead Squat.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Overhead Squat.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Demonstration.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Demonstration.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DeserializeJson.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DeserializeJson.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Difficulty.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Difficulty.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Exercise.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DataHandler/Exercise.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Exercise.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DataHandler/Exercise.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/JsonHelper.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/JsonHelper.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/JsonToExercise.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/JsonToExercise.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/front_raise.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/front_raise.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/overhead_squat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/overhead_squat.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DataHandler/data/exercises.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DataHandler/data/exercises.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DataHandler/data/trainingsplan.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DataHandler/data/trainingsplan.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnExercises.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnExercises.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TrainingPlan.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TrainingPlan.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Assets.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Assets/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Assets/Materials/Spotlight.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Assets/Materials/Spotlight.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Assets/Materials/Spotlight_basecolor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Assets/Materials/Spotlight_basecolor.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Assets/Materials/Spotlight_emission.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Assets/Materials/Spotlight_emission.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Assets/Materials/Spotlight_normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Assets/Materials/Spotlight_normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Assets/Materials/Spotlight_roughness.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Assets/Materials/Spotlight_roughness.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Assets/Spotlight.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Assets/Spotlight.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Assets/SpotlightStructure1.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Assets/SpotlightStructure1.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Assets/SpotlightStructure2.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Assets/SpotlightStructure2.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Info.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Info.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Scenes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Scenes/DemoScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Scenes/DemoScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Scenes/DemoSceneSettings.lighting" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Scenes/DemoSceneSettings.lighting.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Scenes/Main Camera Profile.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Scenes/Main Camera Profile.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Scenes/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Scenes/Materials/Showcase_mat.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Scenes/Materials/Showcase_mat.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Scenes/Materials/_roughness.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceZeta_Spotlight/Scenes/Materials/_roughness.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +20,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DataHandler/ExercisesContainer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DataHandler/JsonHandler.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -72,21 +31,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "rider.run.widget.enabled.cache": "false",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;rider.run.widget.enabled.cache&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.1.5f1\Editor\Unity.exe" />
@@ -128,6 +87,7 @@
       <workItem from="1655373175206" duration="15000" />
       <workItem from="1655980307283" duration="2478000" />
       <workItem from="1655984804726" duration="1392000" />
+      <workItem from="1656015059272" duration="1850000" />
     </task>
     <servers />
   </component>

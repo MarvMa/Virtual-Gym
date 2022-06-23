@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using DataHandler;
 using Newtonsoft.Json;
 using Unity.VisualScripting;
@@ -13,6 +14,7 @@ public class SpawnExercises : MonoBehaviour
 
     private Vector3[] podestPositions = new[]
     {
+        new Vector3(0, 0.1f, 0),
         new Vector3(10, 0.1f, 10),
         new Vector3(14, 0.1f, 0),
         new Vector3(10, 0.1f, -10),
@@ -22,48 +24,42 @@ public class SpawnExercises : MonoBehaviour
         new Vector3(-10, 0.1f, 10),
         new Vector3(0, 0.1f, 14),
     };
-    
-    public class WeatherForecast
-    {
-        public DateTimeOffset Date { get; set; }
-        public int TemperatureCelsius { get; set; }
-        public string? Summary { get; set; }
-    }
+
+    private List<Exercise> exercises;
+    private List<TrainingPlan> trainingPlans;
+
+    private TrainingPlan trainingPlan = new TrainingPlan();
+
 
     void Start()
     {
+        exercises = JsonHandler.getExercises();
+        trainingPlans = JsonHandler.getTrainingPlans();
+        trainingPlan = trainingPlans.First();
+        Debug.Log(trainingPlan);
         GameObject[] podests = spawnPodests();
-        List<Exercise> exercises = JsonHandler.getExercises();
-        List<TrainingPlan> trainingPlans = JsonHandler.getTrainingPlans();
-        if (exercises != null)
-        {
-            foreach (var exercise in exercises)
-            {
-                // Debug.Log("Exercise" + exercise);
-                Debug.Log(exercise.identifier);
-            }
-            Debug.Log("Training plan first exercise: " + trainingPlans[0].exercises[0]);
-        }
-        else
-        {
-            Debug.Log("exercises are empty");
-        }
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
     }
 
     GameObject[] spawnPodests()
     {
         GameObject[] podests = new GameObject[podestPositions.Length];
         int index = 0;
-        foreach (var position in podestPositions)
+        String[] tpExercises = trainingPlan.exercises;
+        foreach (var exercise in tpExercises)
         {
+            Vector3 position = podestPositions[index];
+            // Spawn Podests
             podests[index] = Instantiate(podestGameObject, position, Quaternion.identity);
+            // Spawn Spotlights
             GameObject light = Instantiate(spotLight, new Vector3(position.x, 5, position.z), Quaternion.identity);
             light.transform.Rotate(90, 0, 0);
+            
+            // Spawn Animation
+            GameObject animationPrefab = Resources.Load<GameObject>("Prefabs/" + exercise);
+            Debug.Log(exercise);
+            GameObject animation = Instantiate(animationPrefab, new Vector3(position.x, 0.18f, position.z),
+                Quaternion.identity);
             index++;
         }
 
