@@ -1,4 +1,7 @@
+using System;
+using System.Collections.Generic;
 using DataHandler;
+using Newtonsoft.Json;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -19,17 +22,27 @@ public class SpawnExercises : MonoBehaviour
         new Vector3(-10, 0.1f, 10),
         new Vector3(0, 0.1f, 14),
     };
+    
+    public class WeatherForecast
+    {
+        public DateTimeOffset Date { get; set; }
+        public int TemperatureCelsius { get; set; }
+        public string? Summary { get; set; }
+    }
 
     void Start()
     {
         GameObject[] podests = spawnPodests();
-        Exercise[] exercises = JsonHandler.getExercises();
+        List<Exercise> exercises = JsonHandler.getExercises();
+        List<TrainingPlan> trainingPlans = JsonHandler.getTrainingPlans();
         if (exercises != null)
         {
             foreach (var exercise in exercises)
             {
-                Debug.Log("Exercise" + exercise);
+                // Debug.Log("Exercise" + exercise);
+                Debug.Log(exercise.identifier);
             }
+            Debug.Log("Training plan first exercise: " + trainingPlans[0].exercises[0]);
         }
         else
         {

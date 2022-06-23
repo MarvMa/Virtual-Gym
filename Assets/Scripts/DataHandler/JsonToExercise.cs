@@ -1,8 +1,10 @@
 // using System;
 
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace DataHandler
 {
@@ -16,10 +18,11 @@ namespace DataHandler
             return exercise;
         }
 
-        public Exercise[] _exercises(string path)
+        public List<Exercise> _exercises(string path)
         {
             string readJson = File.ReadAllText(path);
-            return JsonHelper.FromJson<Exercise>(readJson);
+            // return JsonHelper.FromJson<Exercise>(readJson);
+            return JsonConvert.DeserializeObject<ExercisesContainer>(readJson).exercisesList;
         }
         // public Exercise[] _exercises(string path)
         // {
@@ -39,10 +42,10 @@ namespace DataHandler
             return trainingPlan;
         }
 
-        public TrainingPlan[] _trainingPlans(string path)
+        public List<TrainingPlan> _trainingPlans(string path)
         {
             string readJson = File.ReadAllText(path);
-            return JsonHelper.FromJson<TrainingPlan>(readJson);
+            return JsonConvert.DeserializeObject<TrainingPlanContainer>(readJson).trainingPlanList;
         }
     }
 }
