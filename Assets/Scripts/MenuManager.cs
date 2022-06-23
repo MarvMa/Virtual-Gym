@@ -11,55 +11,65 @@ public class MenuManager : MonoBehaviour
     public Panel panelChooseStart = null;
     public Panel panelSettings = null;
     public Panel panelPauseMenu = null;
-
     private int trainingsPlan;
     private int trainingsExperience;
     private int trainingsDuration;
 
+    private CurrentPanelEnum _currentPanel;
+    
+    private enum CurrentPanelEnum
+    {
+        PanelStart,
+        PanelChoosePlan,
+        PanelChooseModifyExp,
+        PanelChooseModifyDuration,
+        PanelChooseStart,
+        PanelPauseMenu
+    }
+
     private void Start()
     {
         HideAll();
+        _currentPanel = CurrentPanelEnum.PanelStart; 
         panelStart.Show();
     }
     
     // menu
-    public void menuButtonTrainingsplan()
-    {
-        HideAll();
-        panelChoosePlan.Show();
-    }
 
-    public void menuButtonSettings()
+    public void MenuButtonSettings()
     {
         HideAll();
         panelSettings.Show();
     }
     
-    public void menuButtonExit()
+    public void MenuButtonExit()
     {
         HideAll();
         //todo: implement exit
     }
     
     //panel Start 
-    public void pressStartButton()
+    public void PressStartButton()
     {
         HideAll();
-        panelSettings.Show();
+        _currentPanel = CurrentPanelEnum.PanelStart;
+        panelChoosePlan.Show();
     }
     
     //panel panelChoosePlan
-    public void GanzkoerperTrainingButton()
+    public void GKTrainingButton()
     {
         trainingsPlan = 1; 
         HideAll();
+        _currentPanel = CurrentPanelEnum.PanelChooseModifyExp;
         panelChooseModifyExp.Show();
     }
     
-    public void RückenuebungenButton()
+    public void RueckenUebungenButton()
     {
         trainingsPlan = 2; 
         HideAll();
+        _currentPanel = CurrentPanelEnum.PanelChooseModifyExp;
         panelChooseModifyExp.Show();
     }
     
@@ -67,52 +77,120 @@ public class MenuManager : MonoBehaviour
     {
         trainingsPlan = 0; 
         HideAll();
+        _currentPanel = CurrentPanelEnum.PanelChooseModifyExp;
         panelChooseModifyExp.Show();
     }
     
     // panelChooseModifyExp
-    public void panelChooseModifyExpOne()
+    public void PanelChooseModifyExpOne()
+    {
+        trainingsExperience = 0;
+        HideAll();
+        _currentPanel = CurrentPanelEnum.PanelChooseModifyDuration;
+        panelChooseModifyDuration.Show();
+    }
+    
+    public void PanelChooseModifyExpTwo()
     {
         trainingsExperience = 1;
         HideAll();
+        _currentPanel = CurrentPanelEnum.PanelChooseModifyDuration;
         panelChooseModifyDuration.Show();
     }
     
-    public void panelChooseModifyExpTwo()
+    public void PanelChooseModifyExpThree()
     {
         trainingsExperience = 2;
         HideAll();
-        panelChooseModifyDuration.Show();
-    }
-    
-    public void panelChooseModifyExpThree()
-    {
-        trainingsExperience = 3;
-        HideAll();
+        _currentPanel = CurrentPanelEnum.PanelChooseModifyDuration;
         panelChooseModifyDuration.Show();
     }
     
     //panelChooseModifyDuration
-    public void panelChooseModifyDurOne()
-    {
-        trainingsDuration = 1;
-        HideAll();
-        panelChooseStart.Show();
-    }
-    
-    public void panelChooseModifyDurTwo()
-    {
-        trainingsDuration = 2;
-        HideAll();
-        panelChooseStart.Show();
-    }
-    
-    public void panelChooseModifyDurThree()
+    public void PanelChooseModifyDurOne()
     {
         trainingsDuration = 3;
         HideAll();
+        _currentPanel = CurrentPanelEnum.PanelChooseStart;
         panelChooseStart.Show();
     }
+    
+    public void PanelChooseModifyDurTwo()
+    {
+        trainingsDuration = 6;
+        HideAll();
+        _currentPanel = CurrentPanelEnum.PanelChooseStart;
+        panelChooseStart.Show();
+    }
+    
+    public void PanelChooseModifyDurThree()
+    {
+        trainingsDuration = 9;
+        HideAll();
+        _currentPanel = CurrentPanelEnum.PanelChooseStart;
+        panelChooseStart.Show();
+    }
+
+    public void PanelChooseModifyDurBackButton()
+    {
+        HideAll();
+        _currentPanel = CurrentPanelEnum.PanelChooseModifyExp;
+        panelChooseModifyExp.Show();
+    }
+    
+    //panelChooseStart
+    
+    public void PanelChooseStartBackButton()
+    {
+        HideAll();
+        _currentPanel = CurrentPanelEnum.PanelChooseModifyDuration;
+        panelChooseModifyDuration.Show();
+    }
+    
+    public void PanelChooseStartStartButton()
+    {
+        HideAll();
+        //implent hideMenu
+    }
+    
+    //panelPauseMenu
+    
+    public void PanelPauseÜbersichtButton()
+    {
+        HideAll();
+        _currentPanel = CurrentPanelEnum.PanelChooseStart;
+        panelChooseStart.Show();
+    }
+
+    public void PanelSettingBackButton()
+    {
+        HideAll();
+        if (_currentPanel == CurrentPanelEnum.PanelStart)
+        {
+            panelStart.Show();
+        }
+        if (_currentPanel == CurrentPanelEnum.PanelChoosePlan)
+        {
+            panelChoosePlan.Show();
+        }
+        if (_currentPanel == CurrentPanelEnum.PanelChooseModifyExp)
+        {
+            panelChooseModifyExp.Show();
+        }
+        if (_currentPanel == CurrentPanelEnum.PanelChooseModifyDuration)
+        {
+            panelChooseModifyDuration.Show();
+        }
+        if (_currentPanel == CurrentPanelEnum.PanelChooseStart)
+        {
+            panelChooseStart.Show();
+        }
+        if (_currentPanel == CurrentPanelEnum.PanelPauseMenu)
+        {
+            panelPauseMenu.Show();
+        }
+    }
+
     
     //genTrainingsplan
     
@@ -126,4 +204,7 @@ public class MenuManager : MonoBehaviour
         panelSettings.Hide();
         panelPauseMenu.Hide();
     }
+
+    
+    
 }
