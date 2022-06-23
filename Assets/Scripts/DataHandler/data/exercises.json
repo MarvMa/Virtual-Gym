@@ -1,162 +1,164 @@
+{
+"exercisesList" : 
 [
-  {
-    "name": "Kniebeugen ohne Gewicht",
-    "identifier": "air_squat",
-    "muscleGroups": [
-      "legs",
-      "core"
-    ],
-    "difficulty": 2,
-    "background_infos": "Wer kein Fitnessequipment zur Verfügung hat, kann seine Beine durch die klassische Kniebeuge trainieren, die den meisten noch aus dem Sportunterricht bekannt sein dürfte. Außerdem kann diese Übung einen leichten Einstieg in die Bewegungsabfolge der Kniebeuge bieten und für das Training mit Gewichten vorbereiten. Generell trainiert die Kniebeuge die Vorder- (musculus quadriceps femoris) und Rückseite des Oberschenkels (musculus biceps femoris) sowie den Po (musculus gluteus maximus). Daneben werden die Rückenstrecker (musculus erector spinae) und die Adduktoren (musculus adductor) mittrainiert.",
-    "execution_infos": "Stelle dich aufrecht hin, bilde ein leichtes Hohlkreuz im unteren Rücken und spanne deine Bauchmuskeln an. Deine Füße positionierst du etwa schulterbreit und streckst deine Arme waagerecht zum Boden nach vorne aus. Jetzt senkst du deinen Po nach unten ab, indem du die Beine im Kniegelenk beugst, als ob du dich auf einen imaginären Stuhl setzen wolltest. Achte darauf, dass deine Knie stets hinter deinen Fußspitzen sind, maximal auf gleicher Höhe. Wenn deine Oberschenkel parallel zum Boden sind, kannst du diese Stellung kurz halten. Anschließend atmest du aus und drückst gleichzeitig deinen Oberkörper über die Fersen wieder nach oben.Während der gesamten Übungsausführung bleibt dein Oberkörper unverändert. Lediglich die Beine verrichten die Arbeit bei dieser Fitnessübung."
-  },
-  {
-    "name": "Kniebeugen",
-    "identifier": "back_squat",
-    "muscleGroups": [
-      "legs"
-    ],
-    "difficulty": 3,
-    "background_infos": "Die Kniebeuge, auf Englisch Back Squat oder kurz einfach nur Squat genannt, ist wohl eine der anspruchsvollsten und schwierigsten Übungen im Kraftsport. Aufgrund der Vielzahl an beanspruchten Muskeln, gehört diese Übung zu den Grundübungen des Krafttrainings und ist Anfängern zu empfehlen, wenn sie unter kompetenter Aufsicht eingeübt werden kann. Trainiert werden durch die Kniebeuge vor allem die Beine und der Po. Allerdings werden auch der unterer Rücken und die Bauchmuskeln mittrainiert. Im Detail beansprucht die Kniebeuge den vierköpfigen Oberschenkelmuskel (musculus quadrizeps femoris), den Beinbizeps (musculus biceps femoris), den großen Gesäßmuskel (musculus gluteus maximus), die Rückenstrecker (musculus erector spinae) und den dreiköpfigen Adduktor (musculus adductor).",
-    "execution_infos": "Stelle dich unter die Langhantelstange und lege diese auf die hinteren Schultermuskeln oder auf den Kapuzenmuskel. Greife die Stange deutlich weiter als schulterbreit und schiebe die Ellbogen nach hinten. Hebe die Stange mit geradem Oberkörper und leichter Hohlkreuzstellung im unteren Rücken aus der Halterung. Positioniere deine Füße etwa schulterbreit auseinander. Jetzt stehst du völlig aufrecht, deine Brust ist nach vorne herausgeschoben, dein Oberkörper ist gerade und dein unterer Rücken bleibt stets in der leichten Hohlkreuzstellung. Dein Blick ist gerade aus gerichtet und deine Bauchmuskeln sind angespannt. Langsam und kontrolliert beugst du die Beine, dein Oberkörper wird dabei leicht nach vorne geneigt und dein Gesäß nach hinten geschoben. Atme während dieser Übungsphase ein. Achte bei der Abwärtbewegung darauf, dass deine Knie in die gleiche Richtung wie deine Fußspitzen zeigen und dass die Knie hinter bzw. maximal auf gleicher Höhe mit den Fußspitzen sind. Wenn die Oberschenkel parallel zum Boden sind, hast du den Endpunkt der Abwärtsbewegung erreicht. Anschließend streckst du die Beine mit Druck über die Fersen wieder nach oben durch. Dabei atmest du aus. Achte stets darauf, dass dein unterer Rücken in seiner leichten Hohlkreuzstellung bleibt. Viele Fitnessexperten (auch im Video zu sehen) sind der Meinung, man müsse die Oberschenkel so weit absenken, dass sich das Becken am Ende der Bewegung unterhalb der Knie befindet. Diese als „ass to the grass“ bekannte Variante trainiert den Gesäßmuskel erheblich stärker und wird daher häufig praktiziert. Allerdings kann diese Technik nur sauber ausgeführt werden, wenn man selbst über kurze Oberschenkel verfügt. Groß gewachsenen Fitnessathleten ist es nahezu unmöglich, diese Technik sauber durchzuführen ohne das Gleichgewicht zu verlieren oder im unteren Teil der Bewegung den unteren Rücken nicht zu krümmen. Generell können ein Keil, ein Brett oder zwei kleine Gewichtsscheiben unter die Fersen gelegt werden, um das Gleichgewicht besser halten zu können."
-  },
-  {
-    "name": "Bizeps Curl",
-    "identifier": "bizep_curl",
-    "muscleGroups": [
-      "bizeps",
-      "forearm"
-    ],
-    "difficulty": 0,
-    "background_infos": "Das Armbeugen mit Kurzhanteln, gerne als Bizepscurls bezeichnet, ist wohl die bekannteste aller Übungen zum Muskelaufbau. Sie trainiert den langen (musculus biceps brachii caput longum) und den kurzen Kopf des Bizeps (musculus biceps brachii caput breve) sowie den Armbeuger (musculus brachialis). Durch die einfache und schnell zu erlernende Übungsausführung ist sie auch Einsteigern zu empfehlen.Hier erklären wir die Bizepscurls mit Kurzhanteln. Es gibt jedoch zahlreiche Varianten, die man unbedingt kennen sollte. Eine vollständige Übersicht findest du hier. Besonders populär sind die Langhantel-Curls, die Scottcurls und die Konzentrationscurls. Bei der nachfolgend erläuterten Variante benötigst Du außer 2 Kurzhanteln kein zusätzliches Equipment.",
-    "execution_infos": "Du nimmst in jede Hand eine Kurzhantel, stellst dich aufrecht hin und positionierst die Füße hüftbreit auseinander. Die Schultern führst du nach hinten, wo sie während der gesamten Übungsdurchführung verbleiben. Im Untergriff (supiniert) beugst du während du ausatmest beide Arme gleichzeitig bis zu den Schultern nach oben. Anschließend wird die Kurzhantel wieder langsam nach unten geführt. Die Ellbogen verbleiben während der gesamten Übung an der gleichen Stelle. Sie sind der Dreh- und Angelpunkt für die Bewegung des Unterarms. Konzentriere dich darauf, möglichst nur den Unterarm zu bewegen. Dies garantiert dir eine maximale Beanspruchung der zu trainierenden Muskeln."
-  },
-  {
-    "name": "Burpee",
-    "identifier": "burpee",
-    "muscleGroups": [
-      "chest",
-      "legs",
-      "core"
-    ],
-    "difficulty": 1,
-    "background_infos": "Die Burpees sind eine Übung, die sehr viele Muskeln gleichzeitig beansprucht. Populär wurden sie durch Crossfit und das Trainingsprogramm Freeletics. Sie lassen sich ohne Equipment durchführen und dienen vor allem der Stärkung der Kraft-Ausdauer. Von Trainingsanfängern werden die Burpees oft falsch ausgeführt, denn die Kombination mehrerer Bewegungsabläufe erfordert ein gutes Maß an Körperbeherrschung und auch ein wenig Übung. Zusätzliche Verwirrung entsteht durch den Umstand, dass es zahlreiche Variationen der Burpees gibt. Wir erklären hier die unserer Meinung nach beste Variante – mit Liegestütz und Ausstrecken der Arme über dem Kopf.",
-    "execution_infos": "Beginne die Übung im aufrechten Stand. Die Füße stehen etwa schulterbreit. Gehe nun schwungvoll in die Hocke. Die Fersen sind vom Boden abgehoben, die Knie befinden sich vor dem Oberkörper. Platziere außerdem die Handflächen seitlich vor dir auf den Boden. Aus dieser Position heraus streckst du mit einer schnellen Bewegung die Beine nach hinten, um in die Liegestützposition zu kommen. Deine Füße hebst du dabei vom Boden ab und „wirfst“ sie nach hinten, dein Körpergewicht lastet währenddessen auf den Armen, die sich auf dem Boden abstützen. Vollführe jetzt einen Liegestütz: Beuge die Arme und senke den Körper in Richtung Boden, so dass deine Nasenspitze ihn beinahe erreicht. Mit der Kraft deiner Arme drückst du dich dann wieder nach oben. Achte während dieser Bewegungsphase darauf, dass deine Hüfte nicht durchhängt. Beine, Oberkörper und Kopf sollten eine gerade Linie bilden. Nach Abschluss des Liegestützes ziehst du die Beine wieder an und kehrst in die Hock-Position zurück, die du zu Beginn der Übung bereits eingenommen hattest. Es folgt der abschließende Strecksprung: Springe schwungvoll aus der Hocke in die Höhe. Richte dabei deinen Körper vollständig auf und strecke während der Aufrichtbewegung deine Arme nach oben über den Kopf. Am höchsten Punkt deines Sprungs sollten deine Arme fast ganz ausgestreckt sein. Wie hoch du springst, kannst du selbst bestimmen. Trainingsanfänger heben mit den Füßen nur kurz vom Boden ab, geübte Sportler springen so hoch sie können und ziehen dabei zusätzlich die Knie nach oben, um einen zusätzlichen Trainingsreiz zu setzen. Sobald deine Füße den Boden wieder berühren, kehrst du ohne künstliche Unterbrechung des Bewegungsflusses in die Hock-Position zurück und beginnst sofort mit der nächsten Wiederholung. Wichtig: Der gesamte Burpee sollte eine Bewegung wie aus einem Guss darstellen. Die einzelnen Bewegungsphasen müssen nahtlos ineinander übergehen. Es kann allerdings ein wenig Übung erfordern, ehe dir das gelingt."
-  },
-  {
-    "name": "Clean And Jerk",
-    "identifier": "clean_and_jerk",
-    "muscleGroups": [
-      "legs",
-      "core",
-      "shoulder",
-      "neck"
-    ],
-    "difficulty": 2,
-    "background_infos": "Der Clean and Jerk ist eine Kombination aus zwei Gewichtheberbewegungen, die meist mit einer Langhantel ausgeführt werden: dem Clean und dem Jerk. Beim Stoßen bewegt der Heber die Hantel vom Boden aus in eine gekrümmte Position über den Deltamuskeln, ohne dass sie vollständig auf den Schlüsselbeinen ruht. Beim Stoßen hebt der Heber die Hantel in eine stationäre Position über dem Kopf, wobei er mit gestreckten Armen und Beinen abschließt und die Füße in der gleichen Ebene wie der Oberkörper und die Hantel stehen. Von den verschiedenen Varianten des Hebens ist das olympische Stoßen die gebräuchlichste, die zusammen mit dem Reißen bei den olympischen Gewichtheberwettbewerben ausgetragen wird.",
-    "execution_infos": " Die Kettlebell befindet sich also zwischen deinen Beinen auf dem Boden, du greifst sie und schwingst mit entsprechendem Hip Hinge. Achte beim Single Hand Clean darauf, dass du dich beim Schwingen nicht verdrehst. Nutze deine freie Hand als Pendel und gleiche die Schwungbewegung aus. Ziehe die Kettlebell nach oben. Wichtig ist dabei, dass der Griff der Kugel nach oben zeigt und du das Gewicht nah am Körper ziehst. Nun folgt der wichtigste Part des Clean: Die Hand muss in den Griff eingeführt werden, ein „Umsetzen“ der Hand erfolgt. Das bedeutet, dass der Griff von den Fingern in die Hand wandern muss. Dafür rollst du deine Hand in den Griff. Der Griff zeigt weiterhin nach oben. Die Kettlebell legt sich automatisch sanft auf deinem Arm ab. Und noch einmal: Der Clean wird eng am Körper durchgeführt, der Ellenbogen zeigt nicht etwa zur Seite, sondern befindet sich am Oberkörper, dein Unterarm liegt auf der Brust auf, wenn die Kugel in deiner Hand liegt. Solltest du einmal mit zu viel Kraft nach oben schwingen, federe den Schwung mit einer Hebebewegung des Arms ab. So knallt die Kettlebell nicht auf den Arm, sondern gleitet easy und du umgehst die Clean-typischen blauen Flecken."
-  },
-  {
-    "name": "Front Heben",
-    "identifier": "front_raises",
-    "muscleGroups": [
-      "shoulder",
-      "neck"
-    ],
-    "difficulty": 0,
-    "background_infos": "Das Frontheben ist wohl eine der bekannteren Übungen für die Schultern. Ob im Fitnessstudio, im Homegym oder unterwegs (z.B. mit 2 Wasserflaschen), diese Übung lässt sich eigentlich überall absolvieren.    Richtig ausgeführt ist diese Übung eine der effektivsten für den vorderen Deltamuskel (musculus deltoideus pars clavicularis). Aufgrund der simplen Bewegungsausführung ist diese Übung auch Fitnessanfängern zu empfehlen.",
-    "execution_infos": "Nimm in jede Hand eine Kurzhantel im neutralen Griff (Hammerhaltung) und lass die Arme seitlich mit einem leichten Knick im Ellbogengelenk an deinem Körper herunterhängen. Du stehst etwa hüftbreit, dein Oberkörper ist aufrecht und dein Blick nach vorne gerichtet. Jetzt hebst du abwechselnd jeweils einen fast ausgestreckten Arm nach vorne, bis sich die Kurzhantel in etwa auf Höhe der Schlüsselbeinfasern der Brust befindet. Während dieser Aufwärtsbewegung atmest du aus und drehst das Handgelenk dieses Arms um 90 Grad nach innen. Im Anschluss atmest du ein und senkst den Arm nach unten ab, bis er wieder seitlich neben deinem Körper ist. Während der Abwärtsbewegung des Armes drehst du das Handgelenk wieder zurück in die neutrale Haltung. Achte darauf, die Arme langsam anzuheben und abzusenken."
-  },
-  {
-    "name": "Sprung Liegestütze",
-    "identifier": "jump_push_up",
-    "muscleGroups": [
-      "chest",
-      "core",
-      "triceps"
-    ],
-    "difficulty": 2,
-    "background_infos": "Die Übung wird ähnlich, wie eine normale Liegestütze ausgeführt. Bei dieser Liegestützvariation liegt der Fokus dabei, die Explosiv-Kraft der Brust zu trainieren. Das kann gerade im Box oder Kampfsport Bereich sinnvoll sein, da es dabei wichtig ist schnelle Bewegungen durchzuführen.",
-    "execution_infos": "Begib dich zunächst auf die Knie und stütze dich mit den Händen etwas weiter als schulterbreit vor dem Körper ab. Die Hände sollten in der Ausgangsstellung etwa auf Höhe der Brust sein. Anschließend streckst du die Beine nach hinten aus und stellst die Füße auf die Zehenspitzen. Achte auf zwei Dinge: Erstens sollten deine Beine, dein Oberkörper und dein Kopf eine möglichst gerade Linie bilden. Das heißt, du darfst nicht deinen Hintern nach oben schieben, aber auch nicht die Hüfte nach unten durchhängen lassen. In den Beinen herrscht Spannung und der Kopf bildet die Verlängerung der Wirbelsäule. Bildlich gesprochen: Wenn deine Körperform während der Liegestütze an eine Banane erinnert, machst du etwas falsch. Zweitens dürfen die Arme nie ganz durchgestreckt werden. Halte immer eine kleine Beugung in den Ellenbogengelenken, um sie zu schonen. Senke nun den Körper nach unten ab. Dabei hältst du Spannung und verbiegst deinen Körper nicht. Die Arbeit wird vollständig von der Brust und den Armen verrichtet, die Ellenbogen zeigen nach außen. Außerdem atmest du ein. Gehe so weit nach unten, dass deine Nase den Boden beinahe berührt. Anschließend drückst du dich explosiv wieder nach oben, damit deine Arme und Beine den Boden nicht mehr berühren und atmest dabei aus."
-  },
-  {
-    "name": "Hampelmänner",
-    "identifier": "jumping_jacks",
-    "muscleGroups": [
-      "legs",
-      "shoulder",
-      "core"
-    ],
-    "difficulty": 0,
-    "background_infos": "Der Hampelmann – oder auf Englisch: Jumping Jack – ist ein echter Fitnessklassiker. Es handelt sich um eine Cardio-Übung, die deinen gesamten Körper in Anspruch nimmt. Du benötigst zur Ausführung der Hampelmänner keinerlei Equipment, sondern lediglich etwas Platz und einen rutschfesten Untergrund. Die Hampelmann-Übung ist an ein altes Kinderspielzeug aus Holz angelehnt.",
-    "execution_infos": "In der Ausgangsposition der Übung stehen deine Füße etwas breiter als schulterbreit. Dein Körper ist aufrecht, die Arme sind seitlich an den Rumpf angelegt. Deine Handflächen berühren die Oberschenkel. Hebe die Arme nun seitlich deines Körpers nach oben und führe die Hände über dem Kopf zusammen. Gleichzeitig springst du leicht vom Boden ab und ziehst deine Beine zusammen, damit deine Füße direkt nebeneinander stehen. Koordiniere die Bewegungen von Armen und Beinen so, dass sich deine Hände und deine Füße ungefähr zum gleichen Zeitpunkt berühren. Im zweiten Teil des Bewegungsablaufs führst du Hände und Füße wieder in ihre Ausgangsposition zurück. Springe dazu wieder leicht vom Boden ab. Die Arme nehmen den gleichen Weg nach unten, den sie gerade nach oben genommen haben."
-  },
-  {
-    "name": "Überkopf Kniebeuge",
-    "identifier": "overhead_squat",
-    "muscleGroups": [
-      "legs",
-      "shoulder",
-      "core"
-    ],
-    "difficulty": 3,
-    "background_infos": "Die Überkopfkniebeuge (engl. overhead squat) wird mit einer Langhantel oder einem Stab, der primär mit einem breiten Griff – ähnlich dem Griff bei der Gewichtheberübung „Reissen“ – überkopf gehalten wird, ausgeführt. Die Überkopfkniebeuge involviert somit hauptsächlich eine dynamische Kontraktion von Quadrizeps, Beinbizeps und Gesäß sowie eine isometrische Kontraktion des unteren Rückens und Schultergürtels, um in beiden Arealen die optimale Position zu halten, sowie die Langhantel oder den Besenstil vertikal überkopf zu positionieren und zu stabilisieren.",
-    "execution_infos": "Zu Beginn sucht man sich einen etwa schulterbreiten Stand, zu Beginn vielleicht eine Nuance breiter als beim Air Squat, die Fußspitzen zeigen am Boden leicht nach außen. Die Stange wird aus dem Nacken schwungvoll über den Kopf gedrückt, Oberkörper und Gesäß unter Spannung gesetzt. Die Stange sollte sich nun im Snatchgrip überkopf befinden. Die Schultern und Ellenbogen werden aktiv gestreckt, um das Gewicht zu stabilisieren.Nun beginnt der eigentliche Overhead Squat. Erst wird das Becken nach hinten geschoben, anschließend wandern die Knie kontrolliert nach außen und verschaffen so der Hüfte den nötigen Bewegungsraum. Die Stange wird über die gesamte Bewegung aktiv über dem Körper gehalten. Mit aufrechtem Oberkörper gilt es die Langhantel über dem Schwerpunkt zu balancieren, das Gewicht bleibt gleichmäßig über dem ganzen Fuß verteilt und die Stange wandert auf ihrem Weg geradlinig auf und ab. Lässt es die Mobilität zu, sollte das Becken bis unter parallel gebracht werden. Vor Einleiten der Umkehrbewegung MUSS das Gewicht stabil sein. Anschließend Knie und Hüfte erneut strecken, bis die Startposition wieder erreicht ist."
-  },
-  {
-    "name": "Pike Walk",
-    "identifier": "pike_walk",
-    "muscleGroups": [
-      "bizep",
-      "forearm"
-    ],
-    "difficulty": 1,
-    "background_infos": "Der Pike Walk ist eine Mobilitätsübung, die in der Regel als Aufwärmübung genutzt wird.",
-    "execution_infos": "Die Grundposition ist ein gerader Stand, die Füße sind Schulterbreit aufgestellt und die Zehenspitzen zeigen nach vorne. Führe nun die Hände zu dem Boden und halte dabei deine Beine gestreckt. Nun Läuft man mit seinen Händen vorwärts, während die Beine Fest stehen bleiben. Mit den Händen wird so lange noch vorne gelaufen wie es möglich ist, anschließend läuft man mit den Händen zurück, bis diese wieder an den Füßen angelangt sind. Es ist nicht notwendig sich nach jeder Wiederholung wieder aufzurichten."
-  },
-  {
-    "name": "Pistol Squat",
-    "identifier": "pistol_squat",
-    "muscleGroups": [
-      "legs",
-      "core"
-    ],
-    "difficulty": 2,
-    "background_infos": "Während die englische Bezeichnung der Übung vielen ein Fragezeichen auf die Stirn zaubert, macht der deutsche Name schnell klar, worum es geht: die einbeinige Kniebeuge. Der herausfordernde Pistol Squat verdankt seinen Namen der Endposition, die du bei der Übung einnimmst. Sie erinnert an eine Pistole. Während du bei herkömmlichen Kniebeugen deinen Po in einem festen Stand Richtung Boden bringst, stehst du beim Pistol Squat nur auf einem Bein. Eine Herausforderung für deinen Körper. Die Basisübung beansprucht vor allem deine Oberschenkel- und Pomuskulatur. Für den Pistol Squat brauchst du viel Balance. Zusätzlich trainierst du Füße, Hüfte, den unteren Rücken und die Bauchmuskeln.",
-    "execution_infos": "Stelle dich für einen Pistol Squat hüftbreit auf. Strecke dein linkes Bein gerade nach vorn und finde dein Gleichgewicht. Der Abstand zwischen Fuß und Boden beträgt rund 20 Zentimeter. Lehne dich ein wenig zurück. So, als wolltest du dich auf einen Stuhl hinter dir setzen. Deine beiden Arme führst du horizontal auf Brusthöhe nach vorn. Jetzt gehts mit geradem Oberkörper behutsam einige Etagen tiefer. Das Knie deines Standbeins zeigt leicht nach außen. Das Gewicht lastet auf deiner Ferse. Das andere Bein streckst du aus und hältst es parallel zum Boden in der Luft. Ziel ist es, dass deine Oberschenkelrückseite deine Wade berührt. Aus dieser Hockposition drückst du dich kräftig nach oben in die Ausgangsstellung. Wichtig: Rumpfspannung und Oberkörper möglichst aufrecht halten."
-  },
-  {
-    "name": "Push Up",
-    "identifier": "bizep_curl",
-    "muscleGroups": [
-      "chest",
-      "triceps"
-    ],
-    "difficulty": 0,
-    "background_infos": "Der Liegestütz (Plural: Liegestütze), auch: die Liegestütze (Plural: Liegestützen), englisch Push-Up oder Press-Up, ist eine sportliche Eigengewichtübung zur Kräftigung der Muskeln, hier speziell Schulter-, Arm- und Brustmuskulatur. Der gestreckte Körper wird dabei von den Armen gestützt, der Blick ist zum Boden hin gerichtet.",
-    "execution_infos": "Viele Menschen behaupten, dass man mit den Liegestützen die Brustmuskeln nicht effektiv trainieren könne, weil sie zu einfach seien. Glaube nicht alles, was man dir erzählt! 90 Prozent der Leute, die das behaupten, haben diese Übung noch nie richtig absolviert. Es gibt tatsächlich gut trainierte Sportler, die mehr als fünfzig oder gar mehr als hundert Liegestütze schaffen. Aber die meisten, die das von sich selbst behaupten, machen schlichtweg die Übung falsch. Auf die richtige Ausführung kommt es an. Begib dich zunächst auf die Knie und stütze dich mit den Händen etwas weiter als schulterbreit vor dem Körper ab. Die Hände sollten in der Ausgangsstellung etwa auf Höhe der Brust sein. Anschließend streckst du die Beine nach hinten aus und stellst die Füße auf die Zehenspitzen. Achte auf zwei Dinge: Erstens sollten deine Beine, dein Oberkörper und dein Kopf eine möglichst gerade Linie bilden. Das heißt, du darfst nicht deinen Hintern nach oben schieben, aber auch nicht die Hüfte nach unten durchhängen lassen. In den Beinen herrscht Spannung und der Kopf bildet die Verlängerung der Wirbelsäule. Bildlich gesprochen: Wenn deine Körperform während der Liegestütze an eine Banane erinnert, machst du etwas falsch. Zweitens dürfen die Arme nie ganz durchgestreckt werden. Halte immer eine kleine Beugung in den Ellenbogengelenken, um sie zu schonen. Senke nun den Körper nach unten ab. Dabei hältst du Spannung und verbiegst deinen Körper nicht. Die Arbeit wird vollständig von der Brust und den Armen verrichtet, die Ellenbogen zeigen nach außen. Außerdem atmest du ein. Gehe so weit nach unten, dass deine Nase den Boden beinahe berührt. Anschließend drückst du dich wieder nach oben und atmest dabei aus. Wichtig ist die Geschwindigkeit der Bewegung: Die Bewegungsphase nach unten sollte mindestens eine Sekunde dauern. Die Rückkehr zurück in die Ausgangsposition ebenso lange. Ein kompletter Liegestütz dauert demnach mindestens zwei Sekunden."
-  },
-  {
-    "name": "Situps",
-    "identifier": "situps",
-    "muscleGroups": [
-      "core"
-    ],
-    "difficulty": 0,
-    "background_infos": "Eine der bekanntesten Bauchübungen sind wohl die Sit-Ups. Im Vergleich zum Crunch ist diese Übung erheblich schwerer – sowohl im Kraftaufwand der Bauchmuskulatur, als auch in der Übungsausführung. Generell werden die Crunches als überlegene Alternative empfohlen, da die Sit-Ups vergleichsweise schwierig auszuführen sind und die Wirbelsäule stark belasten. Trainiert wird bei dieser Übung für den Bauch vor allem der gerade Bauchmuskel (musculus rectus abdominis).",
-    "execution_infos": "Lege dich mit dem Rücken auf den Boden und stelle die Beine etwa fußbreit voneinander entfernt und leicht angewinkelt vor dir auf. Die Arme streckst du gerade am Körper nach unten. Die Hände berühren die seitliche Gesäßmuskulatur oder den oberen Teil des seitlichen Oberschenkels. Zuerst bewegst du die Brust in Richtung der Knie, dann drückst du den Bauch in Richtung der Oberschenkel, bis der Oberkörper senkrecht zum Boden steht. Gleichzeitig atmest du aus. Die Arme führst während der Aufwärtsbewegung an den Oberschenkeln nach oben. Sich an den Oberschenkeln festzuhalten und nach oben zu ziehen, ist jedoch verboten! Danach senkst du den geraden Oberkörper wieder langsam nach hinten und krümmst ihn wieder, um deinen Oberkörper sanft auf dem Boden zu bringen. Zeitgleich solltest du einatmen. Achte während der gesamten Übungsausführung darauf, die Schultern unten zu lassen."
-  },
-  {
-    "name": "Snatch",
-    "identifier": "snatch",
-    "muscleGroups": [
-      "legs",
-      "core",
-      "shoulder"
-    ],
-    "difficulty": 2,
-    "background_infos": "Der Hang Power Snatch oder deutsch das Standreißen aus dem Hang ist in unseren Augen der optimale Einstieg in die Bewegung des Reißens. Genauso halten wir es auch beim Clean und dem Hang Power Clean. Beim klassischen Reißen aus dem Olympischen Gewichtheben wird das Gewicht durch ein Zugbewegung überkopf gebracht. Der Hang Power Snatch ist eine vereinfachte Form des Reißens und deswegen ideal für alle geeignet, die neu im Gewichte Game sind oder ein komplexes Krafttraining zur Ergänzung ihrer eigentlichen Sportroutine suchen. ",
-    "execution_infos": "Die Begriffe „Hang“ und „Power“ vor dem eigentlichen Snatch stehen für die Ausgangs- und die Catch-Positionen – also die Position, aus dem die Bewegung gestartet und die, in der die Hantel „gefangen“ wird. Die Übung beginnt folglich aus dem Hang und wird durch einen Deadlift in eben jene Position gebracht. Die Knie sind leicht gebeugt, die Arme sind gestreckt und halten die Hantel im Hook Grip (Daumen richtig tapen für Gewichtheben). Der Griff sollte so breit ausfallen, dass Hantel etwa auf Höhe der Hüfte hängt. Die Schultern befinden sich über der Stange, der Oberkörper ist also aufrecht, aber leicht nach vorn gelehnt. Das Gewicht lagert auf deinem Mittelfuß. Der Core ist angespannt, der Blick nach vorn gerichtet.  Ein kleiner Dip stellt den Auftakt der Bewegung dar. Auf diesen Dip folgt die Triple Extension: Die explosive Streckung der Sprunggelenke, der Knie und Hüfte. Die Füße bleiben bis zur maximalen Streckung am Boden. Die Schultern ziehen nach oben und du drückst dich mit den Armen unter die Stange.  Du fängst die Stange in einem leichten Overhead-Squat. Anschließend richtest du dich auf, die Arme bleiben nach oben gestreckt fixiert, Knie und Hüfte werden gestreckt. Das Gewicht der Stange lastet wieder auf dem Mittelfuß. Zwar handelt es sich bei dieser Snatch-Variante um eine Vereinfachung, dennoch solltest du dir keinesfalls ein falsches Bewegungsmuster antrainieren und dadurch deinem Bewegungsapparat schaden. Erlerne die korrekte Technik also unbedingt unter professioneller Anleitung vom Coach in deiner CrossFit Box. "
-  }
+{
+"name": "Kniebeugen ohne Gewicht",
+"identifier": "air_squat",
+"muscleGroups": [
+"legs",
+"core"
+],
+"difficulty": 2,
+"background_infos": "Wer kein Fitnessequipment zur Verfügung hat, kann seine Beine durch die klassische Kniebeuge trainieren, die den meisten noch aus dem Sportunterricht bekannt sein dürfte. Außerdem kann diese Übung einen leichten Einstieg in die Bewegungsabfolge der Kniebeuge bieten und für das Training mit Gewichten vorbereiten. Generell trainiert die Kniebeuge die Vorder- (musculus quadriceps femoris) und Rückseite des Oberschenkels (musculus biceps femoris) sowie den Po (musculus gluteus maximus). Daneben werden die Rückenstrecker (musculus erector spinae) und die Adduktoren (musculus adductor) mittrainiert.",
+"execution_infos": "Stelle dich aufrecht hin, bilde ein leichtes Hohlkreuz im unteren Rücken und spanne deine Bauchmuskeln an. Deine Füße positionierst du etwa schulterbreit und streckst deine Arme waagerecht zum Boden nach vorne aus. Jetzt senkst du deinen Po nach unten ab, indem du die Beine im Kniegelenk beugst, als ob du dich auf einen imaginären Stuhl setzen wolltest. Achte darauf, dass deine Knie stets hinter deinen Fußspitzen sind, maximal auf gleicher Höhe. Wenn deine Oberschenkel parallel zum Boden sind, kannst du diese Stellung kurz halten. Anschließend atmest du aus und drückst gleichzeitig deinen Oberkörper über die Fersen wieder nach oben.Während der gesamten Übungsausführung bleibt dein Oberkörper unverändert. Lediglich die Beine verrichten die Arbeit bei dieser Fitnessübung."
+},
+{
+"name": "Kniebeugen",
+"identifier": "back_squat",
+"muscleGroups": [
+"legs"
+],
+"difficulty": 3,
+"background_infos": "Die Kniebeuge, auf Englisch Back Squat oder kurz einfach nur Squat genannt, ist wohl eine der anspruchsvollsten und schwierigsten Übungen im Kraftsport. Aufgrund der Vielzahl an beanspruchten Muskeln, gehört diese Übung zu den Grundübungen des Krafttrainings und ist Anfängern zu empfehlen, wenn sie unter kompetenter Aufsicht eingeübt werden kann. Trainiert werden durch die Kniebeuge vor allem die Beine und der Po. Allerdings werden auch der unterer Rücken und die Bauchmuskeln mittrainiert. Im Detail beansprucht die Kniebeuge den vierköpfigen Oberschenkelmuskel (musculus quadrizeps femoris), den Beinbizeps (musculus biceps femoris), den großen Gesäßmuskel (musculus gluteus maximus), die Rückenstrecker (musculus erector spinae) und den dreiköpfigen Adduktor (musculus adductor).",
+"execution_infos": "Stelle dich unter die Langhantelstange und lege diese auf die hinteren Schultermuskeln oder auf den Kapuzenmuskel. Greife die Stange deutlich weiter als schulterbreit und schiebe die Ellbogen nach hinten. Hebe die Stange mit geradem Oberkörper und leichter Hohlkreuzstellung im unteren Rücken aus der Halterung. Positioniere deine Füße etwa schulterbreit auseinander. Jetzt stehst du völlig aufrecht, deine Brust ist nach vorne herausgeschoben, dein Oberkörper ist gerade und dein unterer Rücken bleibt stets in der leichten Hohlkreuzstellung. Dein Blick ist gerade aus gerichtet und deine Bauchmuskeln sind angespannt. Langsam und kontrolliert beugst du die Beine, dein Oberkörper wird dabei leicht nach vorne geneigt und dein Gesäß nach hinten geschoben. Atme während dieser Übungsphase ein. Achte bei der Abwärtbewegung darauf, dass deine Knie in die gleiche Richtung wie deine Fußspitzen zeigen und dass die Knie hinter bzw. maximal auf gleicher Höhe mit den Fußspitzen sind. Wenn die Oberschenkel parallel zum Boden sind, hast du den Endpunkt der Abwärtsbewegung erreicht. Anschließend streckst du die Beine mit Druck über die Fersen wieder nach oben durch. Dabei atmest du aus. Achte stets darauf, dass dein unterer Rücken in seiner leichten Hohlkreuzstellung bleibt. Viele Fitnessexperten (auch im Video zu sehen) sind der Meinung, man müsse die Oberschenkel so weit absenken, dass sich das Becken am Ende der Bewegung unterhalb der Knie befindet. Diese als „ass to the grass“ bekannte Variante trainiert den Gesäßmuskel erheblich stärker und wird daher häufig praktiziert. Allerdings kann diese Technik nur sauber ausgeführt werden, wenn man selbst über kurze Oberschenkel verfügt. Groß gewachsenen Fitnessathleten ist es nahezu unmöglich, diese Technik sauber durchzuführen ohne das Gleichgewicht zu verlieren oder im unteren Teil der Bewegung den unteren Rücken nicht zu krümmen. Generell können ein Keil, ein Brett oder zwei kleine Gewichtsscheiben unter die Fersen gelegt werden, um das Gleichgewicht besser halten zu können."
+},
+{
+"name": "Bizeps Curl",
+"identifier": "bizep_curl",
+"muscleGroups": [
+"bizeps",
+"forearm"
+],
+"difficulty": 0,
+"background_infos": "Das Armbeugen mit Kurzhanteln, gerne als Bizepscurls bezeichnet, ist wohl die bekannteste aller Übungen zum Muskelaufbau. Sie trainiert den langen (musculus biceps brachii caput longum) und den kurzen Kopf des Bizeps (musculus biceps brachii caput breve) sowie den Armbeuger (musculus brachialis). Durch die einfache und schnell zu erlernende Übungsausführung ist sie auch Einsteigern zu empfehlen.Hier erklären wir die Bizepscurls mit Kurzhanteln. Es gibt jedoch zahlreiche Varianten, die man unbedingt kennen sollte. Eine vollständige Übersicht findest du hier. Besonders populär sind die Langhantel-Curls, die Scottcurls und die Konzentrationscurls. Bei der nachfolgend erläuterten Variante benötigst Du außer 2 Kurzhanteln kein zusätzliches Equipment.",
+"execution_infos": "Du nimmst in jede Hand eine Kurzhantel, stellst dich aufrecht hin und positionierst die Füße hüftbreit auseinander. Die Schultern führst du nach hinten, wo sie während der gesamten Übungsdurchführung verbleiben. Im Untergriff (supiniert) beugst du während du ausatmest beide Arme gleichzeitig bis zu den Schultern nach oben. Anschließend wird die Kurzhantel wieder langsam nach unten geführt. Die Ellbogen verbleiben während der gesamten Übung an der gleichen Stelle. Sie sind der Dreh- und Angelpunkt für die Bewegung des Unterarms. Konzentriere dich darauf, möglichst nur den Unterarm zu bewegen. Dies garantiert dir eine maximale Beanspruchung der zu trainierenden Muskeln."
+},
+{
+"name": "Burpee",
+"identifier": "burpee",
+"muscleGroups": [
+"chest",
+"legs",
+"core"
+],
+"difficulty": 1,
+"background_infos": "Die Burpees sind eine Übung, die sehr viele Muskeln gleichzeitig beansprucht. Populär wurden sie durch Crossfit und das Trainingsprogramm Freeletics. Sie lassen sich ohne Equipment durchführen und dienen vor allem der Stärkung der Kraft-Ausdauer. Von Trainingsanfängern werden die Burpees oft falsch ausgeführt, denn die Kombination mehrerer Bewegungsabläufe erfordert ein gutes Maß an Körperbeherrschung und auch ein wenig Übung. Zusätzliche Verwirrung entsteht durch den Umstand, dass es zahlreiche Variationen der Burpees gibt. Wir erklären hier die unserer Meinung nach beste Variante – mit Liegestütz und Ausstrecken der Arme über dem Kopf.",
+"execution_infos": "Beginne die Übung im aufrechten Stand. Die Füße stehen etwa schulterbreit. Gehe nun schwungvoll in die Hocke. Die Fersen sind vom Boden abgehoben, die Knie befinden sich vor dem Oberkörper. Platziere außerdem die Handflächen seitlich vor dir auf den Boden. Aus dieser Position heraus streckst du mit einer schnellen Bewegung die Beine nach hinten, um in die Liegestützposition zu kommen. Deine Füße hebst du dabei vom Boden ab und „wirfst“ sie nach hinten, dein Körpergewicht lastet währenddessen auf den Armen, die sich auf dem Boden abstützen. Vollführe jetzt einen Liegestütz: Beuge die Arme und senke den Körper in Richtung Boden, so dass deine Nasenspitze ihn beinahe erreicht. Mit der Kraft deiner Arme drückst du dich dann wieder nach oben. Achte während dieser Bewegungsphase darauf, dass deine Hüfte nicht durchhängt. Beine, Oberkörper und Kopf sollten eine gerade Linie bilden. Nach Abschluss des Liegestützes ziehst du die Beine wieder an und kehrst in die Hock-Position zurück, die du zu Beginn der Übung bereits eingenommen hattest. Es folgt der abschließende Strecksprung: Springe schwungvoll aus der Hocke in die Höhe. Richte dabei deinen Körper vollständig auf und strecke während der Aufrichtbewegung deine Arme nach oben über den Kopf. Am höchsten Punkt deines Sprungs sollten deine Arme fast ganz ausgestreckt sein. Wie hoch du springst, kannst du selbst bestimmen. Trainingsanfänger heben mit den Füßen nur kurz vom Boden ab, geübte Sportler springen so hoch sie können und ziehen dabei zusätzlich die Knie nach oben, um einen zusätzlichen Trainingsreiz zu setzen. Sobald deine Füße den Boden wieder berühren, kehrst du ohne künstliche Unterbrechung des Bewegungsflusses in die Hock-Position zurück und beginnst sofort mit der nächsten Wiederholung. Wichtig: Der gesamte Burpee sollte eine Bewegung wie aus einem Guss darstellen. Die einzelnen Bewegungsphasen müssen nahtlos ineinander übergehen. Es kann allerdings ein wenig Übung erfordern, ehe dir das gelingt."
+},
+{
+"name": "Clean And Jerk",
+"identifier": "clean_and_jerk",
+"muscleGroups": [
+"legs",
+"core",
+"shoulder",
+"neck"
+],
+"difficulty": 2,
+"background_infos": "Der Clean and Jerk ist eine Kombination aus zwei Gewichtheberbewegungen, die meist mit einer Langhantel ausgeführt werden: dem Clean und dem Jerk. Beim Stoßen bewegt der Heber die Hantel vom Boden aus in eine gekrümmte Position über den Deltamuskeln, ohne dass sie vollständig auf den Schlüsselbeinen ruht. Beim Stoßen hebt der Heber die Hantel in eine stationäre Position über dem Kopf, wobei er mit gestreckten Armen und Beinen abschließt und die Füße in der gleichen Ebene wie der Oberkörper und die Hantel stehen. Von den verschiedenen Varianten des Hebens ist das olympische Stoßen die gebräuchlichste, die zusammen mit dem Reißen bei den olympischen Gewichtheberwettbewerben ausgetragen wird.",
+"execution_infos": " Die Kettlebell befindet sich also zwischen deinen Beinen auf dem Boden, du greifst sie und schwingst mit entsprechendem Hip Hinge. Achte beim Single Hand Clean darauf, dass du dich beim Schwingen nicht verdrehst. Nutze deine freie Hand als Pendel und gleiche die Schwungbewegung aus. Ziehe die Kettlebell nach oben. Wichtig ist dabei, dass der Griff der Kugel nach oben zeigt und du das Gewicht nah am Körper ziehst. Nun folgt der wichtigste Part des Clean: Die Hand muss in den Griff eingeführt werden, ein „Umsetzen“ der Hand erfolgt. Das bedeutet, dass der Griff von den Fingern in die Hand wandern muss. Dafür rollst du deine Hand in den Griff. Der Griff zeigt weiterhin nach oben. Die Kettlebell legt sich automatisch sanft auf deinem Arm ab. Und noch einmal: Der Clean wird eng am Körper durchgeführt, der Ellenbogen zeigt nicht etwa zur Seite, sondern befindet sich am Oberkörper, dein Unterarm liegt auf der Brust auf, wenn die Kugel in deiner Hand liegt. Solltest du einmal mit zu viel Kraft nach oben schwingen, federe den Schwung mit einer Hebebewegung des Arms ab. So knallt die Kettlebell nicht auf den Arm, sondern gleitet easy und du umgehst die Clean-typischen blauen Flecken."
+},
+{
+"name": "Front Heben",
+"identifier": "front_raises",
+"muscleGroups": [
+"shoulder",
+"neck"
+],
+"difficulty": 0,
+"background_infos": "Das Frontheben ist wohl eine der bekannteren Übungen für die Schultern. Ob im Fitnessstudio, im Homegym oder unterwegs (z.B. mit 2 Wasserflaschen), diese Übung lässt sich eigentlich überall absolvieren.    Richtig ausgeführt ist diese Übung eine der effektivsten für den vorderen Deltamuskel (musculus deltoideus pars clavicularis). Aufgrund der simplen Bewegungsausführung ist diese Übung auch Fitnessanfängern zu empfehlen.",
+"execution_infos": "Nimm in jede Hand eine Kurzhantel im neutralen Griff (Hammerhaltung) und lass die Arme seitlich mit einem leichten Knick im Ellbogengelenk an deinem Körper herunterhängen. Du stehst etwa hüftbreit, dein Oberkörper ist aufrecht und dein Blick nach vorne gerichtet. Jetzt hebst du abwechselnd jeweils einen fast ausgestreckten Arm nach vorne, bis sich die Kurzhantel in etwa auf Höhe der Schlüsselbeinfasern der Brust befindet. Während dieser Aufwärtsbewegung atmest du aus und drehst das Handgelenk dieses Arms um 90 Grad nach innen. Im Anschluss atmest du ein und senkst den Arm nach unten ab, bis er wieder seitlich neben deinem Körper ist. Während der Abwärtsbewegung des Armes drehst du das Handgelenk wieder zurück in die neutrale Haltung. Achte darauf, die Arme langsam anzuheben und abzusenken."
+},
+{
+"name": "Sprung Liegestütze",
+"identifier": "jump_push_up",
+"muscleGroups": [
+"chest",
+"core",
+"triceps"
+],
+"difficulty": 2,
+"background_infos": "Die Übung wird ähnlich, wie eine normale Liegestütze ausgeführt. Bei dieser Liegestützvariation liegt der Fokus dabei, die Explosiv-Kraft der Brust zu trainieren. Das kann gerade im Box oder Kampfsport Bereich sinnvoll sein, da es dabei wichtig ist schnelle Bewegungen durchzuführen.",
+"execution_infos": "Begib dich zunächst auf die Knie und stütze dich mit den Händen etwas weiter als schulterbreit vor dem Körper ab. Die Hände sollten in der Ausgangsstellung etwa auf Höhe der Brust sein. Anschließend streckst du die Beine nach hinten aus und stellst die Füße auf die Zehenspitzen. Achte auf zwei Dinge: Erstens sollten deine Beine, dein Oberkörper und dein Kopf eine möglichst gerade Linie bilden. Das heißt, du darfst nicht deinen Hintern nach oben schieben, aber auch nicht die Hüfte nach unten durchhängen lassen. In den Beinen herrscht Spannung und der Kopf bildet die Verlängerung der Wirbelsäule. Bildlich gesprochen: Wenn deine Körperform während der Liegestütze an eine Banane erinnert, machst du etwas falsch. Zweitens dürfen die Arme nie ganz durchgestreckt werden. Halte immer eine kleine Beugung in den Ellenbogengelenken, um sie zu schonen. Senke nun den Körper nach unten ab. Dabei hältst du Spannung und verbiegst deinen Körper nicht. Die Arbeit wird vollständig von der Brust und den Armen verrichtet, die Ellenbogen zeigen nach außen. Außerdem atmest du ein. Gehe so weit nach unten, dass deine Nase den Boden beinahe berührt. Anschließend drückst du dich explosiv wieder nach oben, damit deine Arme und Beine den Boden nicht mehr berühren und atmest dabei aus."
+},
+{
+"name": "Hampelmänner",
+"identifier": "jumping_jacks",
+"muscleGroups": [
+"legs",
+"shoulder",
+"core"
+],
+"difficulty": 0,
+"background_infos": "Der Hampelmann – oder auf Englisch: Jumping Jack – ist ein echter Fitnessklassiker. Es handelt sich um eine Cardio-Übung, die deinen gesamten Körper in Anspruch nimmt. Du benötigst zur Ausführung der Hampelmänner keinerlei Equipment, sondern lediglich etwas Platz und einen rutschfesten Untergrund. Die Hampelmann-Übung ist an ein altes Kinderspielzeug aus Holz angelehnt.",
+"execution_infos": "In der Ausgangsposition der Übung stehen deine Füße etwas breiter als schulterbreit. Dein Körper ist aufrecht, die Arme sind seitlich an den Rumpf angelegt. Deine Handflächen berühren die Oberschenkel. Hebe die Arme nun seitlich deines Körpers nach oben und führe die Hände über dem Kopf zusammen. Gleichzeitig springst du leicht vom Boden ab und ziehst deine Beine zusammen, damit deine Füße direkt nebeneinander stehen. Koordiniere die Bewegungen von Armen und Beinen so, dass sich deine Hände und deine Füße ungefähr zum gleichen Zeitpunkt berühren. Im zweiten Teil des Bewegungsablaufs führst du Hände und Füße wieder in ihre Ausgangsposition zurück. Springe dazu wieder leicht vom Boden ab. Die Arme nehmen den gleichen Weg nach unten, den sie gerade nach oben genommen haben."
+},
+{
+"name": "Überkopf Kniebeuge",
+"identifier": "overhead_squat",
+"muscleGroups": [
+"legs",
+"shoulder",
+"core"
+],
+"difficulty": 3,
+"background_infos": "Die Überkopfkniebeuge (engl. overhead squat) wird mit einer Langhantel oder einem Stab, der primär mit einem breiten Griff – ähnlich dem Griff bei der Gewichtheberübung „Reissen“ – überkopf gehalten wird, ausgeführt. Die Überkopfkniebeuge involviert somit hauptsächlich eine dynamische Kontraktion von Quadrizeps, Beinbizeps und Gesäß sowie eine isometrische Kontraktion des unteren Rückens und Schultergürtels, um in beiden Arealen die optimale Position zu halten, sowie die Langhantel oder den Besenstil vertikal überkopf zu positionieren und zu stabilisieren.",
+"execution_infos": "Zu Beginn sucht man sich einen etwa schulterbreiten Stand, zu Beginn vielleicht eine Nuance breiter als beim Air Squat, die Fußspitzen zeigen am Boden leicht nach außen. Die Stange wird aus dem Nacken schwungvoll über den Kopf gedrückt, Oberkörper und Gesäß unter Spannung gesetzt. Die Stange sollte sich nun im Snatchgrip überkopf befinden. Die Schultern und Ellenbogen werden aktiv gestreckt, um das Gewicht zu stabilisieren.Nun beginnt der eigentliche Overhead Squat. Erst wird das Becken nach hinten geschoben, anschließend wandern die Knie kontrolliert nach außen und verschaffen so der Hüfte den nötigen Bewegungsraum. Die Stange wird über die gesamte Bewegung aktiv über dem Körper gehalten. Mit aufrechtem Oberkörper gilt es die Langhantel über dem Schwerpunkt zu balancieren, das Gewicht bleibt gleichmäßig über dem ganzen Fuß verteilt und die Stange wandert auf ihrem Weg geradlinig auf und ab. Lässt es die Mobilität zu, sollte das Becken bis unter parallel gebracht werden. Vor Einleiten der Umkehrbewegung MUSS das Gewicht stabil sein. Anschließend Knie und Hüfte erneut strecken, bis die Startposition wieder erreicht ist."
+},
+{
+"name": "Pike Walk",
+"identifier": "pike_walk",
+"muscleGroups": [
+"bizep",
+"forearm"
+],
+"difficulty": 1,
+"background_infos": "Der Pike Walk ist eine Mobilitätsübung, die in der Regel als Aufwärmübung genutzt wird.",
+"execution_infos": "Die Grundposition ist ein gerader Stand, die Füße sind Schulterbreit aufgestellt und die Zehenspitzen zeigen nach vorne. Führe nun die Hände zu dem Boden und halte dabei deine Beine gestreckt. Nun Läuft man mit seinen Händen vorwärts, während die Beine Fest stehen bleiben. Mit den Händen wird so lange noch vorne gelaufen wie es möglich ist, anschließend läuft man mit den Händen zurück, bis diese wieder an den Füßen angelangt sind. Es ist nicht notwendig sich nach jeder Wiederholung wieder aufzurichten."
+},
+{
+"name": "Pistol Squat",
+"identifier": "pistol_squat",
+"muscleGroups": [
+"legs",
+"core"
+],
+"difficulty": 2,
+"background_infos": "Während die englische Bezeichnung der Übung vielen ein Fragezeichen auf die Stirn zaubert, macht der deutsche Name schnell klar, worum es geht: die einbeinige Kniebeuge. Der herausfordernde Pistol Squat verdankt seinen Namen der Endposition, die du bei der Übung einnimmst. Sie erinnert an eine Pistole. Während du bei herkömmlichen Kniebeugen deinen Po in einem festen Stand Richtung Boden bringst, stehst du beim Pistol Squat nur auf einem Bein. Eine Herausforderung für deinen Körper. Die Basisübung beansprucht vor allem deine Oberschenkel- und Pomuskulatur. Für den Pistol Squat brauchst du viel Balance. Zusätzlich trainierst du Füße, Hüfte, den unteren Rücken und die Bauchmuskeln.",
+"execution_infos": "Stelle dich für einen Pistol Squat hüftbreit auf. Strecke dein linkes Bein gerade nach vorn und finde dein Gleichgewicht. Der Abstand zwischen Fuß und Boden beträgt rund 20 Zentimeter. Lehne dich ein wenig zurück. So, als wolltest du dich auf einen Stuhl hinter dir setzen. Deine beiden Arme führst du horizontal auf Brusthöhe nach vorn. Jetzt gehts mit geradem Oberkörper behutsam einige Etagen tiefer. Das Knie deines Standbeins zeigt leicht nach außen. Das Gewicht lastet auf deiner Ferse. Das andere Bein streckst du aus und hältst es parallel zum Boden in der Luft. Ziel ist es, dass deine Oberschenkelrückseite deine Wade berührt. Aus dieser Hockposition drückst du dich kräftig nach oben in die Ausgangsstellung. Wichtig: Rumpfspannung und Oberkörper möglichst aufrecht halten."
+},
+{
+"name": "Push Up",
+"identifier": "bizep_curl",
+"muscleGroups": [
+"chest",
+"triceps"
+],
+"difficulty": 0,
+"background_infos": "Der Liegestütz (Plural: Liegestütze), auch: die Liegestütze (Plural: Liegestützen), englisch Push-Up oder Press-Up, ist eine sportliche Eigengewichtübung zur Kräftigung der Muskeln, hier speziell Schulter-, Arm- und Brustmuskulatur. Der gestreckte Körper wird dabei von den Armen gestützt, der Blick ist zum Boden hin gerichtet.",
+"execution_infos": "Viele Menschen behaupten, dass man mit den Liegestützen die Brustmuskeln nicht effektiv trainieren könne, weil sie zu einfach seien. Glaube nicht alles, was man dir erzählt! 90 Prozent der Leute, die das behaupten, haben diese Übung noch nie richtig absolviert. Es gibt tatsächlich gut trainierte Sportler, die mehr als fünfzig oder gar mehr als hundert Liegestütze schaffen. Aber die meisten, die das von sich selbst behaupten, machen schlichtweg die Übung falsch. Auf die richtige Ausführung kommt es an. Begib dich zunächst auf die Knie und stütze dich mit den Händen etwas weiter als schulterbreit vor dem Körper ab. Die Hände sollten in der Ausgangsstellung etwa auf Höhe der Brust sein. Anschließend streckst du die Beine nach hinten aus und stellst die Füße auf die Zehenspitzen. Achte auf zwei Dinge: Erstens sollten deine Beine, dein Oberkörper und dein Kopf eine möglichst gerade Linie bilden. Das heißt, du darfst nicht deinen Hintern nach oben schieben, aber auch nicht die Hüfte nach unten durchhängen lassen. In den Beinen herrscht Spannung und der Kopf bildet die Verlängerung der Wirbelsäule. Bildlich gesprochen: Wenn deine Körperform während der Liegestütze an eine Banane erinnert, machst du etwas falsch. Zweitens dürfen die Arme nie ganz durchgestreckt werden. Halte immer eine kleine Beugung in den Ellenbogengelenken, um sie zu schonen. Senke nun den Körper nach unten ab. Dabei hältst du Spannung und verbiegst deinen Körper nicht. Die Arbeit wird vollständig von der Brust und den Armen verrichtet, die Ellenbogen zeigen nach außen. Außerdem atmest du ein. Gehe so weit nach unten, dass deine Nase den Boden beinahe berührt. Anschließend drückst du dich wieder nach oben und atmest dabei aus. Wichtig ist die Geschwindigkeit der Bewegung: Die Bewegungsphase nach unten sollte mindestens eine Sekunde dauern. Die Rückkehr zurück in die Ausgangsposition ebenso lange. Ein kompletter Liegestütz dauert demnach mindestens zwei Sekunden."
+},
+{
+"name": "Situps",
+"identifier": "situps",
+"muscleGroups": [
+"core"
+],
+"difficulty": 0,
+"background_infos": "Eine der bekanntesten Bauchübungen sind wohl die Sit-Ups. Im Vergleich zum Crunch ist diese Übung erheblich schwerer – sowohl im Kraftaufwand der Bauchmuskulatur, als auch in der Übungsausführung. Generell werden die Crunches als überlegene Alternative empfohlen, da die Sit-Ups vergleichsweise schwierig auszuführen sind und die Wirbelsäule stark belasten. Trainiert wird bei dieser Übung für den Bauch vor allem der gerade Bauchmuskel (musculus rectus abdominis).",
+"execution_infos": "Lege dich mit dem Rücken auf den Boden und stelle die Beine etwa fußbreit voneinander entfernt und leicht angewinkelt vor dir auf. Die Arme streckst du gerade am Körper nach unten. Die Hände berühren die seitliche Gesäßmuskulatur oder den oberen Teil des seitlichen Oberschenkels. Zuerst bewegst du die Brust in Richtung der Knie, dann drückst du den Bauch in Richtung der Oberschenkel, bis der Oberkörper senkrecht zum Boden steht. Gleichzeitig atmest du aus. Die Arme führst während der Aufwärtsbewegung an den Oberschenkeln nach oben. Sich an den Oberschenkeln festzuhalten und nach oben zu ziehen, ist jedoch verboten! Danach senkst du den geraden Oberkörper wieder langsam nach hinten und krümmst ihn wieder, um deinen Oberkörper sanft auf dem Boden zu bringen. Zeitgleich solltest du einatmen. Achte während der gesamten Übungsausführung darauf, die Schultern unten zu lassen."
+},
+{
+"name": "Snatch",
+"identifier": "snatch",
+"muscleGroups": [
+"legs",
+"core",
+"shoulder"
+],
+"difficulty": 2,
+"background_infos": "Der Hang Power Snatch oder deutsch das Standreißen aus dem Hang ist in unseren Augen der optimale Einstieg in die Bewegung des Reißens. Genauso halten wir es auch beim Clean und dem Hang Power Clean. Beim klassischen Reißen aus dem Olympischen Gewichtheben wird das Gewicht durch ein Zugbewegung überkopf gebracht. Der Hang Power Snatch ist eine vereinfachte Form des Reißens und deswegen ideal für alle geeignet, die neu im Gewichte Game sind oder ein komplexes Krafttraining zur Ergänzung ihrer eigentlichen Sportroutine suchen. ",
+"execution_infos": "Die Begriffe „Hang“ und „Power“ vor dem eigentlichen Snatch stehen für die Ausgangs- und die Catch-Positionen – also die Position, aus dem die Bewegung gestartet und die, in der die Hantel „gefangen“ wird. Die Übung beginnt folglich aus dem Hang und wird durch einen Deadlift in eben jene Position gebracht. Die Knie sind leicht gebeugt, die Arme sind gestreckt und halten die Hantel im Hook Grip (Daumen richtig tapen für Gewichtheben). Der Griff sollte so breit ausfallen, dass Hantel etwa auf Höhe der Hüfte hängt. Die Schultern befinden sich über der Stange, der Oberkörper ist also aufrecht, aber leicht nach vorn gelehnt. Das Gewicht lagert auf deinem Mittelfuß. Der Core ist angespannt, der Blick nach vorn gerichtet.  Ein kleiner Dip stellt den Auftakt der Bewegung dar. Auf diesen Dip folgt die Triple Extension: Die explosive Streckung der Sprunggelenke, der Knie und Hüfte. Die Füße bleiben bis zur maximalen Streckung am Boden. Die Schultern ziehen nach oben und du drückst dich mit den Armen unter die Stange.  Du fängst die Stange in einem leichten Overhead-Squat. Anschließend richtest du dich auf, die Arme bleiben nach oben gestreckt fixiert, Knie und Hüfte werden gestreckt. Das Gewicht der Stange lastet wieder auf dem Mittelfuß. Zwar handelt es sich bei dieser Snatch-Variante um eine Vereinfachung, dennoch solltest du dir keinesfalls ein falsches Bewegungsmuster antrainieren und dadurch deinem Bewegungsapparat schaden. Erlerne die korrekte Technik also unbedingt unter professioneller Anleitung vom Coach in deiner CrossFit Box. "
+}
 ]
-
+}

@@ -1,8 +1,13 @@
-[
-  {
-    "name": "my_plan",
-    "exercises": ["bizep_curl", "bench_press"],
-    "difficulty": 2,
-    "duration": 10
-  }
-]
+{
+  "trainingPlanList": [
+    {
+      "name": "my_plan",
+      "exercises": [
+        "bizep_curl",
+        "bench_press"
+      ],
+      "difficulty": 2,
+      "duration": 10
+    }
+  ]
+}

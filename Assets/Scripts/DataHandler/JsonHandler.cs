@@ -7,10 +7,16 @@ namespace DataHandler
 {
     public class JsonHandler
     {
-        public static Exercise[] getExercises()
+        public static List<Exercise> getExercises()
         {
             JsonToExercise jte = new JsonToExercise();
             return jte._exercises("Assets/Scripts/DataHandler/data/exercises.json");
+        }
+        
+        public static List<TrainingPlan> getTrainingPlans()
+        {
+            JsonToExercise jte = new JsonToExercise();
+            return jte._trainingPlans("Assets/Scripts/DataHandler/data/trainingsplan.json");
         }
 
         private static void serialize_exercise(Exercise exercise, string file_name)
