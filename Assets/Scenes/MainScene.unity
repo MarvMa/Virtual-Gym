@@ -1950,7 +1950,7 @@ GameObject:
   - component: {fileID: 1679265352}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5762,7 +5762,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &4286626350344417554
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8487,6 +8487,7 @@ MonoBehaviour:
   panelChooseStart: {fileID: 7128417008972314442}
   panelSettings: {fileID: 7128417008431713780}
   panelPauseMenu: {fileID: 7128417008329947830}
+  spawnExercises: {fileID: 0}
 --- !u!1 &7128417007510754633
 GameObject:
   m_ObjectHideFlags: 0

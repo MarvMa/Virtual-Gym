@@ -31,12 +31,9 @@ public class SpawnExercises : MonoBehaviour
     private TrainingPlan trainingPlan = new TrainingPlan();
 
 
-    void Start()
+    GameObject createExerciseObject(Exercise)
     {
-        // exercises = JsonHandler.getExercises();
-        // trainingPlans = JsonHandler.getTrainingPlans();
-        // trainingPlan = trainingPlans.First();
-        // spawnPodests();
+        
     }
 
     public GameObject[] spawnPodests()
@@ -44,7 +41,9 @@ public class SpawnExercises : MonoBehaviour
         exercises = JsonHandler.getExercises();
         trainingPlans = JsonHandler.getTrainingPlans();
         trainingPlan = trainingPlans.First();
-        
+
+        GameObject target = GameObject.FindWithTag("MainCamera");
+
         GameObject[] podests = new GameObject[podestPositions.Length];
         int index = 0;
         String[] tpExercises = trainingPlan.exercises;
@@ -56,12 +55,20 @@ public class SpawnExercises : MonoBehaviour
             // Spawn Spotlights
             GameObject light = Instantiate(spotLight, new Vector3(position.x, 5, position.z), Quaternion.identity);
             light.transform.Rotate(90, 0, 0);
-            
+
             // Spawn Animation
             GameObject animationPrefab = Resources.Load<GameObject>("Prefabs/" + exercise);
-            Debug.Log(exercise);
+            
             GameObject animation = Instantiate(animationPrefab, new Vector3(position.x, 0.18f, position.z),
                 Quaternion.identity);
+            // Make Animation Look towards Player
+            var lookPos = target.transform.position - animation.transform.position;
+            lookPos.y = 0;
+            lookPos.z = 0;
+            Quaternion rotation = Quaternion.LookRotation(lookPos);
+            Debug.Log("rotation " + rotation);
+            animation.transform.rotation = rotation;
+            
             index++;
         }
 
