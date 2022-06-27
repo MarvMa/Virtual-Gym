@@ -29,11 +29,36 @@ public class SpawnExercises : MonoBehaviour
     private List<TrainingPlan> trainingPlans;
 
     private TrainingPlan trainingPlan = new TrainingPlan();
-    
 
-    GameObject createExerciseObject(Exercise)
+
+    GameObject createExerciseObject(List<Exercise> exercises, String exerciseName, Vector3 position, GameObject target)
     {
-        
+        Exercise exercise = exercises.Find(x => x.identifier.Equals(exerciseName));
+
+        GameObject exerciseContainer = new GameObject(exercise.name);
+        exerciseContainer.transform.position = position;
+        // Spawn Podest
+        GameObject podest = Instantiate(podestGameObject, position, Quaternion.identity);
+        podest.transform.parent = exerciseContainer.transform;
+
+        // Spawn Spotlights
+        GameObject light = Instantiate(spotLight, new Vector3(position.x, 5, position.z), Quaternion.Euler(90, 0, 0));
+        light.transform.parent = exerciseContainer.transform;
+
+        // Spawn Animation
+        GameObject animationPrefab = Resources.Load<GameObject>("Prefabs/" + exercise.identifier);
+
+        GameObject animation = Instantiate(animationPrefab, new Vector3(position.x, 0.18f, position.z),
+            Quaternion.identity);
+
+
+        // Make Animation Look towards Player
+        var lookPos = target.transform.position - animation.transform.position;
+
+        Quaternion rotation = Quaternion.LookRotation(lookPos);
+        animation.transform.rotation = rotation;
+        animation.transform.parent = exerciseContainer.transform;
+        return exerciseContainer;
     }
 
     public GameObject[] spawnPodests()
@@ -45,30 +70,11 @@ public class SpawnExercises : MonoBehaviour
         GameObject target = GameObject.FindWithTag("MainCamera");
 
         GameObject[] podests = new GameObject[podestPositions.Length];
-        int index = 0;
-        String[] tpExercises = trainingPlan.exercises;
-        foreach (var exercise in tpExercises)
-        {
-            Vector3 position = podestPositions[index];
-            // Spawn Podests
-            podests[index] = Instantiate(podestGameObject, position, Quaternion.identity);
-            // Spawn Spotlights
-            GameObject light = Instantiate(spotLight, new Vector3(position.x, 5, position.z), Quaternion.identity);
-            light.transform.Rotate(90, 0, 0);
 
-            // Spawn Animation
-            GameObject animationPrefab = Resources.Load<GameObject>("Prefabs/" + exercise);
-            
-            GameObject animation = Instantiate(animationPrefab, new Vector3(position.x, 0.18f, position.z),
-                Quaternion.identity);
-            // Make Animation Look towards Player
-            var lookPos = target.transform.position - animation.transform.position;
-            lookPos.y = 0;
-            lookPos.z = 0;
-            Quaternion rotation = Quaternion.LookRotation(lookPos);
-            Debug.Log("rotation " + rotation);
-            animation.transform.rotation = rotation;
-            
+        int index = 0;
+        foreach (var exercise in trainingPlan.exercises)
+        {
+            createExerciseObject(exercises, exercise, podestPositions[index], target);
             index++;
         }
 
