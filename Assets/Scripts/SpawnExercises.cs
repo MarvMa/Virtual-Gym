@@ -31,10 +31,7 @@ public class SpawnExercises : MonoBehaviour
     private TrainingPlan trainingPlan = new TrainingPlan();
 
 
-    GameObject createExerciseObject(Exercise)
-    {
-        
-    }
+    //GameObject createExerciseObject(Exercise) { }
 
     public GameObject[] spawnPodests()
     {
