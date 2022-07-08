@@ -1,79 +1,136 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
-using UnityEngine.XR;
 
 public class CylinderScript : MonoBehaviour
 {
     
-    public ActionBasedController xr;
+    public ActionBasedController left_controller;
+    public ActionBasedController right_controller;
     private GameObject cylinder;
+    private Renderer renderer;
+    private float cylinder_radius;
+    private float cylinder_top;
+    private float cylinder_bottom;
+    public XRRayInteractor right_rayInteractor;
+    public XRRayInteractor left_rayInteractor;
  
     void Start()
     {
         cylinder = gameObject.GetComponent<CylinderScript>().gameObject;
-        Debug.Log(cylinder.transform.position);
-        Debug.Log("cylinder diameter: " + cylinder.transform.localScale.x);
-        Debug.Log("cylinder diameter: " + cylinder.transform.localScale.y);
-        Debug.Log("cylinder diameter: " + cylinder.transform.localScale.z);
+        cylinder_radius = cylinder.transform.localScale.x / 2;
+        cylinder_top = cylinder.transform.position.y + cylinder.transform.localScale.y ;
+        cylinder_bottom = cylinder.transform.position.y - cylinder.transform.localScale.y ;
+
+        // Color
+        //Get the Renderer component from the new cube
+        renderer = cylinder.GetComponent<Renderer>();
         
-        UnityEngine.XR.InputDevice device = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
-        HapticCapabilities capabilities;
-        Debug.Log(device);
-        Debug.Log(device.TryGetHapticCapabilities(out capabilities));
-        if (device.TryGetHapticCapabilities(out capabilities))
-        {
-            Debug.Log(capabilities.supportsImpulse);
-            if (capabilities.supportsImpulse)
-                device.SendHapticImpulse(0, 0.5f, 1.0f);
-        }
-
-        device = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
-        if (device.TryGetHapticCapabilities(out capabilities))
-            if (capabilities.supportsImpulse)
-                device.SendHapticImpulse(0, 0.5f, 1.0f);
-
-        // wait();
-        // xr = (XRController) GameObject.FindObjectOfType(typeof(XRController));
-        // bool test = xr.SendHapticImpulse(0.7f, 2f);
-        // Debug.Log("haptic: " + test);
-        // Debug.Log(xr.hapticDeviceAction);
-        // Debug.Log(xr.isActiveAndEnabled);
+       
     }
-
-    // IEnumerator wait()
-    // {
-    //     yield return new WaitForSeconds(7);
-    // }
-    // Start is called before the first frame update
-    // void Start()
-    // {
-    //     var list = new List<ActionBasedController>(GetComponents<ActionBasedController>());
-    //     ActionBasedController actionBasedController = list[0];
-    //     //ActionBasedController actionBasedController = GetComponent<ActionBasedController>();
-    //     Debug.Log(actionBasedController.isActiveAndEnabled);
-    //     actionBasedController.SendHapticImpulse(0.1f, 1f);
-    // }
-
-    // Update is called once per frame
     void Update()
     {
-        Vector3 controllerPosition = xr.modelParent.position;
-        Vector3 cylinderPosition = cylinder.transform.position;
-        controllerPosition.y = 0;
-        cylinderPosition.y = 0;
-        float distance = Vector3.Distance(controllerPosition, cylinderPosition);
-        float height = 0.6f;
-        if (distance < 0.15)
+        if (right_controller != null && left_controller == null)
         {
-            if (xr.modelParent.position.y < height)
-            {
-                Debug.Log(distance);
-            }
+            handleSingleController(right_controller);
+        } else if (right_controller == null && left_controller != null)
+        {
+            handleSingleController(left_controller);
         }
+        else
+        {
+            handleBothControllers();
+        }
+    }
+
+    private void handleSingleController(ActionBasedController controller)
+    {
+        if (controllerInCyliner(controller, 0.0f))
+        {
+            // Debug.Log(distance);
+            changeColor(Color.green);
+        }
+        else if (controllerInCyliner(controller, 0.3f))
+        {
+            changeColor(Color.yellow);
+        }
+        else
+        {
+            changeColor(Color.red);
+        }
+
+        if (controllerInCyliner(controller, 2.0f))
+        {
+            if (right_rayInteractor != null)
+                right_rayInteractor.enabled = false;
+            if (left_rayInteractor != null)
+                left_rayInteractor.enabled = false;
+        }
+        else
+        {
+            if (right_rayInteractor != null)
+                right_rayInteractor.enabled = true;
+            if (left_rayInteractor != null)
+                left_rayInteractor.enabled = true;
+        }
+    }
+
+    private void handleBothControllers()
+    {
+        if (bothControllersInCylinder(0.0f))
+        {
+            // Debug.Log(distance);
+            changeColor(Color.green);
+        }
+        else if (bothControllersInCylinder(0.3f))
+        {
+            changeColor(Color.yellow);
+        }
+        else
+        {
+            changeColor(Color.red);
+        }
+
+        if (bothControllersInCylinder(2.0f))
+        {
+            right_rayInteractor.enabled = false;
+            left_rayInteractor.enabled = false;
+        }
+        else
+        {
+            right_rayInteractor.enabled = true;
+            left_rayInteractor.enabled = true;
+        }
+    }
+
+    bool bothControllersInCylinder(float tolerance)
+    {
+        return controllerInCyliner(left_controller, tolerance) && controllerInCyliner(right_controller, tolerance);
+    }
+
+    float GetDistanceOnHorizontalPlain(Vector3 cylinder, Vector3 controller)
+    {
+        controller.y = 0;
+        cylinder.y = 0;
+        return Vector3.Distance(controller, cylinder);
+    }
+
+
+    bool controllerInCyliner(ActionBasedController controller, float tolerance)
+    {
+        float controller_height = controller.modelParent.position.y;
+        float controller_distance =
+            GetDistanceOnHorizontalPlain(cylinder.transform.position, controller.modelParent.position);
         
-        // Debug.Log(xr.modelParent.position);
+        bool in_radius = controller_distance < (cylinder_radius + cylinder_radius*tolerance);
+        bool below_top =controller_height < cylinder_top;
+        bool above_bottom = controller_height > cylinder_bottom;
+        return in_radius && below_top && above_bottom;
+    }
+
+    void changeColor(Color color)
+    {
+        color.a = 0.25f;
+        //Call SetColor using the shader property name "_Color" and setting the color to red
+        renderer.material.SetColor("_Color", color);
     }
 }
