@@ -1,17 +1,37 @@
 {
   "trainingPlanList": [
     {
-      "name": "my_plan",
+      "name": "full-body",
       "exercises": [
         "air_squat",
         "back_squat",
         "biceps_curl",
-        "burpee",
+        "snatch",
         "clean_and_jerk",
         "front_raises",
+        "overhead_squat",
+        "push_up",
+        "situps",
+        "TO INSERT SUMO HIGH PULL IDENTIFIER",
+        "pistol_squat"
+      ],
+      "difficulty": 2,
+      "duration": 10
+    },
+    {
+      "name": "cardio",
+      "exercises": [
+        "air_squat",
+        "back_squat",
+        "burpee",
         "jump_push_up",
         "jumping_jacks",
-        "overhead_squat",
+        "pike_walk",
+        "situps",
+        "push_up",
+        "pistol_squat",
+        "snatch",
+        "TO INSERT SUMO HIGH PULL IDENTIFIER"
       ],
       "difficulty": 2,
       "duration": 10
