@@ -717,6 +717,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 595404648}
+  - component: {fileID: 595404649}
   m_Layer: 0
   m_Name: Environment
   m_TagString: Untagged
@@ -741,6 +742,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &595404649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595404647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd1e122ba484a8a4ca653fe653d7f4ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  podestGameObject: {fileID: 8751774397615464370, guid: 23effb35463536b45b7c18377f94e37d,
+    type: 3}
+  spotLight: {fileID: 3831881951192820605, guid: fb346bb5a72a3da47b96210148a521a5,
+    type: 3}
 --- !u!1 &898227382
 GameObject:
   m_ObjectHideFlags: 0

@@ -38,10 +38,13 @@ public class SpawnExercises : MonoBehaviour
 
     public GameObject[] spawnPodests()
     {
-        exercises = JsonHandler.getExercises();
+        // exercises = JsonHandler.getExercises();
         trainingPlans = JsonHandler.getTrainingPlans();
         trainingPlan = trainingPlans.First();
-
+        
+        
+        
+        
         GameObject target = GameObject.FindWithTag("MainCamera");
 
         GameObject[] podests = new GameObject[podestPositions.Length];

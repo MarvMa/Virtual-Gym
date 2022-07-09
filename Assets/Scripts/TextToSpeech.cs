@@ -8,7 +8,7 @@ public class TextToSpeech : MonoBehaviour
 
     void Start()
     {
-        WindowsVoice.speak("Drücke zum Starten auf den grünen Button");
+        // WindowsVoice.speak("Drï¿½cke zum Starten auf den grï¿½nen Button");
     }
 
     // Update is called once per frame
