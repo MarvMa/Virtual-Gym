@@ -264,7 +264,7 @@ public class MenuManager : MonoBehaviour
         //Get both trainingsplans
         filteredTrainingsPlan = JsonHandler.getTrainingPlans();
         //Select the trainingplan and sort the exercises by descending difficulty
-        availableExercises = filteredTrainingsPlan[trainingsPlan].exercises.OrderByDescending(o => o.exerciseDifficulty).ToList();
+        availableExercises = filteredTrainingsPlan[trainingsPlan-1].exercises.OrderByDescending(o => o.exerciseDifficulty).ToList();
         foreach (var item in availableExercises)
         {
             //Remove exercises with not matching difficulty
@@ -289,18 +289,23 @@ public class MenuManager : MonoBehaviour
                 break;
     
         }
+
+        exercisesAsStrings = new List<string>();
         //Return only the string names of the exercises in a list
         foreach (var item in availableExercises)
         {
+            
             exercisesAsStrings.Add(item.exerciseName);
         }
+        Debug.Log(exercisesAsStrings.ToString());
         return exercisesAsStrings;
 
     }
-    async Task spawnScene()
+    // async 
+        void spawnScene()
     {
 
-        await Task.Delay(2500);
+        // await Task.Delay(2500);
         spawnExercises.spawnPodests(ReturnTrainingPlan());
 
     }
