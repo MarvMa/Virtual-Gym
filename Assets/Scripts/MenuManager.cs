@@ -264,14 +264,21 @@ public class MenuManager : MonoBehaviour
         //Get both trainingsplans
         filteredTrainingsPlan = JsonHandler.getTrainingPlans();
         //Select the trainingplan and sort the exercises by descending difficulty
-        availableExercises = filteredTrainingsPlan[trainingsPlan-1].exercises.OrderByDescending(o => o.exerciseDifficulty).ToList();
-        foreach (var item in availableExercises)
+        switch (trainingsExperience)
         {
-            //Remove exercises with not matching difficulty
-            if(item.exerciseDifficulty > trainingsExperience)
-            {
-                availableExercises.Remove(item);
-            }
+            case 0:
+                //0-1-2
+                availableExercises = filteredTrainingsPlan[trainingsPlan - 1].exercises.OrderBy(o => o.exerciseDifficulty).ToList();
+                break;
+                //1-0-2
+            case 1:
+                availableExercises = availableExercises.OrderBy(i => i.exerciseDifficulty == 2).ThenByDescending(i => i).ToList();
+                break;
+                //2-1-0
+            case 2:
+                availableExercises = filteredTrainingsPlan[trainingsPlan - 1].exercises.OrderByDescending(o => o.exerciseDifficulty).ToList();
+                break;
+
         }
         //Select amount of exercises
         switch (trainingsDuration)
