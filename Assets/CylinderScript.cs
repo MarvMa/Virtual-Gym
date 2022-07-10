@@ -13,9 +13,13 @@ public class CylinderScript : MonoBehaviour
     private float cylinder_bottom;
     public XRRayInteractor right_rayInteractor;
     public XRRayInteractor left_rayInteractor;
+    
+    private AudioSource audioSource;
+    private bool audioPlaying = false;
  
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         cylinder = gameObject.GetComponent<CylinderScript>().gameObject;
         cylinder_radius = cylinder.transform.localScale.x / 2;
         cylinder_top = cylinder.transform.position.y + cylinder.transform.localScale.y ;
@@ -48,14 +52,19 @@ public class CylinderScript : MonoBehaviour
         {
             // Debug.Log(distance);
             changeColor(Color.green);
+            // stopAudio();
+
         }
         else if (controllerInCyliner(controller, 0.3f))
         {
             changeColor(Color.yellow);
+            audioSource.Play();
+            audioPlaying = true;
         }
         else
         {
             changeColor(Color.red);
+            // stopAudio();
         }
 
         if (controllerInCyliner(controller, 2.0f))
@@ -71,6 +80,15 @@ public class CylinderScript : MonoBehaviour
                 right_rayInteractor.enabled = true;
             if (left_rayInteractor != null)
                 left_rayInteractor.enabled = true;
+        }
+    }
+
+    private void stopAudio()
+    {
+        if (audioPlaying)
+        {
+            audioSource.Stop();
+            audioPlaying = false;
         }
     }
 
