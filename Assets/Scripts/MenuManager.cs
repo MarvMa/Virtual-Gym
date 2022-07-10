@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 using System.Threading.Tasks;
+using DataHandler;
+using System.Linq;
 
 public class MenuManager : MonoBehaviour
 {
@@ -26,6 +28,12 @@ public class MenuManager : MonoBehaviour
     private bool is_spawned = false;
 
     public SpawnExercises spawnExercises;
+    private List<TrainingPlan> filteredTrainingsPlan;
+    private List<InnerExercise> availableExercises;
+    private List<String> exercisesAsStrings;
+
+
+
 
     private enum CurrentPanelEnum
     {
@@ -44,6 +52,7 @@ public class MenuManager : MonoBehaviour
 
     private void Start()
     {
+       
         spawnExercises = GameObject.FindWithTag("GameManager").GetComponent<SpawnExercises>();
         HideAll();
         _currentPanel = CurrentPanelEnum.PanelStart;
@@ -249,10 +258,50 @@ public class MenuManager : MonoBehaviour
         }
 
     }
+
+    public List<String> ReturnTrainingPlan()
+    {
+        //Get both trainingsplans
+        filteredTrainingsPlan = JsonHandler.getTrainingPlans();
+        //Select the trainingplan and sort the exercises by descending difficulty
+        availableExercises = filteredTrainingsPlan[trainingsPlan].exercises.OrderByDescending(o => o.exerciseDifficulty).ToList();
+        foreach (var item in availableExercises)
+        {
+            //Remove exercises with not matching difficulty
+            if(item.exerciseDifficulty > trainingsExperience)
+            {
+                availableExercises.Remove(item);
+            }
+        }
+        //Select amount of exercises
+        switch (trainingsDuration)
+        {
+            case 0:
+                availableExercises.Take(3);
+                break;
+
+            case 1:
+                availableExercises.Take(6);
+                break;
+
+            case 2:
+                availableExercises.Take(9);
+                break;
+    
+        }
+        //Return only the string names of the exercises in a list
+        foreach (var item in availableExercises)
+        {
+            exercisesAsStrings.Add(item.exerciseName);
+        }
+        return exercisesAsStrings;
+
+    }
     async Task spawnScene()
     {
+
         await Task.Delay(2500);
-        spawnExercises.spawnPodests();
+        spawnExercises.spawnPodests(ReturnTrainingPlan());
 
     }
 }

@@ -3,17 +3,50 @@
     {
       "name": "full-body",
       "exercises": [
-        "air_squat",
-        "back_squat",
-        "biceps_curl",
-        "snatch",
-        "clean_and_jerk",
-        "front_raises",
-        "overhead_squat",
-        "push_up",
-        "situps",
-        "TO INSERT SUMO HIGH PULL IDENTIFIER",
-        "pistol_squat"
+        {
+          "exerciseName": "air_squat",
+          "exerciseDifficulty": 1
+        },
+        {
+          "exerciseName": "back_squat",
+          "exerciseDifficulty": 2
+        },
+        {
+          "exerciseName": "biceps_curl",
+          "exerciseDifficulty": 0
+        },
+        {
+          "exerciseName": "snatch",
+          "exerciseDifficulty": 1
+        },
+        {
+          "exerciseName": "clean_and_jerk",
+          "exerciseDifficulty": 1
+        },
+        {
+          "exerciseName": "front_raises",
+          "exerciseDifficulty": 0
+        },
+        {
+          "exerciseName": "overhead_squat",
+          "exerciseDifficulty": 1
+        },
+        {
+          "exerciseName": "push_up",
+          "exerciseDifficulty": 0
+        },
+        {
+          "exerciseName": "situps",
+          "exerciseDifficulty": 0
+        },
+        {
+          "exerciseName": "TO INSERT SUMO HIGH PULL IDENTIFIER",
+          "exerciseDifficulty": 1
+        },
+        {
+          "exerciseName": "pistol_squat",
+          "exerciseDifficulty": 2
+        }
       ],
       "difficulty": 2,
       "duration": 10
@@ -21,17 +54,50 @@
     {
       "name": "cardio",
       "exercises": [
-        "air_squat",
-        "back_squat",
-        "burpee",
-        "jump_push_up",
-        "jumping_jacks",
-        "pike_walk",
-        "situps",
-        "push_up",
-        "pistol_squat",
-        "snatch",
-        "TO INSERT SUMO HIGH PULL IDENTIFIER"
+        {
+          "exerciseName": "air_squat",
+          "exerciseDifficulty": 1
+        },
+        {
+          "exerciseName": "back_squat",
+          "exerciseDifficulty": 2
+        },
+        {
+          "exerciseName": "burpee",
+          "exerciseDifficulty": 1
+        },
+        {
+          "exerciseName": "jump_push_up",
+          "exerciseDifficulty": 2
+        },
+        {
+          "exerciseName": "jumping_jacks",
+          "exerciseDifficulty": 0
+        },
+        {
+          "exerciseName": "pike_walk",
+          "exerciseDifficulty": 1
+        },
+        {
+          "exerciseName": "situps",
+          "exerciseDifficulty": 0
+        },
+        {
+          "exerciseName": "push_up",
+          "exerciseDifficulty": 0
+        },
+        {
+          "exerciseName": "pistol_squat",
+          "exerciseDifficulty": 2
+        },
+        {
+          "exerciseName": "snatch",
+          "exerciseDifficulty": 1
+        },
+        {
+          "exerciseName": "TO INSERT SUMO HIGH PULL IDENTIFIER",
+          "exerciseDifficulty": 1
+        }
       ],
       "difficulty": 2,
       "duration": 10
