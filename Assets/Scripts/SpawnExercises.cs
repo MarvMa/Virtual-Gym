@@ -11,6 +11,7 @@ public class SpawnExercises : MonoBehaviour
     // Public Variables
     public GameObject podestGameObject;
     public GameObject spotLight;
+     
 
     private Vector3[] podestPositions = new[]
     {
@@ -25,10 +26,8 @@ public class SpawnExercises : MonoBehaviour
         new Vector3(0, 0.1f, 14),
     };
 
-    private List<Exercise> exercises;
-    private List<TrainingPlan> trainingPlans;
+   
 
-    private TrainingPlan trainingPlan = new TrainingPlan();
 
 
   /*  GameObject createExerciseObject(Exercise)
@@ -36,18 +35,13 @@ public class SpawnExercises : MonoBehaviour
         
     }*/
 
-    public GameObject[] spawnPodests()
+    public GameObject[] spawnPodests(List<String> trainingsPlan)
     {
-        exercises = JsonHandler.getExercises();
-        trainingPlans = JsonHandler.getTrainingPlans();
-        trainingPlan = trainingPlans.First();
-
-        GameObject target = GameObject.FindWithTag("MainCamera");
+    GameObject target = GameObject.FindWithTag("MainCamera");
 
         GameObject[] podests = new GameObject[podestPositions.Length];
         int index = 0;
-        String[] tpExercises = trainingPlan.exercises;
-        foreach (var exercise in tpExercises)
+        foreach (var exercise in trainingsPlan)
         {
             Vector3 position = podestPositions[index];
             // Spawn Podests
