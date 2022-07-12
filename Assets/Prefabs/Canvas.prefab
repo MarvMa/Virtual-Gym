@@ -6251,7 +6251,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &7287094387991185739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6281,6 +6281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e304506e213bf47832994dbc6851a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uibBackground: {fileID: 0}
   panelStart: {fileID: 7128417007819235866}
   panelChoosePlan: {fileID: 7128417008207979363}
   panelChooseModifyExp: {fileID: 7128417008171337561}
@@ -6288,6 +6289,7 @@ MonoBehaviour:
   panelChooseStart: {fileID: 7128417008320406878}
   panelSettings: {fileID: 7128417008844218336}
   panelPauseMenu: {fileID: 7128417008746768546}
+  spawnExercises: {fileID: 0}
 --- !u!114 &7670927305701399463
 MonoBehaviour:
   m_ObjectHideFlags: 0

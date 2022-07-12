@@ -2119,8 +2119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2061edb822efd3e489ef6faaeb176a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  podestGameObject: {fileID: 8751774397615464370, guid: 23effb35463536b45b7c18377f94e37d,
-    type: 3}
+  podiumGameObject: {fileID: 0}
   spotLight: {fileID: 1592452612}
 --- !u!4 &1679265353
 Transform:
