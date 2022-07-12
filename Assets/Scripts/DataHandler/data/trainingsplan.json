@@ -40,10 +40,6 @@
           "exerciseDifficulty": 0
         },
         {
-          "exerciseName": "push_up",
-          "exerciseDifficulty": 1
-        },
-        {
           "exerciseName": "pistol_squat",
           "exerciseDifficulty": 2
         }
@@ -89,10 +85,6 @@
         {
           "exerciseName": "pistol_squat",
           "exerciseDifficulty": 2
-        },
-        {
-          "exerciseName": "snatch",
-          "exerciseDifficulty": 1
         },
         {
           "exerciseName": "snatch",

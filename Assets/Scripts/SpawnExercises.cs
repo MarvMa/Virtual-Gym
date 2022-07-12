@@ -1,13 +1,18 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using DataHandler;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SpawnExercises : MonoBehaviour
 {
     // Public Variables
     public GameObject exerciseEnvironment;
+    private List<String> _trainingPlan;
+    private GameObject _target;
+    private GameObject _currentMidAnimation;
 
     private Vector3[] _podestPositions = new[]
     {
@@ -34,8 +39,7 @@ public class SpawnExercises : MonoBehaviour
         _trainingPlans = JsonHandler.getTrainingPlans();
     }
 
-    GameObject createExerciseObject(String exerciseName, Vector3 position,
-        GameObject target)
+    GameObject createExerciseObject(String exerciseName, Vector3 position)
     {
         var exercise = _exercises.Find(x => x.identifier.Equals(exerciseName));
 
@@ -46,11 +50,11 @@ public class SpawnExercises : MonoBehaviour
         var animationPrefab = Resources.Load<GameObject>("Prefabs/" + exercise.identifier);
         var animation = Instantiate(animationPrefab, new Vector3(position.x, 0.18f, position.z),
             Quaternion.identity);
-        animation.tag = ANIMATION_TAG;
+        // animation.tag = ANIMATION_TAG;
         animation.transform.parent = exerciseContainer.transform;
 
         // Make Animation Look towards Player
-        var lookPos = target.transform.position - animation.transform.position;
+        var lookPos = _target.transform.position - animation.transform.position;
 
         var rotation = Quaternion.LookRotation(lookPos);
         animation.transform.rotation = rotation;
@@ -68,28 +72,53 @@ public class SpawnExercises : MonoBehaviour
 
     public List<GameObject> spawnPodests(List<String> trainingPlan)
     {
-        GameObject target = GameObject.FindWithTag("MainCamera");
+        _trainingPlan = trainingPlan;
+        _target = GameObject.FindWithTag("MainCamera");
 
         //GameObject[] exerciseContainer = new GameObject[trainingPlan.Count];
         List<GameObject> exerciseContainer = new List<GameObject>();
-
+        
         int index = 0;
         foreach (var exercise in trainingPlan)
         {
-            exerciseContainer.Add(createExerciseObject(exercise, _podestPositions[index], target));
+            exerciseContainer.Add(createExerciseObject(exercise, _podestPositions[index]));
             index++;
         }
 
-        //initCenterExercise(exerciseContainer.First(), target);
+        _currentMidAnimation = initCenterExercise(exerciseContainer.First().name);
+        CrossSceneInfo1.animation_id = exerciseContainer.First().name;
         return exerciseContainer;
     }
 
-    private void initCenterExercise(GameObject exercise, GameObject target)
+    private String getNextExercise()
     {
-        Transform animationObj = Helper.FindComponentInChildWithTag<Transform>(exercise, ANIMATION_TAG);
-        animationObj.gameObject.SetActive(false);
-        GameObject exerciseContainer = createExerciseObject(exercise.name, _centerPosition, target);
-        var exerciseObj = _exercises.Find(x => x.identifier.Equals(exercise.name));
+        String current_animation_id = CrossSceneInfo1.animation_id;
+        int index = _trainingPlan.FindIndex(x => x.Equals(current_animation_id));
+        index++;
+        Debug.Log("index: " + index);
+        Debug.Log("training plan länge: " + _trainingPlan.Count);
+        
+        int new_index = index % _trainingPlan.Count;
+        Debug.Log("new index: " + new_index);
+        return _trainingPlan[new_index];
+    }
+
+    public void goRightNew()
+    {
+        Destroy(_currentMidAnimation);
+        Debug.Log("animation id: " + CrossSceneInfo1.animation_id);
+        String next_exercise = getNextExercise();
+        CrossSceneInfo1.animation_id = next_exercise;
+        _currentMidAnimation = initCenterExercise(next_exercise);
+    }
+
+    private GameObject initCenterExercise(String exercise)
+    {
+        
+        // Transform animationObj = Helper.FindComponentInChildWithTag<Transform>(exercise, ANIMATION_TAG);
+        // animationObj.gameObject.SetActive(false);
+        GameObject exerciseContainer = createExerciseObject(exercise, _centerPosition);
+        var exerciseObj = _exercises.Find(x => x.identifier.Equals(exercise));
         var texts = exerciseContainer.GetComponentsInChildren<TMP_Text>();
         
         foreach (var tmpText in texts)
@@ -108,6 +137,8 @@ public class SpawnExercises : MonoBehaviour
                 _ => "Kein Text vorhanden"
             };
         }
+
+        return exerciseContainer;
     }
 
     public void beforeExercise()

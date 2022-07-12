@@ -294,15 +294,15 @@ public class MenuManager : MonoBehaviour
         //Select amount of exercises
         switch (trainingsDuration)
         {
-            case 0:
+            case 3:
                 availableExercises = availableExercises.Take(3).ToList();
                 break;
 
-            case 1:
+            case 6:
                 availableExercises = availableExercises.Take(6).ToList();
                 break;
 
-            case 2:
+            case 8:
                 availableExercises = availableExercises.Take(8).ToList();
                 break;
 

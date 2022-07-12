@@ -594,6 +594,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
+--- !u!114 &575810328 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3172686384291315632, guid: 26a514f607a5f0e4ea3828790ece65a3,
+    type: 3}
+  m_PrefabInstance: {fileID: 3172686382614278648}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2061edb822efd3e489ef6faaeb176a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &595404647
 GameObject:
   m_ObjectHideFlags: 0
@@ -1311,9 +1323,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1972964009}
-        m_TargetAssemblyTypeName: MenuInPodiumActivator, Assembly-CSharp
-        m_MethodName: onPushForwardButton
+      - m_Target: {fileID: 575810328}
+        m_TargetAssemblyTypeName: SpawnExercises, Assembly-CSharp
+        m_MethodName: goRightNew
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2181,66 +2193,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
---- !u!1 &1679265351
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1679265353}
-  - component: {fileID: 1679265352}
-  - component: {fileID: 1679265354}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: GameManager
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1679265352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1679265351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2061edb822efd3e489ef6faaeb176a7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  exerciseEnvironment: {fileID: 6757704698316490462, guid: 9cc5828703d533347a4e3227c5ddba99,
-    type: 3}
---- !u!4 &1679265353
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1679265351}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1679265354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1679265351}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 352dd8be159797f489da078e479d82c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvasInPodium: {fileID: 1972964000}
 --- !u!1 &1903216721
 GameObject:
   m_ObjectHideFlags: 0
@@ -2499,9 +2451,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1972964009}
-        m_TargetAssemblyTypeName: MenuInPodiumActivator, Assembly-CSharp
-        m_MethodName: onPushMenuButton
+      - m_Target: {fileID: 575810328}
+        m_TargetAssemblyTypeName: SpawnExercises, Assembly-CSharp
+        m_MethodName: goRight
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5230,6 +5182,82 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &3172686382614278648
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3172686384291315633, guid: 26a514f607a5f0e4ea3828790ece65a3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3172686384291315633, guid: 26a514f607a5f0e4ea3828790ece65a3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3172686384291315633, guid: 26a514f607a5f0e4ea3828790ece65a3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3172686384291315633, guid: 26a514f607a5f0e4ea3828790ece65a3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3172686384291315633, guid: 26a514f607a5f0e4ea3828790ece65a3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3172686384291315633, guid: 26a514f607a5f0e4ea3828790ece65a3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3172686384291315633, guid: 26a514f607a5f0e4ea3828790ece65a3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3172686384291315633, guid: 26a514f607a5f0e4ea3828790ece65a3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3172686384291315633, guid: 26a514f607a5f0e4ea3828790ece65a3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3172686384291315633, guid: 26a514f607a5f0e4ea3828790ece65a3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3172686384291315633, guid: 26a514f607a5f0e4ea3828790ece65a3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3172686384291315634, guid: 26a514f607a5f0e4ea3828790ece65a3,
+        type: 3}
+      propertyPath: canvasInPodium
+      value: 
+      objectReference: {fileID: 1972964000}
+    - target: {fileID: 3172686384291315647, guid: 26a514f607a5f0e4ea3828790ece65a3,
+        type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 26a514f607a5f0e4ea3828790ece65a3, type: 3}
 --- !u!114 &3205926937708110679
 MonoBehaviour:
   m_ObjectHideFlags: 0
