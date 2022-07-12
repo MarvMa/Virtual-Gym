@@ -154,7 +154,7 @@ public class MenuManager : MonoBehaviour
 
     public void PanelChooseModifyDurThree()
     {
-        trainingsDuration = 9;
+        trainingsDuration = 8;
         HideAll();
         _currentPanel = CurrentPanelEnum.PanelChooseStart;
         panelChooseStart.Show();
@@ -303,7 +303,7 @@ public class MenuManager : MonoBehaviour
                 break;
 
             case 2:
-                availableExercises = availableExercises.Take(9).ToList();
+                availableExercises = availableExercises.Take(8).ToList();
                 break;
 
         }
