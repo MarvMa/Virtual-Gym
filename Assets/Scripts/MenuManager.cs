@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
@@ -34,6 +33,9 @@ public class MenuManager : MonoBehaviour
     private List<InnerExercise> availableExercises;
     private List<String> exercisesAsStrings;
     private List<InnerExercise> helper;
+
+    private int arrowCounter = 0;
+    private List<GameObject> podiumsAndAnimations;
 
 
 
@@ -258,7 +260,7 @@ public class MenuManager : MonoBehaviour
 
         if (!is_visible && !is_spawned)
         {
-            spawnScene();
+            spawnScene(0);
             is_spawned = true;
         }
 
@@ -317,12 +319,23 @@ public class MenuManager : MonoBehaviour
 
     }
     // async 
-    void spawnScene()
+    void spawnScene(int startIndex)
     {
 
         // await Task.Delay(2500);
-        spawnExercises.spawnPodests(ReturnTrainingPlan());
-        
+        podiumsAndAnimations = spawnExercises.spawn(ReturnTrainingPlan(), 0);
 
     }
+
+    public void goRight()
+    {
+        arrowCounter++;
+        foreach (var gameObject in podiumsAndAnimations)
+        {
+            Destroy(gameObject);
+        }
+        spawnScene(arrowCounter);
+
+    }
+    
 }
