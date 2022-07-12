@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using DataHandler;
 using Newtonsoft.Json;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+
 
 public class SpawnExercises : MonoBehaviour
 {
     // Public Variables
-    public GameObject podestGameObject;
-    public GameObject spotLight;
+    public GameObject exerciseEnvironment;
 
     private Vector3[] podestPositions = new[]
     {
-        new Vector3(0, 0.1f, 0),
         new Vector3(10, 0.1f, 10),
         new Vector3(14, 0.1f, 0),
         new Vector3(10, 0.1f, -10),
@@ -25,59 +25,125 @@ public class SpawnExercises : MonoBehaviour
         new Vector3(0, 0.1f, 14),
     };
 
-    private List<Exercise> exercises;
-    private List<TrainingPlan> trainingPlans;
+    private Vector3 centerPosition = new Vector3(0, 0.1f, 0);
 
-    private TrainingPlan trainingPlan = new TrainingPlan();
+    private List<Exercise> _exercises;
+    private List<TrainingPlan> _trainingPlans;
 
+    private TrainingPlan _trainingPlan = new TrainingPlan();
 
-    GameObject createExerciseObject(List<Exercise> exercises, String exerciseName, Vector3 position, GameObject target)
+    private String ANIMATION_TAG = "animation";
+
+    private void Start()
     {
-        Exercise exercise = exercises.Find(x => x.identifier.Equals(exerciseName));
+        _exercises = JsonHandler.getExercises();
+        _trainingPlans = JsonHandler.getTrainingPlans();
+        _trainingPlan = _trainingPlans.First();
 
-        GameObject exerciseContainer = new GameObject(exercise.name);
-        exerciseContainer.transform.position = position;
-        // Spawn Podest
-        GameObject podest = Instantiate(podestGameObject, position, Quaternion.identity);
-        podest.transform.parent = exerciseContainer.transform;
+        spawnPodests();
+    }
 
-        // Spawn Spotlights
-        GameObject light = Instantiate(spotLight, new Vector3(position.x, 5, position.z), Quaternion.Euler(90, 0, 0));
-        light.transform.parent = exerciseContainer.transform;
+    GameObject createExerciseObject(String exerciseName, Vector3 position,
+        GameObject target)
+    {
+        var exercise = _exercises.Find(x => x.identifier.Equals(exerciseName));
+
+        var exerciseContainer = Instantiate(exerciseEnvironment, position, Quaternion.identity);
+        exerciseContainer.name = exercise.identifier;
 
         // Spawn Animation
-        GameObject animationPrefab = Resources.Load<GameObject>("Prefabs/" + exercise.identifier);
-
-        GameObject animation = Instantiate(animationPrefab, new Vector3(position.x, 0.18f, position.z),
+        var animationPrefab = Resources.Load<GameObject>("Prefabs/" + exercise.identifier);
+        var animation = Instantiate(animationPrefab, new Vector3(position.x, 0.18f, position.z),
             Quaternion.identity);
-
+        animation.tag = ANIMATION_TAG;
+        animation.transform.parent = exerciseContainer.transform;
 
         // Make Animation Look towards Player
         var lookPos = target.transform.position - animation.transform.position;
 
-        Quaternion rotation = Quaternion.LookRotation(lookPos);
+        var rotation = Quaternion.LookRotation(lookPos);
         animation.transform.rotation = rotation;
-        animation.transform.parent = exerciseContainer.transform;
+
+        var texts = exerciseContainer.GetComponentsInChildren<TMP_Text>();
+
+        foreach (var tmpText in texts)
+        {
+            tmpText.gameObject.SetActive(false);
+        }
+
+
         return exerciseContainer;
     }
 
     public GameObject[] spawnPodests()
     {
-        exercises = JsonHandler.getExercises();
-        trainingPlans = JsonHandler.getTrainingPlans();
-        trainingPlan = trainingPlans.First();
-
         GameObject target = GameObject.FindWithTag("MainCamera");
 
-        GameObject[] podests = new GameObject[podestPositions.Length];
+        GameObject[] exerciseContainer = new GameObject[_trainingPlan.exercises.Length];
 
         int index = 0;
-        foreach (var exercise in trainingPlan.exercises)
+        foreach (var exercise in _trainingPlan.exercises)
         {
-            createExerciseObject(exercises, exercise, podestPositions[index], target);
+            exerciseContainer[index] = createExerciseObject(exercise, podestPositions[index], target);
             index++;
         }
 
-        return podests;
+        initCenterExercise(exerciseContainer.First(), target);
+        return exerciseContainer;
+    }
+
+    private void initCenterExercise(GameObject exercise, GameObject target)
+    {
+        Transform animationObj = Helper.FindComponentInChildWithTag<Transform>(exercise, ANIMATION_TAG);
+        animationObj.gameObject.SetActive(false);
+        GameObject exerciseContainer = createExerciseObject(exercise.name, centerPosition, target);
+        var exerciseObj = _exercises.Find(x => x.identifier.Equals(exercise.name));
+        var texts = exerciseContainer.GetComponentsInChildren<TMP_Text>();
+        
+        foreach (var tmpText in texts)
+        {
+            Debug.Log("tmpText" + tmpText.text);
+            tmpText.gameObject.SetActive(false);
+        }
+        foreach (var text in texts)
+        {
+            text.text = text.name switch
+            {
+                "exercise-name-txt" =>
+                    text.text = exerciseObj.name,
+                "exercise-information-txt" =>
+                    text.text = exerciseObj.background_infos,
+                _ => "Kein Text vorhanden"
+            };
+        }
+    }
+
+    public void beforeExercise()
+    {
+    }
+
+    public void nextExercise()
+    {
+    }
+}
+
+
+public class Helper
+
+{
+    public static T FindComponentInChildWithTag<T>(GameObject parent, string tag)
+    {
+        Transform t = parent.transform;
+        foreach (Transform tr in t)
+        {
+            Debug.Log(tr.name + " " + tr.tag);
+            if (tr.tag == tag)
+            {
+                Debug.Log(tr.GetType());
+                return tr.GetComponent<T>();
+            }
+        }
+
+        throw new Exception("No Animation in Parent: " + parent.name);
     }
 }

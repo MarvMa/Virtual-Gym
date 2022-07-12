@@ -1894,12 +1894,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
---- !u!1 &1592452612 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3831881951192820605, guid: fb346bb5a72a3da47b96210148a521a5,
-    type: 3}
-  m_PrefabInstance: {fileID: 3831881951912840569}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1662244932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1967,9 +1961,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2061edb822efd3e489ef6faaeb176a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  podestGameObject: {fileID: 8751774397615464370, guid: 23effb35463536b45b7c18377f94e37d,
+  exerciseEnvironment: {fileID: 6757704698316490462, guid: 9cc5828703d533347a4e3227c5ddba99,
     type: 3}
-  spotLight: {fileID: 1592452612}
 --- !u!4 &1679265353
 Transform:
   m_ObjectHideFlags: 0
@@ -2125,7 +2118,7 @@ Camera:
   m_GameObject: {fileID: 1903216721}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 3
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
