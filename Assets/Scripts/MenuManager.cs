@@ -6,6 +6,7 @@ using UnityEngine;
 using System.Threading.Tasks;
 using DataHandler;
 using System.Linq;
+using UnityEngine.Serialization;
 
 public class MenuManager : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class MenuManager : MonoBehaviour
     private bool is_spawned = false;
 
     public SpawnExercises spawnExercises;
+    public MenuInPodiumActivator menuInPodiumActivator;
     private List<TrainingPlan> filteredTrainingsPlan;
     private List<InnerExercise> availableExercises;
     private List<String> exercisesAsStrings;
@@ -55,6 +57,7 @@ public class MenuManager : MonoBehaviour
     {
        
         spawnExercises = GameObject.FindWithTag("GameManager").GetComponent<SpawnExercises>();
+        menuInPodiumActivator = GameObject.FindWithTag("GameManager").GetComponent<MenuInPodiumActivator>();
         HideAll();
         _currentPanel = CurrentPanelEnum.PanelStart;
         panelStart.Show();
@@ -173,6 +176,7 @@ public class MenuManager : MonoBehaviour
     public void PanelChooseStartStartButton()
     {
         sethideMenu = true;
+        menuInPodiumActivator.SetMenuActive();
     }
 
     //panelPauseMenu
@@ -318,6 +322,7 @@ public class MenuManager : MonoBehaviour
 
         // await Task.Delay(2500);
         spawnExercises.spawnPodests(ReturnTrainingPlan());
+        
 
     }
 }
