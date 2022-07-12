@@ -5,11 +5,11 @@ using UnityEngine;
 public class MenuInPodiumActivator : MonoBehaviour
 {
     public GameObject canvasInPodium;
-    public MenuManager menuManager;
+    private MenuManager menuManager;
 
     private void Start()
     {
-        //menuManager = GameObject.FindWithTag("Canvas").GetComponent<MenuManager>();
+        menuManager = GameObject.FindWithTag("Canvas").GetComponent<MenuManager>();
     }
     public void SetMenuActive()
     {
@@ -17,12 +17,13 @@ public class MenuInPodiumActivator : MonoBehaviour
     }
     public void onPushMenuButton()
     {
-        //menuManager.PanelPauseÜbersichtButton();
+        // menuManager.PanelPauseÜbersichtButton();
     }
 
     public void onPushForwardButton()
     {
-        
+        Debug.Log("forward button clicked");
+        menuManager.goRight();
     }
 
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
@@ -307,7 +308,7 @@ public class MenuManager : MonoBehaviour
 
         }
 
-        exercisesAsStrings = new List<string>();
+        exercisesAsStrings = new List<String>();
         //Return only the string names of the exercises in a list
         foreach (var item in availableExercises)
         {
