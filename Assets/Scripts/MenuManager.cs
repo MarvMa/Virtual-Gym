@@ -308,6 +308,7 @@ public class MenuManager : MonoBehaviour
 
             exercisesAsStrings.Add(item.exerciseName);
         }
+        Debug.Log(exercisesAsStrings.Count);
         return exercisesAsStrings;
 
     }
