@@ -1,19 +1,15 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using DataHandler;
-using Newtonsoft.Json;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-
 
 public class SpawnExercises : MonoBehaviour
 {
     // Public Variables
     public GameObject exerciseEnvironment;
 
-    private Vector3[] podestPositions = new[]
+    private Vector3[] _podestPositions = new[]
     {
         new Vector3(10, 0.1f, 10),
         new Vector3(14, 0.1f, 0),
@@ -25,12 +21,10 @@ public class SpawnExercises : MonoBehaviour
         new Vector3(0, 0.1f, 14),
     };
 
-    private Vector3 centerPosition = new Vector3(0, 0.1f, 0);
+    private Vector3 _centerPosition = new Vector3(0, 0.1f, 0);
 
     private List<Exercise> _exercises;
     private List<TrainingPlan> _trainingPlans;
-
-    private TrainingPlan _trainingPlan = new TrainingPlan();
 
     private String ANIMATION_TAG = "animation";
 
@@ -38,9 +32,6 @@ public class SpawnExercises : MonoBehaviour
     {
         _exercises = JsonHandler.getExercises();
         _trainingPlans = JsonHandler.getTrainingPlans();
-        _trainingPlan = _trainingPlans.First();
-
-        spawnPodests();
     }
 
     GameObject createExerciseObject(String exerciseName, Vector3 position,
@@ -75,20 +66,21 @@ public class SpawnExercises : MonoBehaviour
         return exerciseContainer;
     }
 
-    public GameObject[] spawnPodests()
+    public List<GameObject> spawnPodests(List<String> trainingPlan)
     {
         GameObject target = GameObject.FindWithTag("MainCamera");
 
-        GameObject[] exerciseContainer = new GameObject[_trainingPlan.exercises.Length];
+        //GameObject[] exerciseContainer = new GameObject[trainingPlan.Count];
+        List<GameObject> exerciseContainer = new List<GameObject>();
 
         int index = 0;
-        foreach (var exercise in _trainingPlan.exercises)
+        foreach (var exercise in trainingPlan)
         {
-            exerciseContainer[index] = createExerciseObject(exercise, podestPositions[index], target);
+            exerciseContainer.Add(createExerciseObject(exercise, _podestPositions[index], target));
             index++;
         }
 
-        initCenterExercise(exerciseContainer.First(), target);
+        //initCenterExercise(exerciseContainer.First(), target);
         return exerciseContainer;
     }
 
@@ -96,7 +88,7 @@ public class SpawnExercises : MonoBehaviour
     {
         Transform animationObj = Helper.FindComponentInChildWithTag<Transform>(exercise, ANIMATION_TAG);
         animationObj.gameObject.SetActive(false);
-        GameObject exerciseContainer = createExerciseObject(exercise.name, centerPosition, target);
+        GameObject exerciseContainer = createExerciseObject(exercise.name, _centerPosition, target);
         var exerciseObj = _exercises.Find(x => x.identifier.Equals(exercise.name));
         var texts = exerciseContainer.GetComponentsInChildren<TMP_Text>();
         
