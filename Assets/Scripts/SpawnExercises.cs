@@ -36,6 +36,7 @@ public class SpawnExercises : MonoBehaviour
 
     // private String ANIMATION_TAG = "animation";
 
+
     private void Start()
     {
         _exercises = JsonHandler.getExercises();
@@ -119,7 +120,7 @@ public class SpawnExercises : MonoBehaviour
 
         //GameObject[] exerciseContainer = new GameObject[trainingPlan.Count];
         List<GameObject> exerciseContainer = new List<GameObject>();
-        
+
         int index = 0;
         foreach (var exercise in trainingPlan)
         {
@@ -146,10 +147,11 @@ public class SpawnExercises : MonoBehaviour
         String currentAnimationId = CrossSceneInfo1.animation_id;
         int index = _trainingPlan.FindIndex(x => x.Equals(currentAnimationId));
         index++;
-        
+
         int newIndex = index % _trainingPlan.Count;
         return _trainingPlan[newIndex];
     }
+
     private String GetPreviousExercise()
     {
         String currentAnimationId = CrossSceneInfo1.animation_id;
@@ -159,6 +161,7 @@ public class SpawnExercises : MonoBehaviour
         {
             index += _trainingPlan.Count;
         }
+
         int newIndex = index % _trainingPlan.Count;
         return _trainingPlan[newIndex];
     }
@@ -183,6 +186,7 @@ public class SpawnExercises : MonoBehaviour
             menuInPodiumActivator.SetcanvasForInteractiveExercise(false);
         }
     }
+
     public void GoLeftNew()
     {
         Destroy(_currentMidAnimation);
@@ -232,13 +236,13 @@ public class SpawnExercises : MonoBehaviour
 
         return exerciseContainer;
     }
-    
+
     public int CheckForInteractive()
     {
         int interactiveEcerciseInt = 0;
         String current_animation_id = CrossSceneInfo1.animation_id;
         Debug.Log(current_animation_id);
-        if (String.Equals(current_animation_id,"back_squat"))
+        if (String.Equals(current_animation_id, "back_squat"))
         {
             Debug.Log("back_squat");
             interactiveEcerciseInt = 1;
@@ -252,26 +256,24 @@ public class SpawnExercises : MonoBehaviour
 
         return interactiveEcerciseInt;
     }
-    
-}
 
+    public class Helper
 
-public class Helper
-
-{
-    public static T FindComponentInChildWithTag<T>(GameObject parent, string tag)
     {
-        Transform t = parent.transform;
-        foreach (Transform tr in t)
+        public static T FindComponentInChildWithTag<T>(GameObject parent, string tag)
         {
-            Debug.Log(tr.name + " " + tr.tag);
-            if (tr.tag == tag)
+            Transform t = parent.transform;
+            foreach (Transform tr in t)
             {
-                Debug.Log(tr.GetType());
-                return tr.GetComponent<T>();
+                Debug.Log(tr.name + " " + tr.tag);
+                if (tr.tag == tag)
+                {
+                    Debug.Log(tr.GetType());
+                    return tr.GetComponent<T>();
+                }
             }
-        }
 
-        throw new Exception("No Animation in Parent: " + parent.name);
+            throw new Exception("No Animation in Parent: " + parent.name);
+        }
     }
 }

@@ -7,10 +7,37 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    public void LoadScene(string sceneName)
+    public SpawnExercises spawnExercises;
+
+    void Start()
     {
-        SceneManager.LoadScene(sceneName);
+        spawnExercises = GameObject.FindWithTag("GameManager").GetComponent<SpawnExercises>();
+    } 
+    
+    public void LoadScene()
+    {
+        SceneManager.LoadScene( GetInteractiveExercise());
     }
 
-    
+    private String GetInteractiveExercise()
+    {
+        int scene = spawnExercises.CheckForInteractive();
+
+        if (scene ==1)
+        {
+            return "SquatScene";
+        }
+
+        if (scene == 2)
+        {
+            return "KettleScene";
+        }
+
+        return "MainScene";
+    }
+
+    public void LoadMainScene()
+    {
+        SceneManager.LoadScene( "MainScene");
+    }
 }
