@@ -17,9 +17,9 @@ public class MenuInPodiumActivator : MonoBehaviour
         canvasInPodium.SetActive(true);
     }
     
-    public void SetcanvasForInteractiveExerciseActive()
+    public void SetcanvasForInteractiveExercise(bool is_active)
     {
-        canvasForInteractiveExercise.SetActive(true);
+        canvasForInteractiveExercise.SetActive(is_active);
     }
 
 }

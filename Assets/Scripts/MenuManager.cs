@@ -185,6 +185,8 @@ public class MenuManager : MonoBehaviour
     {
         ToggleMenuVisibility();
         menuInPodiumActivator.SetMenuActive();
+        spawnScene();
+        
     }
 
     //panelPauseMenu
@@ -296,38 +298,39 @@ public class MenuManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (sethideMenu)
-        {
-            uibBackground.SetActive(false);
-            // if (transform.position.y > -1.1f)
-            // {
-            //     uibBackground.transform.Translate(0, -1.2f * Time.deltaTime, 0);
-            //     transform.Translate(0, -1.2f * Time.deltaTime, 0);
-            //     is_visible = false;
-            // }
-        }
-        if (setShowMenu)
-        {
-            uibBackground.SetActive(true);
-            // if (transform.position.y < 1.684)
-            // {
-            //     uibBackground.transform.Translate(0, 0.8f * Time.deltaTime, 0);
-            //     transform.Translate(0, 0.5f * Time.deltaTime, 0);
-            // }
-            //
-            // if (transform.position.y >= 1.684)
-            // {
-            //     setShowMenu = false;
-            // }
-        }
+        // CheckIfInteractiveExerciseIsActive();
 
-        if (!is_visible && !is_spawned)
-        {
-            spawnScene(0);
-            is_spawned = true;
-        }
+        // if (sethideMenu)
+        // {
+        //     uibBackground.SetActive(false);
+        //     // if (transform.position.y > -1.1f)
+        //     // {
+        //     //     uibBackground.transform.Translate(0, -1.2f * Time.deltaTime, 0);
+        //     //     transform.Translate(0, -1.2f * Time.deltaTime, 0);
+        //     //     is_visible = false;
+        //     // }
+        // }
+        // if (setShowMenu)
+        // {
+        //     uibBackground.SetActive(true);
+        //     // if (transform.position.y < 1.684)
+        //     // {
+        //     //     uibBackground.transform.Translate(0, 0.8f * Time.deltaTime, 0);
+        //     //     transform.Translate(0, 0.5f * Time.deltaTime, 0);
+        //     // }
+        //     //
+        //     // if (transform.position.y >= 1.684)
+        //     // {
+        //     //     setShowMenu = false;
+        //     // }
+        // }
+
+        // if (!is_visible && !is_spawned)
+        // {
+        //     spawnScene();
+        //     is_spawned = true;
+        // }
         
-        CheckIfInteractiveExerciseIsActive();
 
     }
 
@@ -384,57 +387,69 @@ public class MenuManager : MonoBehaviour
 
     }
     // async 
-    void spawnScene(int startIndex)
+    void spawnScene()
     {
 
         // await Task.Delay(2500);
+        if (podiumsAndAnimations != null && podiumsAndAnimations.Count != 0)
+        {
+            foreach (var exerciseContainer in podiumsAndAnimations)
+            {
+                Debug.Log(exerciseContainer.transform.position);
+                Destroy(exerciseContainer);
+            }
+        }
         podiumsAndAnimations = spawnExercises.spawnPodiums(ReturnTrainingPlan());
 
     }
 
-    public void goRight()
-    {
-        arrowCounter++;
-        foreach (var gameObj in podiumsAndAnimations)
-        {
-            Destroy(gameObj);
-        }
-        spawnScene(arrowCounter);
-    }
+    // public void goRight()
+    // {
+    //     arrowCounter++;
+    //     foreach (var gameObj in podiumsAndAnimations)
+    //     {
+    //         Destroy(gameObj);
+    //     }
+    //     spawnScene(arrowCounter);
+    // }
 
     public void SetShowMenuTrue()
     {
         setShowMenu = true;
     }
 
-    public void goLeft()
-    {
-        arrowCounter--;
-        foreach (var gameObj in podiumsAndAnimations)
-        {
-            Destroy(gameObj);
-        }
+    // public void goLeft()
+    // {
+    //     arrowCounter--;
+    //     foreach (var gameObj in podiumsAndAnimations)
+    //     {
+    //         Destroy(gameObj);
+    //     }
+    //
+    //     spawnScene();
+    // }
 
-        spawnScene(arrowCounter);
-    }
+    // public void CheckIfInteractiveExerciseIsActive()
+    // {
+    //     int exerInteractive = spawnExercises.CheckForInteractive();
+    //     
+    //     if (exerInteractive==1)
+    //     {
+    //         Debug.Log("menuManager SetSumoActive");
+    //         menuInPodiumActivator.SetcanvasForInteractiveExerciseActive();
+    //     }
+    //     
+    //     if (exerInteractive==2)
+    //     {
+    //         Debug.Log("menuManager SetSumoActive");
+    //         menuInPodiumActivator.SetcanvasForInteractiveExerciseActive();
+    //     }
+    //     
+    // }
 
-    public void CheckIfInteractiveExerciseIsActive()
-
-    {
-        int exerInteractive = spawnExercises.CheckForInteractive();
-        
-        if (exerInteractive==1)
-        {
-            Debug.Log("menuManager SetSumoActive");
-            menuInPodiumActivator.SetcanvasForInteractiveExerciseActive();
-        }
-        
-        if (exerInteractive==2)
-        {
-            Debug.Log("menuManager SetSumoActive");
-            menuInPodiumActivator.SetcanvasForInteractiveExerciseActive();
-        }
-        
-    }
+    // public void activateSwitchSceneButton()
+    // {
+    //     menuInPodiumActivator.SetcanvasForInteractiveExerciseActive();
+    // }
     
 }

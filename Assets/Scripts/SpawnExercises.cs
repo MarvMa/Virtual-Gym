@@ -4,6 +4,7 @@ using System.Linq;
 using DataHandler;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class SpawnExercises : MonoBehaviour
@@ -14,6 +15,7 @@ public class SpawnExercises : MonoBehaviour
     private List<String> _trainingPlan;
     private GameObject _target;
     private GameObject _currentMidAnimation;
+    private MenuInPodiumActivator menuInPodiumActivator;
 
     private Vector3[] _podestPositions = new[]
     {
@@ -32,12 +34,13 @@ public class SpawnExercises : MonoBehaviour
     private List<Exercise> _exercises;
     private List<TrainingPlan> _trainingPlans;
 
-    private String ANIMATION_TAG = "animation";
+    // private String ANIMATION_TAG = "animation";
 
     private void Start()
     {
         _exercises = JsonHandler.getExercises();
         _trainingPlans = JsonHandler.getTrainingPlans();
+        menuInPodiumActivator = GameObject.FindWithTag("GameManager").GetComponent<MenuInPodiumActivator>();
     }
 
     GameObject createExerciseObject(String exerciseName, Vector3 position, bool center)
@@ -133,6 +136,8 @@ public class SpawnExercises : MonoBehaviour
 
         _currentMidAnimation = initCenterExercise(exerciseContainer.First().name);
         CrossSceneInfo1.animation_id = exerciseContainer.First().name;
+        SetSimlationButtonVisibility();
+        exerciseContainer.Add(_currentMidAnimation);
         return exerciseContainer;
     }
 
@@ -165,6 +170,18 @@ public class SpawnExercises : MonoBehaviour
         String nextExercise = GetNextExercise();
         CrossSceneInfo1.animation_id = nextExercise;
         _currentMidAnimation = initCenterExercise(nextExercise);
+        SetSimlationButtonVisibility();
+    }
+
+    private void SetSimlationButtonVisibility()
+    {
+        if (CrossSceneInfo1.animation_id.Equals("sumo_high_pull") || CrossSceneInfo1.animation_id.Equals("back_squat"))
+        {
+            menuInPodiumActivator.SetcanvasForInteractiveExercise(true);
+        } else
+        {
+            menuInPodiumActivator.SetcanvasForInteractiveExercise(false);
+        }
     }
     public void GoLeftNew()
     {
@@ -173,6 +190,7 @@ public class SpawnExercises : MonoBehaviour
         String previousExercise = GetPreviousExercise();
         CrossSceneInfo1.animation_id = previousExercise;
         _currentMidAnimation = initCenterExercise(previousExercise);
+        SetSimlationButtonVisibility();
     }
 
     private GameObject initCenterExercise(String exercise)
