@@ -40,7 +40,7 @@
           "exerciseDifficulty": 0
         },
         {
-          "exerciseName": "pistol_squat",
+          "exerciseName": "sumo_high_pull",
           "exerciseDifficulty": 2
         }
       ],
@@ -87,7 +87,7 @@
           "exerciseDifficulty": 2
         },
         {
-          "exerciseName": "snatch",
+          "exerciseName": "sumo_high_pull",
           "exerciseDifficulty": 1
         }
       ],
