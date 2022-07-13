@@ -136,32 +136,46 @@ public class SpawnExercises : MonoBehaviour
         return exerciseContainer;
     }
 
-    private String getNextExercise()
+    private String GetNextExercise()
     {
-        String current_animation_id = CrossSceneInfo1.animation_id;
-        int index = _trainingPlan.FindIndex(x => x.Equals(current_animation_id));
+        String currentAnimationId = CrossSceneInfo1.animation_id;
+        int index = _trainingPlan.FindIndex(x => x.Equals(currentAnimationId));
         index++;
-        Debug.Log("index: " + index);
-        Debug.Log("training plan länge: " + _trainingPlan.Count);
         
-        int new_index = index % _trainingPlan.Count;
-        Debug.Log("new index: " + new_index);
-        return _trainingPlan[new_index];
+        int newIndex = index % _trainingPlan.Count;
+        return _trainingPlan[newIndex];
+    }
+    private String GetPreviousExercise()
+    {
+        String currentAnimationId = CrossSceneInfo1.animation_id;
+        int index = _trainingPlan.FindIndex(x => x.Equals(currentAnimationId));
+        index--;
+        
+        int newIndex = index % _trainingPlan.Count;
+        return _trainingPlan[newIndex];
     }
 
-    public void goRightNew()
+    public void GoRightNew()
     {
         Destroy(_currentMidAnimation);
         Debug.Log("animation id: " + CrossSceneInfo1.animation_id);
-        String next_exercise = getNextExercise();
-        CrossSceneInfo1.animation_id = next_exercise;
-        _currentMidAnimation = initCenterExercise(next_exercise);
+        String nextExercise = GetNextExercise();
+        CrossSceneInfo1.animation_id = nextExercise;
+        _currentMidAnimation = initCenterExercise(nextExercise);
+    }
+    public void GoLeftNew()
+    {
+        Destroy(_currentMidAnimation);
+        Debug.Log("animation id: " + CrossSceneInfo1.animation_id);
+        String previousExercise = GetPreviousExercise();
+        CrossSceneInfo1.animation_id = previousExercise;
+        _currentMidAnimation = initCenterExercise(previousExercise);
     }
 
     private GameObject initCenterExercise(String exercise)
     {
 
-        
+
         // Transform animationObj = Helper.FindComponentInChildWithTag<Transform>(exercise, ANIMATION_TAG);
         // animationObj.gameObject.SetActive(false);
         GameObject exerciseContainer;
@@ -174,7 +188,7 @@ public class SpawnExercises : MonoBehaviour
         
         var exerciseObj = _exercises.Find(x => x.identifier.Equals(exercise));
         var texts = exerciseContainer.GetComponentsInChildren<TMP_Text>();
-        
+
         // foreach (var tmpText in texts)
         // {
         //     Debug.Log("tmpText" + tmpText.text);
@@ -197,14 +211,27 @@ public class SpawnExercises : MonoBehaviour
 
         return exerciseContainer;
     }
-
-    public void beforeExercise()
+    
+    public int CheckForInteractive()
     {
-    }
+        int interactiveEcerciseInt = 0;
+        String current_animation_id = CrossSceneInfo1.animation_id;
+        Debug.Log(current_animation_id);
+        if (String.Equals(current_animation_id,"back_squat"))
+        {
+            Debug.Log("back_squat");
+            interactiveEcerciseInt = 1;
+        }
 
-    public void nextExercise()
-    {
+        if (String.Equals(current_animation_id, "sumo_high_pull"))
+        {
+            Debug.Log("sumo_high_pull");
+            interactiveEcerciseInt = 2;
+        }
+
+        return interactiveEcerciseInt;
     }
+    
 }
 
 
