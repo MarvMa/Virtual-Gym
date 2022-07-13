@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731713, g: 0.13414736, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1911,8 +1911,9 @@ GameObject:
   - component: {fileID: 1100302199}
   - component: {fileID: 1100302198}
   - component: {fileID: 1100302197}
+  - component: {fileID: 1100302200}
   m_Layer: 5
-  m_Name: sumoSceneButton
+  m_Name: goToIntScene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1983,16 +1984,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 575810328}
-        m_TargetAssemblyTypeName: SpawnExercises, Assembly-CSharp
-        m_MethodName: goRight
+      - m_Target: {fileID: 1100302200}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Assets/Scenes/SquatScene.unity
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1100302198
@@ -2033,6 +2034,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1100302195}
   m_CullTransparentMesh: 1
+--- !u!114 &1100302200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100302195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f01ffd7964800f4fb20b09c74a7fa38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnExercises: {fileID: 0}
 --- !u!1 &1134550741
 GameObject:
   m_ObjectHideFlags: 0
@@ -3470,7 +3484,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1972964003
 MonoBehaviour:
   m_ObjectHideFlags: 0
