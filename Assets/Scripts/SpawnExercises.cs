@@ -104,7 +104,10 @@ public class SpawnExercises : MonoBehaviour
         String currentAnimationId = CrossSceneInfo1.animation_id;
         int index = _trainingPlan.FindIndex(x => x.Equals(currentAnimationId));
         index--;
-        
+        if (index < 0)
+        {
+            index += _trainingPlan.Count;
+        }
         int newIndex = index % _trainingPlan.Count;
         return _trainingPlan[newIndex];
     }
