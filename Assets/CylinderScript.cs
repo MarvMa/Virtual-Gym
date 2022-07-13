@@ -58,7 +58,7 @@ public class CylinderScript : MonoBehaviour
         else if (controllerInCyliner(controller, 0.3f))
         {
             changeColor(Color.yellow);
-            // audioSource.Play();
+            audioSource.Play();
             // audioPlaying = true;
         }
         else
