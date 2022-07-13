@@ -55,6 +55,8 @@ public class MenuManager : MonoBehaviour
     private Boolean sethideMenu = false;
     private Boolean setShowMenu = false;
 
+    private Boolean is_returnedToState = true;
+
 
     private void Start()
     {
@@ -62,8 +64,15 @@ public class MenuManager : MonoBehaviour
         spawnExercises = GameObject.FindWithTag("GameManager").GetComponent<SpawnExercises>();
         menuInPodiumActivator = GameObject.FindWithTag("GameManager").GetComponent<MenuInPodiumActivator>();
         HideAll();
-        _currentPanel = CurrentPanelEnum.PanelStart;
-        panelStart.Show();
+        if(!CrossSceneInfo1.hasStarted)
+        {
+            _currentPanel = CurrentPanelEnum.PanelStart;
+            panelStart.Show();
+        }
+        else
+        {
+            sethideMenu = true;
+        }
     }
 
     // menu
@@ -264,6 +273,12 @@ public class MenuManager : MonoBehaviour
             spawnScene(0);
             is_spawned = true;
         }
+
+        if (CrossSceneInfo1.hasStarted && is_returnedToState)
+        {
+            spawnScene(0);
+            is_returnedToState = false;
+        }
         
         CheckIfInteractiveExerciseIsActive();
 
@@ -318,16 +333,29 @@ public class MenuManager : MonoBehaviour
             exercisesAsStrings.Add(item.exerciseName);
         }
         Debug.Log(exercisesAsStrings.Count);
+        CrossSceneInfo1.exercisesAsStrings = exercisesAsStrings;
         return exercisesAsStrings;
 
     }
     // async 
-    void spawnScene(int startIndex)
+    public void spawnScene(int startIndex)
     {
-
+        if(!CrossSceneInfo1.hasStarted)
+        {
+            podiumsAndAnimations = spawnExercises.spawnPodests(ReturnTrainingPlan());
+            CrossSceneInfo1.staticPodiumsAndAnimations = podiumsAndAnimations;
+            CrossSceneInfo1.hasStarted = true;
+        }
+        else
+        {
+            spawnExercises.spawnPodests(CrossSceneInfo1.exercisesAsStrings);
+            podiumsAndAnimations = CrossSceneInfo1.staticPodiumsAndAnimations;
+        }
         // await Task.Delay(2500);
-        podiumsAndAnimations = spawnExercises.spawnPodests(ReturnTrainingPlan());
+       
 
+        
+        
     }
 
     public void goRight()
