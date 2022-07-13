@@ -625,7 +625,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 06bdb39e5d4960046a5bd698743aa16c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ddfd9b137775cb54485c225470dd1fc9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2084,12 +2084,6 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
---- !u!1 &1592452612 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3831881951192820605, guid: fb346bb5a72a3da47b96210148a521a5,
-    type: 3}
-  m_PrefabInstance: {fileID: 3831881951912840569}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1679265351
 GameObject:
   m_ObjectHideFlags: 0
@@ -2119,8 +2113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2061edb822efd3e489ef6faaeb176a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  podiumGameObject: {fileID: 0}
-  spotLight: {fileID: 1592452612}
+  exerciseEnvironment: {fileID: 0}
 --- !u!4 &1679265353
 Transform:
   m_ObjectHideFlags: 0

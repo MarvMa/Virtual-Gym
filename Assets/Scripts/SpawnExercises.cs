@@ -121,11 +121,11 @@ public class SpawnExercises : MonoBehaviour
         var exerciseObj = _exercises.Find(x => x.identifier.Equals(exercise));
         var texts = exerciseContainer.GetComponentsInChildren<TMP_Text>();
         
-        foreach (var tmpText in texts)
-        {
-            Debug.Log("tmpText" + tmpText.text);
-            tmpText.gameObject.SetActive(false);
-        }
+        // foreach (var tmpText in texts)
+        // {
+        //     Debug.Log("tmpText" + tmpText.text);
+        //     tmpText.gameObject.SetActive(false);
+        // }
         foreach (var text in texts)
         {
             text.text = text.name switch
