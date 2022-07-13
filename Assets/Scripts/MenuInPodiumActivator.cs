@@ -5,7 +5,7 @@ using UnityEngine;
 public class MenuInPodiumActivator : MonoBehaviour
 {
     public GameObject canvasInPodium;
-    public GameObject sumoCanvas;
+    public GameObject canvasForInteractiveExercise;
     private MenuManager menuManager;
 
     private void Start()
@@ -19,7 +19,7 @@ public class MenuInPodiumActivator : MonoBehaviour
     
     public void SetSumoCanvasActive()
     {
-        sumoCanvas.SetActive(true);
+        canvasForInteractiveExercise.SetActive(true);
     }
 
 }
