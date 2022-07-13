@@ -125,7 +125,7 @@ MonoBehaviour:
       - m_Target: {fileID: 3172686384291315632, guid: 26a514f607a5f0e4ea3828790ece65a3,
           type: 3}
         m_TargetAssemblyTypeName: SpawnExercises, Assembly-CSharp
-        m_MethodName: goRightNew
+        m_MethodName: GoRightNew
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
