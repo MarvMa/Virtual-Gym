@@ -32,49 +32,49 @@ public class AudioPlayer : MonoBehaviour
         switch (CrossSceneInfo1.animation_id)
         {
             case "air_squat":
-                play(back_squat);
+                toggleClip(back_squat);
                 break;
             case "back_squat":
-                play(back_squat);
+                toggleClip(back_squat);
                 break;
             case "biceps_curl":
-                play(biceps_curl);
+                toggleClip(biceps_curl);
                 break;
             case "burpee":
-                play(burpee);
+                toggleClip(burpee);
                 break;
             case "clean_and_jerk":
-                play(clean_and_jerk);
+                toggleClip(clean_and_jerk);
                 break;
             case "front_raises":
-                play(front_raises);
+                toggleClip(front_raises);
                 break;
             case "jump_push_up":
-                play(jump_push_up);
+                toggleClip(jump_push_up);
                 break;
             case "jumping_jacks":
-                play(jumping_jacks);
+                toggleClip(jumping_jacks);
                 break;
             case "overhead_squat":
-                play(overhead_squat);
+                toggleClip(overhead_squat);
                 break;
             case "pike_walk":
-                play(pike_walk);
+                toggleClip(pike_walk);
                 break;
             case "pistol_squat":
-                play(pistol_squat);
+                toggleClip(pistol_squat);
                 break;
             case "push_up":
-                play(push_up);
+                toggleClip(push_up);
                 break;
             case "situps":
-                play(situps);
+                toggleClip(situps);
                 break;
             case "snatch":
-                play(snatch);
+                toggleClip(snatch);
                 break;
             case "sumo_high_pull":
-                play(sumo_high_pull);
+                toggleClip(sumo_high_pull);
                 break;
             default:
                 break;
@@ -82,9 +82,16 @@ public class AudioPlayer : MonoBehaviour
 
     }
 
-    private void play(AudioClip audioClip)
+    private void toggleClip(AudioClip audioClip)
     {
-        audioSource.PlayOneShot(audioClip, 0.7f);
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+        else
+        {
+            audioSource.PlayOneShot(audioClip, 0.7f);
+        }
     }
 
     // Update is called once per frame
