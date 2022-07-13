@@ -5,6 +5,7 @@ using UnityEngine;
 public class MenuInPodiumActivator : MonoBehaviour
 {
     public GameObject canvasInPodium;
+    public GameObject sumoCanvas;
     private MenuManager menuManager;
 
     private void Start()
@@ -15,15 +16,10 @@ public class MenuInPodiumActivator : MonoBehaviour
     {
         canvasInPodium.SetActive(true);
     }
-    public void onPushMenuButton()
+    
+    public void SetSumoCanvasActive()
     {
-        // menuManager.PanelPauseÜbersichtButton();
-    }
-
-    public void onPushForwardButton()
-    {
-        Debug.Log("forward button clicked");
-        menuManager.goRight();
+        sumoCanvas.SetActive(true);
     }
 
 }

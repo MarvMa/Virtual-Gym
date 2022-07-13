@@ -264,6 +264,8 @@ public class MenuManager : MonoBehaviour
             spawnScene(0);
             is_spawned = true;
         }
+        
+        CheckIfSumoExerciseIsActive();
 
     }
 
@@ -348,4 +350,14 @@ public class MenuManager : MonoBehaviour
         spawnScene(arrowCounter);
 
     }
+    public void CheckIfSumoExerciseIsActive()
+    {
+        if (spawnExercises.CheckForSumoExerciseActive())
+        {
+            Debug.Log("menuManager SetSumoActive");
+            menuInPodiumActivator.SetSumoCanvasActive();
+        }
+        
+    }
+    
 }

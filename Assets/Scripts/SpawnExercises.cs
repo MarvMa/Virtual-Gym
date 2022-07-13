@@ -154,6 +154,20 @@ public class SpawnExercises : MonoBehaviour
 
         return exerciseContainer;
     }
+    public bool CheckForSumoExerciseActive()
+    {
+        bool isActiv = false;
+        String current_animation_id = CrossSceneInfo1.animation_id;
+        Debug.Log(current_animation_id);
+        if (String.Equals(current_animation_id,"back_squat"))
+        {
+            Debug.Log("Found SumoHighPull");
+            isActiv = true;
+        }
+
+        return isActiv;
+    }
+    
 }
 
 
