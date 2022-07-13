@@ -10,6 +10,7 @@ public class SpawnExercises : MonoBehaviour
 {
     // Public Variables
     public GameObject exerciseEnvironment;
+    public GameObject exerciseEnvironmentCenter;
     private List<String> _trainingPlan;
     private GameObject _target;
     private GameObject _currentMidAnimation;
@@ -39,11 +40,19 @@ public class SpawnExercises : MonoBehaviour
         _trainingPlans = JsonHandler.getTrainingPlans();
     }
 
-    GameObject createExerciseObject(String exerciseName, Vector3 position)
+    GameObject createExerciseObject(String exerciseName, Vector3 position, bool center)
     {
         var exercise = _exercises.Find(x => x.identifier.Equals(exerciseName));
+        GameObject exerciseContainer;
+        if (center)
+        {
+            exerciseContainer  = Instantiate(exerciseEnvironmentCenter, position, Quaternion.identity);
+        }
+        else
+        {
+            exerciseContainer = Instantiate(exerciseEnvironment, position, Quaternion.identity);
 
-        var exerciseContainer = Instantiate(exerciseEnvironment, position, Quaternion.identity);
+        }
         exerciseContainer.name = exercise.identifier;
 
         // Spawn Animation
@@ -60,18 +69,48 @@ public class SpawnExercises : MonoBehaviour
         animation.transform.rotation = rotation;
 
         var texts = exerciseContainer.GetComponentsInChildren<TMP_Text>();
+        
+        // Debug.Log(exerciseName);
+        // Debug.Log(CrossSceneInfo1.animation_id);
+        // if (exerciseName.Equals(CrossSceneInfo1.animation_id))
+        // {
+        //     foreach (var tmpText in texts)
+        //     {
+        //         tmpText.gameObject.SetActive(true);
+        //     }
+        // }
+        // else
+        // {
+        //     // Canvas canvas = exerciseContainer.gameObject.GetComponentInChildren<Canvas>();
+        //     // canvas.
+        // }
 
-        foreach (var tmpText in texts)
-        {
-            tmpText.gameObject.SetActive(false);
-        }
+        // foreach (var tmpText in texts)
+        // {
+        //     Debug.Log(exerciseName);
+        //     Debug.Log(CrossSceneInfo1.animation_id);
+        //     if (exerciseName.Equals(CrossSceneInfo1.animation_id))
+        //     {
+        //         tmpText.gameObject.SetActive(true);
+        //     }
+        //     else
+        //     {
+        //         tmpText.gameObject.SetActive(false);
+        //     }
+        //     
+        // }
 
 
         return exerciseContainer;
     }
 
-    public List<GameObject> spawnPodests(List<String> trainingPlan)
+    public List<GameObject> spawnPodiums(List<String> trainingPlan)
     {
+        if (CrossSceneInfo1.animation_id == null)
+        {
+            CrossSceneInfo1.animation_id = trainingPlan.First();
+        }
+        
         _trainingPlan = trainingPlan;
         _target = GameObject.FindWithTag("MainCamera");
 
@@ -81,7 +120,14 @@ public class SpawnExercises : MonoBehaviour
         int index = 0;
         foreach (var exercise in trainingPlan)
         {
-            exerciseContainer.Add(createExerciseObject(exercise, _podestPositions[index]));
+            // GameObject singleContainer;
+            if (exercise.Equals(CrossSceneInfo1.animation_id))
+                exerciseContainer.Add(createExerciseObject(exercise, _podestPositions[index], true));
+            else
+            {
+                exerciseContainer.Add(createExerciseObject(exercise, _podestPositions[index], false));
+            }
+            // exerciseContainer.Add(createExerciseObject(exercise, _podestPositions[index]), f);
             index++;
         }
 
@@ -114,10 +160,18 @@ public class SpawnExercises : MonoBehaviour
 
     private GameObject initCenterExercise(String exercise)
     {
+
         
         // Transform animationObj = Helper.FindComponentInChildWithTag<Transform>(exercise, ANIMATION_TAG);
         // animationObj.gameObject.SetActive(false);
-        GameObject exerciseContainer = createExerciseObject(exercise, _centerPosition);
+        GameObject exerciseContainer;
+        // if (exercise.Equals(CrossSceneInfo1.animation_id))
+            exerciseContainer = createExerciseObject(exercise, _centerPosition, true);
+        // else
+        // {
+            // exerciseContainer = createExerciseObject(exercise, _centerPosition, false);
+        // }
+        
         var exerciseObj = _exercises.Find(x => x.identifier.Equals(exercise));
         var texts = exerciseContainer.GetComponentsInChildren<TMP_Text>();
         
@@ -128,6 +182,9 @@ public class SpawnExercises : MonoBehaviour
         // }
         foreach (var text in texts)
         {
+            text.gameObject.SetActive(true);
+            Debug.Log(exerciseObj.name);
+            Debug.Log(exerciseObj.background_infos);
             text.text = text.name switch
             {
                 "exercise-name-txt" =>

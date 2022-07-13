@@ -19,6 +19,10 @@ public class MenuManager : MonoBehaviour
     public Panel panelChooseStart = null;
     public Panel panelSettings = null;
     public Panel panelPauseMenu = null;
+    public GameObject menuText;
+    public GameObject menuBeenden;
+    public GameObject menuSettings;
+    public GameObject dividerHorizontal;
     private int trainingsPlan;
     private int trainingsExperience;
     private int trainingsDuration;
@@ -27,6 +31,7 @@ public class MenuManager : MonoBehaviour
 
     private bool is_visible = true;
     private bool is_spawned = false;
+    private bool menu_is_visible = true;
 
     public SpawnExercises spawnExercises;
     public MenuInPodiumActivator menuInPodiumActivator;
@@ -178,7 +183,7 @@ public class MenuManager : MonoBehaviour
 
     public void PanelChooseStartStartButton()
     {
-        sethideMenu = true;
+        ToggleMenuVisibility();
         menuInPodiumActivator.SetMenuActive();
     }
 
@@ -237,26 +242,83 @@ public class MenuManager : MonoBehaviour
         panelChooseStart.Hide();
         panelSettings.Hide();
         panelPauseMenu.Hide();
+
+    }
+    
+    private void ShowAll()
+    {
+        panelStart.Show();
+        panelChoosePlan.Show();
+        panelChooseModifyExp.Show();
+        panelChooseModifyDuration.Show();
+        panelChooseStart.Show();
+        panelSettings.Show();
+        panelPauseMenu.Show();
+    }
+
+    private void HideUpperMenu()
+    {
+        menuText.SetActive(false);
+        menuSettings.SetActive(false);
+        menuBeenden.SetActive(false);
+        dividerHorizontal.SetActive(false);
+    }
+    
+    private void ShowUpperMenu()
+    {
+        menuText.SetActive(true);
+        menuSettings.SetActive(true);
+        menuBeenden.SetActive(true);
+        dividerHorizontal.SetActive(true);
+    }
+
+    public void ToggleMenuVisibility()
+    {
+        if (menu_is_visible)
+        {
+            HideAll();
+            HideUpperMenu();
+            uibBackground.SetActive(false);
+            menu_is_visible = false;
+            is_visible = false;
+        }
+        else
+        {
+            // ShowAll();
+            uibBackground.SetActive(true);
+            ShowUpperMenu();
+            panelStart.Show();
+            menu_is_visible = true;
+        }
+
+        
     }
 
     private void FixedUpdate()
     {
         if (sethideMenu)
         {
-            if (transform.position.y > -1.1f)
-            {
-                uibBackground.transform.Translate(0, -1.2f * Time.deltaTime, 0);
-                transform.Translate(0, -1.2f * Time.deltaTime, 0);
-                is_visible = false;
-            }
+            uibBackground.SetActive(false);
+            // if (transform.position.y > -1.1f)
+            // {
+            //     uibBackground.transform.Translate(0, -1.2f * Time.deltaTime, 0);
+            //     transform.Translate(0, -1.2f * Time.deltaTime, 0);
+            //     is_visible = false;
+            // }
         }
         if (setShowMenu)
         {
-            if (transform.position.y < 1.684)
-            {
-                uibBackground.transform.Translate(0, 0.8f * Time.deltaTime, 0);
-                transform.Translate(0, 0.5f * Time.deltaTime, 0);
-            }
+            uibBackground.SetActive(true);
+            // if (transform.position.y < 1.684)
+            // {
+            //     uibBackground.transform.Translate(0, 0.8f * Time.deltaTime, 0);
+            //     transform.Translate(0, 0.5f * Time.deltaTime, 0);
+            // }
+            //
+            // if (transform.position.y >= 1.684)
+            // {
+            //     setShowMenu = false;
+            // }
         }
 
         if (!is_visible && !is_spawned)
@@ -324,7 +386,7 @@ public class MenuManager : MonoBehaviour
     {
 
         // await Task.Delay(2500);
-        podiumsAndAnimations = spawnExercises.spawnPodests(ReturnTrainingPlan());
+        podiumsAndAnimations = spawnExercises.spawnPodiums(ReturnTrainingPlan());
 
     }
 
@@ -336,7 +398,11 @@ public class MenuManager : MonoBehaviour
             Destroy(gameObject);
         }
         spawnScene(arrowCounter);
+    }
 
+    public void SetShowMenuTrue()
+    {
+        setShowMenu = true;
     }
     
 }
