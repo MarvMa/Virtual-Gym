@@ -19,6 +19,7 @@ public class AudioPlayer : MonoBehaviour
     public AudioClip push_up;
     public AudioClip situps;
     public AudioClip snatch;
+    public AudioClip sumo_high_pull;
 
     // Start is called before the first frame update
     void Start()
@@ -71,6 +72,9 @@ public class AudioPlayer : MonoBehaviour
                 break;
             case "snatch":
                 play(snatch);
+                break;
+            case "sumo_high_pull":
+                play(sumo_high_pull);
                 break;
             default:
                 break;
