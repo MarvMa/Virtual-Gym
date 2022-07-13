@@ -20,7 +20,7 @@ public class CylinderScript : MonoBehaviour
  
     void Start()
     {
-        //audioSource = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
         // cylinder = gameObject.GetComponent<CylinderScript>().gameObject;
         cylinder_radius = cylinder.transform.localScale.x / 2;
         cylinder_top = cylinder.transform.position.y + cylinder.transform.localScale.y ;
@@ -59,7 +59,7 @@ public class CylinderScript : MonoBehaviour
         else if (controllerInCyliner(controller, 0.3f))
         {
             changeColor(Color.yellow);
-            //audioSource.Play();
+            audioSource.Play();
             // audioPlaying = true;
         }
         else
@@ -103,6 +103,7 @@ public class CylinderScript : MonoBehaviour
         else if (bothControllersInCylinder(0.3f))
         {
             changeColor(Color.yellow);
+            audioSource.Play();
         }
         else
         {

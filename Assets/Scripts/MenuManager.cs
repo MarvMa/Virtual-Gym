@@ -69,18 +69,18 @@ public class MenuManager : MonoBehaviour
         spawnExercises = GameObject.FindWithTag("GameManager").GetComponent<SpawnExercises>();
         menuInPodiumActivator = GameObject.FindWithTag("GameManager").GetComponent<MenuInPodiumActivator>();
         HideAll();
-        if(!CrossSceneInfo1.hasStarted)
-        {
+        // if(!CrossSceneInfo1.hasStarted)
+        // {
             _currentPanel = CurrentPanelEnum.PanelStart;
             panelStart.Show();
-        }
-        else
-        {
-            spawnSceneNewScene();
-            menuInPodiumActivator.SetMenuActive();
-            menu_is_visible = true;
-            ToggleMenuVisibility();
-        }
+        // }
+        // else
+        // {
+        //     spawnSceneNewScene();
+        //     menuInPodiumActivator.SetMenuActive();
+        //     menu_is_visible = true;
+        //     ToggleMenuVisibility();
+        // }
     }
 
     // menu
@@ -197,7 +197,7 @@ public class MenuManager : MonoBehaviour
     {
         ToggleMenuVisibility();
         menuInPodiumActivator.SetMenuActive();
-        spawnSceneNewTrainingPlan();
+        spawnScene();
         
     }
 
@@ -409,54 +409,26 @@ public class MenuManager : MonoBehaviour
             exercisesAsStrings.Add(item.exerciseName);
         }
         Debug.Log(exercisesAsStrings.Count);
-        CrossSceneInfo1.exercisesAsStrings = exercisesAsStrings;
+        // CrossSceneInfo1.exercisesAsStrings = exercisesAsStrings;
         return exercisesAsStrings;
 
     }
     // async 
-    void spawnSceneNewTrainingPlan()
+    void spawnScene()
     {
-
-        
         if (podiumsAndAnimations != null && podiumsAndAnimations.Count != 0)
         {
             foreach (var exerciseContainer in podiumsAndAnimations)
             {
-                if (exerciseContainer != null)
-                {
-                    Debug.Log(exerciseContainer.transform.position);
+                // if (exerciseContainer != null)
+                // {
+                    // Debug.Log(exerciseContainer.transform.position);
                     Destroy(exerciseContainer);
-                }
+                // }
             }
         }
         podiumsAndAnimations = spawnExercises.spawnPodiums(ReturnTrainingPlan());
     }
-
-    void spawnSceneNewScene()
-    
-    {
-        if(!CrossSceneInfo1.hasStarted)
-        {
-            podiumsAndAnimations = spawnExercises.spawnPodiums(ReturnTrainingPlan());
-            CrossSceneInfo1.staticPodiumsAndAnimations = podiumsAndAnimations;
-            CrossSceneInfo1.hasStarted = true;
-        }
-        else
-        {
-            spawnExercises.spawnPodiums(CrossSceneInfo1.exercisesAsStrings);
-            podiumsAndAnimations = CrossSceneInfo1.staticPodiumsAndAnimations;
-        }
-    }
-
-    // public void goRight()
-    // {
-    //     arrowCounter++;
-    //     foreach (var gameObj in podiumsAndAnimations)
-    //     {
-    //         Destroy(gameObj);
-    //     }
-    //     spawnScene(arrowCounter);
-    // }
 
     public void SetShowMenuTrue()
     {

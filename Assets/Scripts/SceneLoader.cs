@@ -58,26 +58,29 @@ public class SceneLoader : MonoBehaviour
         if (kettleCylinderVisibility)
         {
             kettleCylinder.SetActive(false);
-
+            kettleCylinderVisibility = false;
         }
         else
         {
             kettleCylinder.SetActive(true);
+            kettleCylinderVisibility = true;
         }
     }
     
     private void toggleSquatCyliner()
     {
-        if (squatCylinderVisibility)
+        if (squatCylinderVisibility == true)
         {
             squatCylinderOne.SetActive(false);
             squatCylinderTwo.SetActive(false);
+            squatCylinderVisibility = false;
 
         }
         else
         {
             squatCylinderOne.SetActive(true);
             squatCylinderTwo.SetActive(true);
+            squatCylinderVisibility = true;
         }
     }
 

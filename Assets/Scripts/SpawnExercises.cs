@@ -110,6 +110,7 @@ public class SpawnExercises : MonoBehaviour
 
     public List<GameObject> spawnPodiums(List<String> trainingPlan)
     {
+        Destroy(_currentMidAnimation);
         if (CrossSceneInfo1.animation_id == null)
         {
             CrossSceneInfo1.animation_id = trainingPlan.First();
