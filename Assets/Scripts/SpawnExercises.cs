@@ -157,18 +157,25 @@ public class SpawnExercises : MonoBehaviour
 
         return exerciseContainer;
     }
-    public bool CheckForSumoExerciseActive()
+    
+    public int CheckForInteractive()
     {
-        bool isActiv = false;
+        int interactiveEcerciseInt = 0;
         String current_animation_id = CrossSceneInfo1.animation_id;
         Debug.Log(current_animation_id);
         if (String.Equals(current_animation_id,"back_squat"))
         {
-            Debug.Log("Found SumoHighPull");
-            isActiv = true;
+            Debug.Log("back_squat");
+            interactiveEcerciseInt = 1;
         }
 
-        return isActiv;
+        if (String.Equals(current_animation_id, "sumo_high_pull"))
+        {
+            Debug.Log("sumo_high_pull");
+            interactiveEcerciseInt = 2;
+        }
+
+        return interactiveEcerciseInt;
     }
     
 }

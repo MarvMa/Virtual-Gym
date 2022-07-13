@@ -265,7 +265,7 @@ public class MenuManager : MonoBehaviour
             is_spawned = true;
         }
         
-        CheckIfSumoExerciseIsActive();
+        CheckIfInteractiveExerciseIsActive();
 
     }
 
@@ -340,6 +340,7 @@ public class MenuManager : MonoBehaviour
         spawnScene(arrowCounter);
 
     }
+
     public void goLeft()
     {
         arrowCounter--;
@@ -347,15 +348,25 @@ public class MenuManager : MonoBehaviour
         {
             Destroy(gameObj);
         }
-        spawnScene(arrowCounter);
 
+        spawnScene(arrowCounter);
     }
-    public void CheckIfSumoExerciseIsActive()
+
+    public void CheckIfInteractiveExerciseIsActive()
+
     {
-        if (spawnExercises.CheckForSumoExerciseActive())
+        int exerInteractive = spawnExercises.CheckForInteractive();
+        
+        if (exerInteractive==1)
         {
             Debug.Log("menuManager SetSumoActive");
-            menuInPodiumActivator.SetSumoCanvasActive();
+            menuInPodiumActivator.SetcanvasForInteractiveExerciseActive();
+        }
+        
+        if (exerInteractive==2)
+        {
+            Debug.Log("menuManager SetSumoActive");
+            menuInPodiumActivator.SetcanvasForInteractiveExerciseActive();
         }
         
     }
