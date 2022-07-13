@@ -3745,15 +3745,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-<<<<<<< HEAD
-      - m_Target: {fileID: 888567360}
-        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
-        m_MethodName: play
-=======
+
       - m_Target: {fileID: 575810328}
         m_TargetAssemblyTypeName: SpawnExercises, Assembly-CSharp
         m_MethodName: GoLeftNew
->>>>>>> 0b90379bd2d3e8317ea10fd10070b071c19a1a40
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
