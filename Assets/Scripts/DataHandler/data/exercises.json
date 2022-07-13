@@ -161,7 +161,7 @@
     },
     {
       "name": "Sumo High Pull",
-      "identifier": "TO INSERT SUMO HIGH PULL IDENTIFIER",
+      "identifier": "sumo_high_pull",
       "muscleGroups": [
         "back",
         "core",
