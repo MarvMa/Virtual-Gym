@@ -6,13 +6,14 @@ public class CylinderScript : MonoBehaviour
     
     public ActionBasedController left_controller;
     public ActionBasedController right_controller;
-    private GameObject cylinder;
+    public XRRayInteractor right_rayInteractor;
+    public XRRayInteractor left_rayInteractor;
+    public GameObject cylinder;
     private Renderer renderer;
     private float cylinder_radius;
     private float cylinder_top;
     private float cylinder_bottom;
-    public XRRayInteractor right_rayInteractor;
-    public XRRayInteractor left_rayInteractor;
+
     
     private AudioSource audioSource;
     private bool audioPlaying = false;
@@ -20,7 +21,7 @@ public class CylinderScript : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        cylinder = gameObject.GetComponent<CylinderScript>().gameObject;
+        // cylinder = gameObject.GetComponent<CylinderScript>().gameObject;
         cylinder_radius = cylinder.transform.localScale.x / 2;
         cylinder_top = cylinder.transform.position.y + cylinder.transform.localScale.y ;
         cylinder_bottom = cylinder.transform.position.y - cylinder.transform.localScale.y ;
@@ -149,6 +150,7 @@ public class CylinderScript : MonoBehaviour
     {
         color.a = 0.25f;
         //Call SetColor using the shader property name "_Color" and setting the color to red
+        Debug.Log(renderer);
         renderer.material.SetColor("_Color", color);
     }
 }

@@ -7,37 +7,83 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    public SpawnExercises spawnExercises;
+    // public SpawnExercises spawnExercises;
+    public GameObject kettleCylinder;
+    public bool kettleCylinderVisibility = false;
+    public GameObject squatCylinderOne;
+    public GameObject squatCylinderTwo;
+    public bool squatCylinderVisibility = false;
 
     void Start()
     {
-        spawnExercises = GameObject.FindWithTag("GameManager").GetComponent<SpawnExercises>();
+        // spawnExercises = GameObject.FindWithTag("GameManager").GetComponent<SpawnExercises>();
     } 
     
-    public void LoadScene()
+    // public void LoadScene()
+    // {
+    //     SceneManager.LoadScene( GetInteractiveExercise());
+    // }
+    //
+    // private String GetInteractiveExercise()
+    // {
+    //     int scene = spawnExercises.CheckForInteractive();
+    //
+    //     if (scene ==1)
+    //     {
+    //         return "SquatScene";
+    //     }
+    //
+    //     if (scene == 2)
+    //     {
+    //         return "KettleScene";
+    //     }
+    //
+    //     return "MainScene";
+    // }
+
+    public void toggleCylinder()
     {
-        SceneManager.LoadScene( GetInteractiveExercise());
+        if (CrossSceneInfo1.animation_id.Equals("back_squat"))
+        {
+            toggleSquatCyliner();
+        }
+        else if (CrossSceneInfo1.animation_id.Equals("sumo_high_pull"))
+        {
+            toggleKettleCyliner();
+        }
     }
 
-    private String GetInteractiveExercise()
+    private void toggleKettleCyliner()
     {
-        int scene = spawnExercises.CheckForInteractive();
-
-        if (scene ==1)
+        if (kettleCylinderVisibility)
         {
-            return "SquatScene";
-        }
+            kettleCylinder.SetActive(false);
 
-        if (scene == 2)
+        }
+        else
         {
-            return "KettleScene";
+            kettleCylinder.SetActive(true);
         }
+    }
+    
+    private void toggleSquatCyliner()
+    {
+        if (squatCylinderVisibility)
+        {
+            squatCylinderOne.SetActive(false);
+            squatCylinderTwo.SetActive(false);
 
-        return "MainScene";
+        }
+        else
+        {
+            squatCylinderOne.SetActive(true);
+            squatCylinderTwo.SetActive(true);
+        }
     }
 
     public void LoadMainScene()
     {
-        SceneManager.LoadScene( "MainScene");
+        // SceneManager.LoadScene( "MainScene");
+        
     }
 }

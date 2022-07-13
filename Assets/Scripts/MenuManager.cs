@@ -76,7 +76,10 @@ public class MenuManager : MonoBehaviour
         }
         else
         {
-            sethideMenu = true;
+            spawnSceneNewScene();
+            menuInPodiumActivator.SetMenuActive();
+            menu_is_visible = true;
+            ToggleMenuVisibility();
         }
     }
 
@@ -194,7 +197,7 @@ public class MenuManager : MonoBehaviour
     {
         ToggleMenuVisibility();
         menuInPodiumActivator.SetMenuActive();
-        spawnScene();
+        spawnSceneNewTrainingPlan();
         
     }
 
@@ -411,7 +414,26 @@ public class MenuManager : MonoBehaviour
 
     }
     // async 
-    void spawnScene()
+    void spawnSceneNewTrainingPlan()
+    {
+
+        
+        if (podiumsAndAnimations != null && podiumsAndAnimations.Count != 0)
+        {
+            foreach (var exerciseContainer in podiumsAndAnimations)
+            {
+                if (exerciseContainer != null)
+                {
+                    Debug.Log(exerciseContainer.transform.position);
+                    Destroy(exerciseContainer);
+                }
+            }
+        }
+        podiumsAndAnimations = spawnExercises.spawnPodiums(ReturnTrainingPlan());
+    }
+
+    void spawnSceneNewScene()
+    
     {
         if(!CrossSceneInfo1.hasStarted)
         {
@@ -424,29 +446,6 @@ public class MenuManager : MonoBehaviour
             spawnExercises.spawnPodiums(CrossSceneInfo1.exercisesAsStrings);
             podiumsAndAnimations = CrossSceneInfo1.staticPodiumsAndAnimations;
         }
-        // await Task.Delay(2500);
-// <<<<<<< HEAD
-// =======
-//        
-//
-//         
-//         
-//     }
-//
-//     public void goRight()
-//     {
-//         arrowCounter++;
-//         foreach (var gameObj in podiumsAndAnimations)
-// >>>>>>> 4018f49714a5101789b90c6fa4bbdf49840aabb5
-        if (podiumsAndAnimations != null && podiumsAndAnimations.Count != 0)
-        {
-            foreach (var exerciseContainer in podiumsAndAnimations)
-            {
-                Debug.Log(exerciseContainer.transform.position);
-                Destroy(exerciseContainer);
-            }
-        }
-        podiumsAndAnimations = spawnExercises.spawnPodiums(ReturnTrainingPlan());
     }
 
     // public void goRight()
