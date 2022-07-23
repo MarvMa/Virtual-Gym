@@ -2,8 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * contains all TTS audio files, can play the one of the central animation based on animation_id from CrossSceneInfo1
+ */
 public class AudioPlayer : MonoBehaviour
 {
+    
     private AudioSource audioSource;
     public AudioClip air_squat;
     public AudioClip back_squat;

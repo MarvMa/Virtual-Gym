@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace DataHandler
 {
+    /**
+     * entity for ORM
+     */
     public class TrainingPlan
     {
         public string name { get; set; }

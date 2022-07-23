@@ -5,6 +5,9 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/**
+ * toggles visibility of simulation elements based on central exercise
+ */
 public class SceneLoader : MonoBehaviour
 {
     // public SpawnExercises spawnExercises;

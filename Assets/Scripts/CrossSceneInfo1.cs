@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+/**
+ * saves animation id of animation in the middle
+ */
 public static class CrossSceneInfo1 
 {
     public static string animation_id { get; set; }

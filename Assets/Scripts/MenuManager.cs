@@ -62,10 +62,11 @@ public class MenuManager : MonoBehaviour
 
     private Boolean is_returnedToState = true;
 
-
+/**
+ * spawn menu
+ */
     private void Start()
     {
-       
         spawnExercises = GameObject.FindWithTag("GameManager").GetComponent<SpawnExercises>();
         menuInPodiumActivator = GameObject.FindWithTag("GameManager").GetComponent<MenuInPodiumActivator>();
         HideAll();
@@ -270,6 +271,9 @@ public class MenuManager : MonoBehaviour
         panelPauseMenu.Show();
     }
 
+    /**
+     * upper menu not hidden in HideAll()
+     */
     private void HideUpperMenu()
     {
         menuText.SetActive(false);
@@ -360,6 +364,9 @@ public class MenuManager : MonoBehaviour
 
     }
 
+    /**
+     * returns list of exercises based on exercises in chosen training plan, optimised for chosen length and difficulty
+     */
     public List<String> ReturnTrainingPlan()
     {
         //Get both trainingsplans
@@ -413,7 +420,10 @@ public class MenuManager : MonoBehaviour
         return exercisesAsStrings;
 
     }
-    // async 
+    
+    /**
+     * destroys podiums and animations if necessary, and spawns new ones based on new training plan
+     */
     void spawnScene()
     {
         if (podiumsAndAnimations != null && podiumsAndAnimations.Count != 0)

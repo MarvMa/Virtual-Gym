@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
+/**
+ * custom collision detection, disables raycast when near cylinders, plays warning sound, works for single and double controllers
+ */
 public class CylinderScript : MonoBehaviour
 {
     
