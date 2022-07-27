@@ -1,50 +1,71 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
-using UnityEngine;
 using System.Threading.Tasks;
 using DataHandler;
-using System.Linq;
+using UnityEngine;
 using UnityEngine.Serialization;
 
+/// <summary>
+///  Class which contains the Logic for the Menu
+/// </summary>
 public class MenuManager : MonoBehaviour
 {
     public GameObject uibBackground;
 
     public Panel panelStart = null;
+
     public Panel panelChoosePlan = null;
+
     public Panel panelChooseModifyExp = null;
+
     public Panel panelChooseModifyDuration = null;
+
     public Panel panelChooseStart = null;
+
     public Panel panelSettings = null;
+
     public Panel panelPauseMenu = null;
+
     public GameObject menuText;
+
     public GameObject menuBeenden;
+
     public GameObject menuSettings;
+
     public GameObject dividerHorizontal;
+
     private int trainingsPlan;
+
     private int trainingsExperience;
+
     private int trainingsDuration;
 
     private CurrentPanelEnum _currentPanel;
 
     private bool is_visible = true;
+
     private bool is_spawned = false;
+
     private bool menu_is_visible = true;
 
     public SpawnExercises spawnExercises;
+
     public MenuInPodiumActivator menuInPodiumActivator;
+
     private List<TrainingPlan> filteredTrainingsPlan;
+
     private List<InnerExercise> availableExercises;
+
     private List<String> exercisesAsStrings;
+
     private List<InnerExercise> helper;
 
     private int arrowCounter = 0;
+
     private List<GameObject> podiumsAndAnimations;
-
-
-
 
     private enum CurrentPanelEnum
     {
@@ -56,35 +77,31 @@ public class MenuManager : MonoBehaviour
         PanelPauseMenu
     }
 
-
     private Boolean sethideMenu = false;
+
     private Boolean setShowMenu = false;
 
     private Boolean is_returnedToState = true;
 
-/**
- * spawn menu
- */
+    /// <summary>
+    /// spawn menu
+    /// </summary>
     private void Start()
     {
-        spawnExercises = GameObject.FindWithTag("GameManager").GetComponent<SpawnExercises>();
-        menuInPodiumActivator = GameObject.FindWithTag("GameManager").GetComponent<MenuInPodiumActivator>();
+        spawnExercises =
+            GameObject
+                .FindWithTag("GameManager")
+                .GetComponent<SpawnExercises>();
+        menuInPodiumActivator =
+            GameObject
+                .FindWithTag("GameManager")
+                .GetComponent<MenuInPodiumActivator>();
         HideAll();
-        // if(!CrossSceneInfo1.hasStarted)
-        // {
-            _currentPanel = CurrentPanelEnum.PanelStart;
-            panelStart.Show();
-        // }
-        // else
-        // {
-        //     spawnSceneNewScene();
-        //     menuInPodiumActivator.SetMenuActive();
-        //     menu_is_visible = true;
-        //     ToggleMenuVisibility();
-        // }
+
+        _currentPanel = CurrentPanelEnum.PanelStart;
+        panelStart.Show();
     }
 
-    // menu
 
     public void MenuButtonSettings()
     {
@@ -98,7 +115,6 @@ public class MenuManager : MonoBehaviour
         //todo: implement exit
     }
 
-    //panel Start 
     public void PressStartButton()
     {
         HideAll();
@@ -106,7 +122,6 @@ public class MenuManager : MonoBehaviour
         panelChoosePlan.Show();
     }
 
-    //panel panelChoosePlan
     public void GKTrainingButton()
     {
         trainingsPlan = 1;
@@ -128,7 +143,6 @@ public class MenuManager : MonoBehaviour
         sethideMenu = true;
     }
 
-    // panelChooseModifyExp
     public void PanelChooseModifyExpOne()
     {
         trainingsExperience = 0;
@@ -185,8 +199,6 @@ public class MenuManager : MonoBehaviour
         panelChooseModifyExp.Show();
     }
 
-    //panelChooseStart
-
     public void PanelChooseStartBackButton()
     {
         HideAll();
@@ -199,10 +211,7 @@ public class MenuManager : MonoBehaviour
         ToggleMenuVisibility();
         menuInPodiumActivator.SetMenuActive();
         spawnScene();
-        
     }
-
-    //panelPauseMenu
 
     public void PanelPauseÜbersichtButton()
     {
@@ -245,9 +254,6 @@ public class MenuManager : MonoBehaviour
         }
     }
 
-
-    //genTrainingsplan
-
     private void HideAll()
     {
         panelStart.Hide();
@@ -257,9 +263,8 @@ public class MenuManager : MonoBehaviour
         panelChooseStart.Hide();
         panelSettings.Hide();
         panelPauseMenu.Hide();
-
     }
-    
+
     private void ShowAll()
     {
         panelStart.Show();
@@ -271,9 +276,9 @@ public class MenuManager : MonoBehaviour
         panelPauseMenu.Show();
     }
 
-    /**
-     * upper menu not hidden in HideAll()
-     */
+     /// <summary>
+     /// upper menu not hidden in HideAll()
+     /// </summary>
     private void HideUpperMenu()
     {
         menuText.SetActive(false);
@@ -281,7 +286,7 @@ public class MenuManager : MonoBehaviour
         menuBeenden.SetActive(false);
         dividerHorizontal.SetActive(false);
     }
-    
+
     private void ShowUpperMenu()
     {
         menuText.SetActive(true);
@@ -302,181 +307,101 @@ public class MenuManager : MonoBehaviour
         }
         else
         {
-            // ShowAll();
             uibBackground.SetActive(true);
             ShowUpperMenu();
             panelStart.Show();
             menu_is_visible = true;
         }
-
-// <<<<<<< HEAD
-// =======
-//         if (!is_visible && !is_spawned)
-//         {
-//             spawnScene(0);
-//             is_spawned = true;
-//         }
-//
-//         if (CrossSceneInfo1.hasStarted && is_returnedToState)
-//         {
-//             spawnScene(0);
-//             is_returnedToState = false;
-//         }
-// >>>>>>> 4018f49714a5101789b90c6fa4bbdf49840aabb5
-        
     }
 
-    private void FixedUpdate()
-    {
-        // CheckIfInteractiveExerciseIsActive();
-
-        // if (sethideMenu)
-        // {
-        //     uibBackground.SetActive(false);
-        //     // if (transform.position.y > -1.1f)
-        //     // {
-        //     //     uibBackground.transform.Translate(0, -1.2f * Time.deltaTime, 0);
-        //     //     transform.Translate(0, -1.2f * Time.deltaTime, 0);
-        //     //     is_visible = false;
-        //     // }
-        // }
-        // if (setShowMenu)
-        // {
-        //     uibBackground.SetActive(true);
-        //     // if (transform.position.y < 1.684)
-        //     // {
-        //     //     uibBackground.transform.Translate(0, 0.8f * Time.deltaTime, 0);
-        //     //     transform.Translate(0, 0.5f * Time.deltaTime, 0);
-        //     // }
-        //     //
-        //     // if (transform.position.y >= 1.684)
-        //     // {
-        //     //     setShowMenu = false;
-        //     // }
-        // }
-
-        // if (!is_visible && !is_spawned)
-        // {
-        //     spawnScene();
-        //     is_spawned = true;
-        // }
-        
-
-    }
-
-    /**
-     * returns list of exercises based on exercises in chosen training plan, optimised for chosen length and difficulty
-     */
+    /// <summary>
+    /// returns list of exercises based on exercises in chosen training plan, optimised for chosen length and difficulty
+    /// </summary>
+    /// <returns>returns list of exercises</returns>
     public List<String> ReturnTrainingPlan()
     {
-        //Get both trainingsplans
+        /// Get both trainingsplans
         filteredTrainingsPlan = JsonHandler.getTrainingPlans();
-        //Select the trainingplan and sort the exercises by descending difficulty
+
+        /// Select the trainingplan and sort the exercises by descending difficulty
         switch (trainingsExperience)
         {
             case 0:
                 //0-1-2
-                availableExercises = filteredTrainingsPlan[trainingsPlan - 1].exercises.OrderBy(o => o.exerciseDifficulty).ToList();
+                availableExercises =
+                    filteredTrainingsPlan[trainingsPlan - 1]
+                        .exercises
+                        .OrderBy(o => o.exerciseDifficulty)
+                        .ToList();
                 break;
-            //1-0-2 kind of unnessesary because there will always be 9 elements with difficulty 1 and 0 and 2 will never be included
+            /// <summary>
+            /// 1-0-2 kind of unnessesary because there will always be 9 elements with difficulty 1 and 0 and 2 will never be included
+            /// </summary>
             case 1:
-                availableExercises = filteredTrainingsPlan[trainingsPlan - 1].exercises.OrderByDescending(o => o.exerciseDifficulty).ToList();
-                helper = availableExercises.Where(o => o.exerciseDifficulty == 2).ToList();
+                availableExercises =
+                    filteredTrainingsPlan[trainingsPlan - 1]
+                        .exercises
+                        .OrderByDescending(o => o.exerciseDifficulty)
+                        .ToList();
+                helper =
+                    availableExercises
+                        .Where(o => o.exerciseDifficulty == 2)
+                        .ToList();
                 availableExercises = availableExercises.Except(helper).ToList();
-                availableExercises.AddRange(helper);
+                availableExercises.AddRange (helper);
                 break;
             //2-1-0
             case 2:
-                availableExercises = filteredTrainingsPlan[trainingsPlan - 1].exercises.OrderByDescending(o => o.exerciseDifficulty).ToList();
+                availableExercises =
+                    filteredTrainingsPlan[trainingsPlan - 1]
+                        .exercises
+                        .OrderByDescending(o => o.exerciseDifficulty)
+                        .ToList();
                 break;
-
         }
-        //Select amount of exercises
+
+        /// Select amount of exercises
         switch (trainingsDuration)
         {
             case 3:
                 availableExercises = availableExercises.Take(3).ToList();
                 break;
-
             case 6:
                 availableExercises = availableExercises.Take(6).ToList();
                 break;
-
             case 8:
                 availableExercises = availableExercises.Take(8).ToList();
                 break;
-
         }
 
         exercisesAsStrings = new List<String>();
-        //Return only the string names of the exercises in a list
+
+        /// Return only the string names of the exercises in a list
         foreach (var item in availableExercises)
         {
-
             exercisesAsStrings.Add(item.exerciseName);
         }
-        Debug.Log(exercisesAsStrings.Count);
-        // CrossSceneInfo1.exercisesAsStrings = exercisesAsStrings;
         return exercisesAsStrings;
-
     }
-    
-    /**
-     * destroys podiums and animations if necessary, and spawns new ones based on new training plan
-     */
+
+    /// <summary>
+    /// destroys podiums and animations if necessary, and spawns new ones based on new training plan
+    /// </summary>
     void spawnScene()
     {
         if (podiumsAndAnimations != null && podiumsAndAnimations.Count != 0)
         {
             foreach (var exerciseContainer in podiumsAndAnimations)
             {
-                // if (exerciseContainer != null)
-                // {
-                    // Debug.Log(exerciseContainer.transform.position);
-                    Destroy(exerciseContainer);
-                // }
+                Destroy (exerciseContainer);
             }
         }
-        podiumsAndAnimations = spawnExercises.spawnPodiums(ReturnTrainingPlan());
+        podiumsAndAnimations =
+            spawnExercises.spawnPodiums(ReturnTrainingPlan());
     }
 
     public void SetShowMenuTrue()
     {
         setShowMenu = true;
     }
-
-    // public void goLeft()
-    // {
-    //     arrowCounter--;
-    //     foreach (var gameObj in podiumsAndAnimations)
-    //     {
-    //         Destroy(gameObj);
-    //     }
-    //
-    //     spawnScene();
-    // }
-
-    // public void CheckIfInteractiveExerciseIsActive()
-    // {
-    //     int exerInteractive = spawnExercises.CheckForInteractive();
-    //     
-    //     if (exerInteractive==1)
-    //     {
-    //         Debug.Log("menuManager SetSumoActive");
-    //         menuInPodiumActivator.SetcanvasForInteractiveExerciseActive();
-    //     }
-    //     
-    //     if (exerInteractive==2)
-    //     {
-    //         Debug.Log("menuManager SetSumoActive");
-    //         menuInPodiumActivator.SetcanvasForInteractiveExerciseActive();
-    //     }
-    //     
-    // }
-
-    // public void activateSwitchSceneButton()
-    // {
-    //     menuInPodiumActivator.SetcanvasForInteractiveExerciseActive();
-    // }
-    
 }

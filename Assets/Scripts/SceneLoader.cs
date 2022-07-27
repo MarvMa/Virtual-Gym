@@ -1,49 +1,28 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
-/**
- * toggles visibility of simulation elements based on central exercise
- */
+/// <summary>
+/// toggles visibility of simulation elements based on central exercise
+/// </summary>
 public class SceneLoader : MonoBehaviour
 {
-    // public SpawnExercises spawnExercises;
     public GameObject kettleCylinder;
+
     public bool kettleCylinderVisibility = false;
+
     public GameObject squatCylinderOne;
+
     public GameObject squatCylinderTwo;
+
     public bool squatCylinderVisibility = false;
 
-    void Start()
-    {
-        // spawnExercises = GameObject.FindWithTag("GameManager").GetComponent<SpawnExercises>();
-    } 
-    
-    // public void LoadScene()
-    // {
-    //     SceneManager.LoadScene( GetInteractiveExercise());
-    // }
-    //
-    // private String GetInteractiveExercise()
-    // {
-    //     int scene = spawnExercises.CheckForInteractive();
-    //
-    //     if (scene ==1)
-    //     {
-    //         return "SquatScene";
-    //     }
-    //
-    //     if (scene == 2)
-    //     {
-    //         return "KettleScene";
-    //     }
-    //
-    //     return "MainScene";
-    // }
-
+    /// <summary>
+    /// Toggle Cylinder depending on the current active exercise
+    /// </summary>
     public void toggleCylinder()
     {
         if (CrossSceneInfo1.animation_id.Equals("back_squat"))
@@ -52,10 +31,13 @@ public class SceneLoader : MonoBehaviour
         }
         else if (CrossSceneInfo1.animation_id.Equals("sumo_high_pull"))
         {
-            toggleKettleCyliner();
+            toggleKettleCylinder();
         }
     }
 
+    /// <summary>
+    /// Toggle Kettle Bell Exercise Cylinder
+    /// </summary>
     private void toggleKettleCyliner()
     {
         if (kettleCylinderVisibility)
@@ -69,15 +51,17 @@ public class SceneLoader : MonoBehaviour
             kettleCylinderVisibility = true;
         }
     }
-    
-    private void toggleSquatCyliner()
+
+    /// <summary>
+    /// Toggle Squat Exercise Cylinder
+    /// </summary>
+    private void toggleSquatCylinder()
     {
         if (squatCylinderVisibility == true)
         {
             squatCylinderOne.SetActive(false);
             squatCylinderTwo.SetActive(false);
             squatCylinderVisibility = false;
-
         }
         else
         {
@@ -85,11 +69,5 @@ public class SceneLoader : MonoBehaviour
             squatCylinderTwo.SetActive(true);
             squatCylinderVisibility = true;
         }
-    }
-
-    public void LoadMainScene()
-    {
-        // SceneManager.LoadScene( "MainScene");
-        
     }
 }
