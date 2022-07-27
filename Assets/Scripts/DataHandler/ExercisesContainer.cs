@@ -11,5 +11,3 @@ namespace DataHandler
         public List<Exercise> exercisesList;
     }
 }
-
-
