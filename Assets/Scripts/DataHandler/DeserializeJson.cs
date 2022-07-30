@@ -2,6 +2,9 @@ using System.Collections.Generic;
 
 namespace DataHandler
 {
+    /// <summary>
+    /// Interface which hold methods for the Deserialization of JSON files
+    /// </summary>
     public interface DeserializeJson
     {
         Exercise _exercise(string path);

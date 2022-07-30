@@ -1,17 +1,95 @@
 {
   "trainingPlanList": [
     {
-      "name": "my_plan",
+      "name": "full-body",
       "exercises": [
-        "air_squat",
-        "back_squat",
-        "biceps_curl",
-        "burpee",
-        "clean_and_jerk",
-        "front_raises",
-        "jump_push_up",
-        "jumping_jacks",
-        "overhead_squat",
+        {
+          "exerciseName": "air_squat",
+          "exerciseDifficulty": 1
+        },
+        {
+          "exerciseName": "back_squat",
+          "exerciseDifficulty": 2
+        },
+        {
+          "exerciseName": "biceps_curl",
+          "exerciseDifficulty": 0
+        },
+        {
+          "exerciseName": "snatch",
+          "exerciseDifficulty": 1
+        },
+        {
+          "exerciseName": "clean_and_jerk",
+          "exerciseDifficulty": 1
+        },
+        {
+          "exerciseName": "front_raises",
+          "exerciseDifficulty": 0
+        },
+        {
+          "exerciseName": "overhead_squat",
+          "exerciseDifficulty": 1
+        },
+        {
+          "exerciseName": "push_up",
+          "exerciseDifficulty": 0
+        },
+        {
+          "exerciseName": "situps",
+          "exerciseDifficulty": 0
+        },
+        {
+          "exerciseName": "sumo_high_pull",
+          "exerciseDifficulty": 2
+        }
+      ],
+      "difficulty": 2,
+      "duration": 10
+    },
+    {
+      "name": "cardio",
+      "exercises": [
+        {
+          "exerciseName": "air_squat",
+          "exerciseDifficulty": 1
+        },
+        {
+          "exerciseName": "back_squat",
+          "exerciseDifficulty": 2
+        },
+        {
+          "exerciseName": "burpee",
+          "exerciseDifficulty": 1
+        },
+        {
+          "exerciseName": "jump_push_up",
+          "exerciseDifficulty": 2
+        },
+        {
+          "exerciseName": "jumping_jacks",
+          "exerciseDifficulty": 0
+        },
+        {
+          "exerciseName": "pike_walk",
+          "exerciseDifficulty": 1
+        },
+        {
+          "exerciseName": "situps",
+          "exerciseDifficulty": 0
+        },
+        {
+          "exerciseName": "push_up",
+          "exerciseDifficulty": 0
+        },
+        {
+          "exerciseName": "pistol_squat",
+          "exerciseDifficulty": 2
+        },
+        {
+          "exerciseName": "sumo_high_pull",
+          "exerciseDifficulty": 1
+        }
       ],
       "difficulty": 2,
       "duration": 10

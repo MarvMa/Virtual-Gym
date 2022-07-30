@@ -4,11 +4,21 @@ using UnityEngine;
 
 namespace DataHandler
 {
+     /// <summary>
+     /// entity for ORM
+     /// </summary>
     public class TrainingPlan
     {
         public string name { get; set; }
-        public string[] exercises { get; set; }
+        public InnerExercise[] exercises { get; set; }
         public Difficulty difficulty { get; set; }
         public int duration { get; set; }
     }
+
+    public class InnerExercise
+    {
+        public string exerciseName { get; set; }
+        public int exerciseDifficulty { get; set; }
+    }
+
 }
