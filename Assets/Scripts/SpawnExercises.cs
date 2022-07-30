@@ -7,6 +7,10 @@ using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
+
+/// <summary>
+/// Manages the spawning of the exercises on the podiums
+/// </summary>
 public class SpawnExercises : MonoBehaviour
 {
     /// Public Variables

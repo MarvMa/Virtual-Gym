@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/**
- * not needed
- */
+/// <summary>
+/// Used to spawn the squat exercise but not needed anymore
+/// </summary>
 public class SpawnSquat : MonoBehaviour
 {
     // Public Variables

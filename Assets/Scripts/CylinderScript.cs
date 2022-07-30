@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-/**
- * custom collision detection, disables raycast when near cylinders, plays warning sound, works for single and double controllers
- */
+/// <summary>
+///custom collision detection, disables raycast when near cylinders, plays warning sound, works for single and double controllers
+/// </summary>
+
 public class CylinderScript : MonoBehaviour
 {
     
@@ -20,7 +21,10 @@ public class CylinderScript : MonoBehaviour
     
     private AudioSource audioSource;
     private bool audioPlaying = false;
- 
+
+    /// <summary>
+    ///Initialization of the cylinder and and audio
+    /// </summary>
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -35,6 +39,9 @@ public class CylinderScript : MonoBehaviour
         
        
     }
+    /// <summary>
+    ///Handling of the controller
+    /// </summary>
     void Update()
     {
         if (right_controller != null && left_controller == null)
@@ -49,6 +56,11 @@ public class CylinderScript : MonoBehaviour
             handleBothControllers();
         }
     }
+
+    /// <summary>
+    ///Visual and audio feedback when one controller interacts with cylinder
+    /// </summary>
+    /// <param name="controller">controller to check</param>
 
     private void handleSingleController(ActionBasedController controller)
     {
@@ -87,6 +99,9 @@ public class CylinderScript : MonoBehaviour
         }
     }
 
+    /// <summary>
+    ///Stop playing of audio file
+    /// </summary>
     private void stopAudio()
     {
         if (audioPlaying)
@@ -95,7 +110,9 @@ public class CylinderScript : MonoBehaviour
             audioPlaying = false;
         }
     }
-
+    /// <summary>
+    ///Visual and audio feedback when both controllers interact with cylinder
+    /// </summary>
     private void handleBothControllers()
     {
         if (bothControllersInCylinder(0.0f))
@@ -124,12 +141,21 @@ public class CylinderScript : MonoBehaviour
             left_rayInteractor.enabled = true;
         }
     }
-
+    /// <summary>
+    ///CHeck if both controllers are inside the cylinder
+    /// </summary>
+    /// <param name="tolerance">tolerance</param>
+    /// <returns> controllers are inside the cylinder</returns>
     bool bothControllersInCylinder(float tolerance)
     {
         return controllerInCyliner(left_controller, tolerance) && controllerInCyliner(right_controller, tolerance);
     }
-
+    /// <summary>
+    ///Computes the distance between controller and cylinder
+    /// </summary>
+    /// <param name="cylinder">cylinder</param>
+    /// <param name="controller">controller</param>
+    /// <returns> the distance between controller and cylinder</returns
     float GetDistanceOnHorizontalPlain(Vector3 cylinder, Vector3 controller)
     {
         controller.y = 0;
@@ -137,7 +163,12 @@ public class CylinderScript : MonoBehaviour
         return Vector3.Distance(controller, cylinder);
     }
 
-
+    /// <summary>
+    ///Checks if controller is inside the cylinder
+    /// </summary>
+    /// <param name="controller">controller</param>
+    /// <param name="tolerance">tolerance</param>
+    /// <returns>true if controller is inside the cylinder</returns
     bool controllerInCyliner(ActionBasedController controller, float tolerance)
     {
         float controller_height = controller.modelParent.position.y;
@@ -149,7 +180,10 @@ public class CylinderScript : MonoBehaviour
         bool above_bottom = controller_height > cylinder_bottom;
         return in_radius && below_top && above_bottom;
     }
-
+    /// <summary>
+    ///Changes the color of the object
+    /// </summary>
+    ///<param name="color"></param>
     void changeColor(Color color)
     {
         color.a = 0.25f;

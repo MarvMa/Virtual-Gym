@@ -5,6 +5,9 @@ using UnityEngine;
 
 namespace DataHandler
 {
+    /// <summary>
+    /// Stores different exercices in a list
+    /// </summary>
     [System.Serializable]
     public class ExercisesContainer
     {

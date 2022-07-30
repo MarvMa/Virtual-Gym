@@ -102,26 +102,34 @@ public class MenuManager : MonoBehaviour
         panelStart.Show();
     }
 
-
+    /// <summary>
+    ///  Shows the panel for the menu button settings
+    /// </summary>
     public void MenuButtonSettings()
     {
         HideAll();
         panelSettings.Show();
     }
-
+    /// <summary>
+    ///  Hides the menu
+    /// </summary>
     public void MenuButtonExit()
     {
         HideAll();
         //todo: implement exit
     }
-
+    /// <summary>
+    ///  Hides the first menu and shows the traningsplan menu
+    /// </summary>
     public void PressStartButton()
     {
         HideAll();
         _currentPanel = CurrentPanelEnum.PanelStart;
         panelChoosePlan.Show();
     }
-
+    /// <summary>
+    ///  Select the whole body trainingsplan
+    /// </summary>
     public void GKTrainingButton()
     {
         trainingsPlan = 1;
@@ -129,7 +137,9 @@ public class MenuManager : MonoBehaviour
         _currentPanel = CurrentPanelEnum.PanelChooseModifyExp;
         panelChooseModifyExp.Show();
     }
-
+    /// <summary>
+    ///  Select the back training trainingsplan
+    /// </summary>
     public void RueckenUebungenButton()
     {
         trainingsPlan = 2;
@@ -137,12 +147,16 @@ public class MenuManager : MonoBehaviour
         _currentPanel = CurrentPanelEnum.PanelChooseModifyExp;
         panelChooseModifyExp.Show();
     }
-
+    /// <summary>
+    ///  Start the free trainings mode
+    /// </summary>
     public void FreiesTrainingButton()
     {
         sethideMenu = true;
     }
-
+    /// <summary>
+    ///  Choose no trainings experience
+    /// </summary>
     public void PanelChooseModifyExpOne()
     {
         trainingsExperience = 0;
@@ -150,7 +164,9 @@ public class MenuManager : MonoBehaviour
         _currentPanel = CurrentPanelEnum.PanelChooseModifyDuration;
         panelChooseModifyDuration.Show();
     }
-
+    /// <summary>
+    ///  Choose average level of trainings experience
+    /// </summary>
     public void PanelChooseModifyExpTwo()
     {
         trainingsExperience = 1;
@@ -158,7 +174,9 @@ public class MenuManager : MonoBehaviour
         _currentPanel = CurrentPanelEnum.PanelChooseModifyDuration;
         panelChooseModifyDuration.Show();
     }
-
+    /// <summary>
+    ///  Choose high level of trainings experience
+    /// </summary>
     public void PanelChooseModifyExpThree()
     {
         trainingsExperience = 2;
@@ -167,7 +185,9 @@ public class MenuManager : MonoBehaviour
         panelChooseModifyDuration.Show();
     }
 
-    //panelChooseModifyDuration
+    /// <summary>
+    ///  Choose three exercises in trainingsplan
+    /// </summary>
     public void PanelChooseModifyDurOne()
     {
         trainingsDuration = 3;
@@ -175,7 +195,9 @@ public class MenuManager : MonoBehaviour
         _currentPanel = CurrentPanelEnum.PanelChooseStart;
         panelChooseStart.Show();
     }
-
+    /// <summary>
+    ///  Choose six exercises in trainingsplan
+    /// </summary>
     public void PanelChooseModifyDurTwo()
     {
         trainingsDuration = 6;
@@ -183,7 +205,9 @@ public class MenuManager : MonoBehaviour
         _currentPanel = CurrentPanelEnum.PanelChooseStart;
         panelChooseStart.Show();
     }
-
+    /// <summary>
+    ///  Choose eight exercises in trainingsplan
+    /// </summary>
     public void PanelChooseModifyDurThree()
     {
         trainingsDuration = 8;
@@ -191,35 +215,45 @@ public class MenuManager : MonoBehaviour
         _currentPanel = CurrentPanelEnum.PanelChooseStart;
         panelChooseStart.Show();
     }
-
+    /// <summary>
+    ///  Go back to the experience menu
+    /// </summary>
     public void PanelChooseModifyDurBackButton()
     {
         HideAll();
         _currentPanel = CurrentPanelEnum.PanelChooseModifyExp;
         panelChooseModifyExp.Show();
     }
-
+    /// <summary>
+    ///  Go back to the amount of trainingsplan menu
+    /// </summary>
     public void PanelChooseStartBackButton()
     {
         HideAll();
         _currentPanel = CurrentPanelEnum.PanelChooseModifyDuration;
         panelChooseModifyDuration.Show();
     }
-
+    /// <summary>
+    ///  Start the simulation 
+    /// </summary>
     public void PanelChooseStartStartButton()
     {
         ToggleMenuVisibility();
         menuInPodiumActivator.SetMenuActive();
         spawnScene();
     }
-
+    /// <summary>
+    ///  Show the menu 
+    /// </summary>
     public void PanelPauseÜbersichtButton()
     {
         HideAll();
         _currentPanel = CurrentPanelEnum.PanelChooseStart;
         panelChooseStart.Show();
     }
-
+    /// <summary>
+    ///  Manages which menu screen to show
+    /// </summary>
     public void PanelSettingBackButton()
     {
         HideAll();
@@ -253,7 +287,9 @@ public class MenuManager : MonoBehaviour
             panelPauseMenu.Show();
         }
     }
-
+    /// <summary>
+    ///  Hide everything in the menu
+    /// </summary>
     private void HideAll()
     {
         panelStart.Hide();
@@ -264,7 +300,9 @@ public class MenuManager : MonoBehaviour
         panelSettings.Hide();
         panelPauseMenu.Hide();
     }
-
+    /// <summary>
+    ///  Show everything in the menu 
+    /// </summary>
     private void ShowAll()
     {
         panelStart.Show();
@@ -286,7 +324,9 @@ public class MenuManager : MonoBehaviour
         menuBeenden.SetActive(false);
         dividerHorizontal.SetActive(false);
     }
-
+    /// <summary>
+    ///  Show the upper menu 
+    /// </summary>
     private void ShowUpperMenu()
     {
         menuText.SetActive(true);
@@ -294,7 +334,9 @@ public class MenuManager : MonoBehaviour
         menuBeenden.SetActive(true);
         dividerHorizontal.SetActive(true);
     }
-
+    /// <summary>
+    ///  Toggles the visibility of the menu on and off
+    /// </summary>
     public void ToggleMenuVisibility()
     {
         if (menu_is_visible)
@@ -399,7 +441,9 @@ public class MenuManager : MonoBehaviour
         podiumsAndAnimations =
             spawnExercises.spawnPodiums(ReturnTrainingPlan());
     }
-
+    /// <summary>
+    ///  Helper method to show the menu
+    /// </summary>
     public void SetShowMenuTrue()
     {
         setShowMenu = true;

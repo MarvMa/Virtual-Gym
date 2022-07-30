@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Includes methods for canvas activation in the podium
+/// </summary>
 public class MenuInPodiumActivator : MonoBehaviour
 {
     public GameObject canvasInPodium;

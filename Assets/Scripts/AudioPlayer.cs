@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/**
- * contains all TTS audio files, can play the one of the central animation based on animation_id from CrossSceneInfo1
- */
+/// <summary>
+///  contains all TTS audio files, can play the one of the central animation based on animation_id from CrossSceneInfo1
+/// </summary>
+
 public class AudioPlayer : MonoBehaviour
 {
     
@@ -25,12 +26,17 @@ public class AudioPlayer : MonoBehaviour
     public AudioClip snatch;
     public AudioClip sumo_high_pull;
 
+    /// <summary>
     // Start is called before the first frame update
+    /// </summary>
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
     }
 
+    /// <summary>
+    ///  Plays a specific tts audio file
+    /// </summary>
     public void play()
     {
         switch (CrossSceneInfo1.animation_id)
@@ -86,6 +92,10 @@ public class AudioPlayer : MonoBehaviour
 
     }
 
+    /// <summary>
+    ///  Toggles the audio on or off
+    /// </summary>
+    /// <param name="audioClip">audioclip to toggle</param>
     private void toggleClip(AudioClip audioClip)
     {
         if (audioSource.isPlaying)
@@ -97,8 +107,10 @@ public class AudioPlayer : MonoBehaviour
             audioSource.PlayOneShot(audioClip, 0.7f);
         }
     }
+    /// <summary>
+    /// Update is called once per frame
+    /// </summary>
 
-    // Update is called once per frame
     void Update()
     {
         // audioSource.Play();
